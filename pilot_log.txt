@@ -1,0 +1,907 @@
+Warning message:
+package ‘httr2’ was built under R version 4.5.2 
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+
+Attaching package: ‘arrow’
+
+The following object is masked from ‘package:utils’:
+
+    timestamp
+
+Warning message:
+package ‘arrow’ was built under R version 4.5.2 
+
+Attaching package: ‘xml2’
+
+The following object is masked from ‘package:httr2’:
+
+    url_parse
+
+Date range: 2022-09-01 to 2022-12-30 — 87 weekdays
+
+=== Starting Oklahoma/CF ===
+
+Resuming from checkpoint: data/pilot_oklahoma_CF_checkpoint.parquet
+Dates remaining for Oklahoma/CF: 77
+[Oklahoma/CF] Fetching 2022-09-15
+[Oklahoma/CF] Fetching 2022-09-16
+[Oklahoma/CF] Fetching 2022-09-19
+[Oklahoma/CF] Fetching 2022-09-20
+[Oklahoma/CF] Fetching 2022-09-21
+[Oklahoma/CF] Fetching 2022-09-22
+[Oklahoma/CF] Fetching 2022-09-23
+[Oklahoma/CF] Fetching 2022-09-26
+[Oklahoma/CF] Fetching 2022-09-27
+[Oklahoma/CF] Fetching 2022-09-28
+  Checkpoint saved — total rows on disk: 6617
+  [Oklahoma/CF] Progress: 10/77 (13%)
+[Oklahoma/CF] Fetching 2022-09-29
+[Oklahoma/CF] Fetching 2022-09-30
+[Oklahoma/CF] Fetching 2022-10-03
+[Oklahoma/CF] Fetching 2022-10-04
+[Oklahoma/CF] Fetching 2022-10-05
+[Oklahoma/CF] Fetching 2022-10-06
+[Oklahoma/CF] Fetching 2022-10-07
+[Oklahoma/CF] Fetching 2022-10-10
+[Oklahoma/CF] Fetching 2022-10-11
+[Oklahoma/CF] Fetching 2022-10-12
+  Checkpoint saved — total rows on disk: 10943
+  [Oklahoma/CF] Progress: 20/77 (26%)
+[Oklahoma/CF] Fetching 2022-10-13
+[Oklahoma/CF] Fetching 2022-10-14
+[Oklahoma/CF] Fetching 2022-10-17
+[Oklahoma/CF] Fetching 2022-10-18
+[Oklahoma/CF] Fetching 2022-10-19
+[Oklahoma/CF] Fetching 2022-10-20
+[Oklahoma/CF] Fetching 2022-10-21
+[Oklahoma/CF] Fetching 2022-10-24
+[Oklahoma/CF] Fetching 2022-10-25
+[Oklahoma/CF] Fetching 2022-10-26
+  Checkpoint saved — total rows on disk: 15787
+  [Oklahoma/CF] Progress: 30/77 (39%)
+[Oklahoma/CF] Fetching 2022-10-27
+[Oklahoma/CF] Fetching 2022-10-28
+[Oklahoma/CF] Fetching 2022-10-31
+[Oklahoma/CF] Fetching 2022-11-01
+[Oklahoma/CF] Fetching 2022-11-02
+[Oklahoma/CF] Fetching 2022-11-03
+[Oklahoma/CF] Fetching 2022-11-04
+[Oklahoma/CF] Fetching 2022-11-07
+[Oklahoma/CF] Fetching 2022-11-08
+[Oklahoma/CF] Fetching 2022-11-09
+  Checkpoint saved — total rows on disk: 16251
+  [Oklahoma/CF] Progress: 40/77 (51.9%)
+[Oklahoma/CF] Fetching 2022-11-10
+[Oklahoma/CF] Fetching 2022-11-11
+[Oklahoma/CF] Fetching 2022-11-14
+[Oklahoma/CF] Fetching 2022-11-15
+[Oklahoma/CF] Fetching 2022-11-16
+[Oklahoma/CF] Fetching 2022-11-17
+[Oklahoma/CF] Fetching 2022-11-18
+[Oklahoma/CF] Fetching 2022-11-21
+[Oklahoma/CF] Fetching 2022-11-22
+[Oklahoma/CF] Fetching 2022-11-23
+  Checkpoint saved — total rows on disk: 16271
+  [Oklahoma/CF] Progress: 50/77 (64.9%)
+[Oklahoma/CF] Fetching 2022-11-24
+[Oklahoma/CF] Fetching 2022-11-25
+[Oklahoma/CF] Fetching 2022-11-28
+[Oklahoma/CF] Fetching 2022-11-29
+[Oklahoma/CF] Fetching 2022-11-30
+[Oklahoma/CF] Fetching 2022-12-01
+[Oklahoma/CF] Fetching 2022-12-02
+[Oklahoma/CF] Fetching 2022-12-05
+[Oklahoma/CF] Fetching 2022-12-06
+[Oklahoma/CF] Fetching 2022-12-07
+  Checkpoint saved — total rows on disk: 16281
+  [Oklahoma/CF] Progress: 60/77 (77.9%)
+[Oklahoma/CF] Fetching 2022-12-08
+[Oklahoma/CF] Fetching 2022-12-09
+[Oklahoma/CF] Fetching 2022-12-12
+[Oklahoma/CF] Fetching 2022-12-13
+[Oklahoma/CF] Fetching 2022-12-14
+[Oklahoma/CF] Fetching 2022-12-15
+[Oklahoma/CF] Fetching 2022-12-16
+[Oklahoma/CF] Fetching 2022-12-19
+[Oklahoma/CF] Fetching 2022-12-20
+[Oklahoma/CF] Fetching 2022-12-21
+  Checkpoint saved — total rows on disk: 16301
+  [Oklahoma/CF] Progress: 70/77 (90.9%)
+[Oklahoma/CF] Fetching 2022-12-22
+[Oklahoma/CF] Fetching 2022-12-23
+[Oklahoma/CF] Fetching 2022-12-26
+[Oklahoma/CF] Fetching 2022-12-27
+[Oklahoma/CF] Fetching 2022-12-28
+[Oklahoma/CF] Fetching 2022-12-29
+[Oklahoma/CF] Fetching 2022-12-30
+  Checkpoint saved — total rows on disk: 7
+=== Finished Oklahoma/CF → data/pilot_oklahoma_CF.parquet ===
+
+
+=== Starting Oklahoma/CM ===
+
+Dates remaining for Oklahoma/CM: 87
+[Oklahoma/CM] Fetching 2022-09-01
+[Oklahoma/CM] Fetching 2022-09-02
+[Oklahoma/CM] Fetching 2022-09-05
+[Oklahoma/CM] Fetching 2022-09-06
+[Oklahoma/CM] Fetching 2022-09-07
+[Oklahoma/CM] Fetching 2022-09-08
+[Oklahoma/CM] Fetching 2022-09-09
+[Oklahoma/CM] Fetching 2022-09-12
+[Oklahoma/CM] Fetching 2022-09-13
+[Oklahoma/CM] Fetching 2022-09-14
+  Checkpoint saved — total rows on disk: 20
+  [Oklahoma/CM] Progress: 10/87 (11.5%)
+[Oklahoma/CM] Fetching 2022-09-15
+[Oklahoma/CM] Fetching 2022-09-16
+[Oklahoma/CM] Fetching 2022-09-19
+[Oklahoma/CM] Fetching 2022-09-20
+[Oklahoma/CM] Fetching 2022-09-21
+[Oklahoma/CM] Fetching 2022-09-22
+[Oklahoma/CM] Fetching 2022-09-23
+[Oklahoma/CM] Fetching 2022-09-26
+[Oklahoma/CM] Fetching 2022-09-27
+[Oklahoma/CM] Fetching 2022-09-28
+  Checkpoint saved — total rows on disk: 40
+  [Oklahoma/CM] Progress: 20/87 (23%)
+[Oklahoma/CM] Fetching 2022-09-29
+[Oklahoma/CM] Fetching 2022-09-30
+[Oklahoma/CM] Fetching 2022-10-03
+[Oklahoma/CM] Fetching 2022-10-04
+[Oklahoma/CM] Fetching 2022-10-05
+[Oklahoma/CM] Fetching 2022-10-06
+[Oklahoma/CM] Fetching 2022-10-07
+[Oklahoma/CM] Fetching 2022-10-10
+[Oklahoma/CM] Fetching 2022-10-11
+[Oklahoma/CM] Fetching 2022-10-12
+  Checkpoint saved — total rows on disk: 60
+  [Oklahoma/CM] Progress: 30/87 (34.5%)
+[Oklahoma/CM] Fetching 2022-10-13
+[Oklahoma/CM] Fetching 2022-10-14
+[Oklahoma/CM] Fetching 2022-10-17
+[Oklahoma/CM] Fetching 2022-10-18
+[Oklahoma/CM] Fetching 2022-10-19
+[Oklahoma/CM] Fetching 2022-10-20
+[Oklahoma/CM] Fetching 2022-10-21
+[Oklahoma/CM] Fetching 2022-10-24
+[Oklahoma/CM] Fetching 2022-10-25
+[Oklahoma/CM] Fetching 2022-10-26
+  Checkpoint saved — total rows on disk: 80
+  [Oklahoma/CM] Progress: 40/87 (46%)
+[Oklahoma/CM] Fetching 2022-10-27
+[Oklahoma/CM] Fetching 2022-10-28
+[Oklahoma/CM] Fetching 2022-10-31
+[Oklahoma/CM] Fetching 2022-11-01
+[Oklahoma/CM] Fetching 2022-11-02
+[Oklahoma/CM] Fetching 2022-11-03
+[Oklahoma/CM] Fetching 2022-11-04
+[Oklahoma/CM] Fetching 2022-11-07
+[Oklahoma/CM] Fetching 2022-11-08
+[Oklahoma/CM] Fetching 2022-11-09
+  Checkpoint saved — total rows on disk: 100
+  [Oklahoma/CM] Progress: 50/87 (57.5%)
+[Oklahoma/CM] Fetching 2022-11-10
+[Oklahoma/CM] Fetching 2022-11-11
+[Oklahoma/CM] Fetching 2022-11-14
+[Oklahoma/CM] Fetching 2022-11-15
+[Oklahoma/CM] Fetching 2022-11-16
+[Oklahoma/CM] Fetching 2022-11-17
+[Oklahoma/CM] Fetching 2022-11-18
+[Oklahoma/CM] Fetching 2022-11-21
+[Oklahoma/CM] Fetching 2022-11-22
+[Oklahoma/CM] Fetching 2022-11-23
+  Checkpoint saved — total rows on disk: 110
+  [Oklahoma/CM] Progress: 60/87 (69%)
+[Oklahoma/CM] Fetching 2022-11-24
+[Oklahoma/CM] Fetching 2022-11-25
+[Oklahoma/CM] Fetching 2022-11-28
+[Oklahoma/CM] Fetching 2022-11-29
+[Oklahoma/CM] Fetching 2022-11-30
+[Oklahoma/CM] Fetching 2022-12-01
+[Oklahoma/CM] Fetching 2022-12-02
+[Oklahoma/CM] Fetching 2022-12-05
+[Oklahoma/CM] Fetching 2022-12-06
+[Oklahoma/CM] Fetching 2022-12-07
+  Checkpoint saved — total rows on disk: 130
+  [Oklahoma/CM] Progress: 70/87 (80.5%)
+[Oklahoma/CM] Fetching 2022-12-08
+[Oklahoma/CM] Fetching 2022-12-09
+[Oklahoma/CM] Fetching 2022-12-12
+[Oklahoma/CM] Fetching 2022-12-13
+[Oklahoma/CM] Fetching 2022-12-14
+[Oklahoma/CM] Fetching 2022-12-15
+[Oklahoma/CM] Fetching 2022-12-16
+[Oklahoma/CM] Fetching 2022-12-19
+[Oklahoma/CM] Fetching 2022-12-20
+[Oklahoma/CM] Fetching 2022-12-21
+  Checkpoint saved — total rows on disk: 150
+  [Oklahoma/CM] Progress: 80/87 (92%)
+[Oklahoma/CM] Fetching 2022-12-22
+[Oklahoma/CM] Fetching 2022-12-23
+[Oklahoma/CM] Fetching 2022-12-26
+[Oklahoma/CM] Fetching 2022-12-27
+[Oklahoma/CM] Fetching 2022-12-28
+[Oklahoma/CM] Fetching 2022-12-29
+[Oklahoma/CM] Fetching 2022-12-30
+  Checkpoint saved — total rows on disk: 167
+=== Finished Oklahoma/CM → data/pilot_oklahoma_CM.parquet ===
+
+
+=== Starting Tulsa/CF ===
+
+Dates remaining for Tulsa/CF: 87
+[Tulsa/CF] Fetching 2022-09-01
+[Tulsa/CF] Fetching 2022-09-02
+[Tulsa/CF] Fetching 2022-09-05
+[Tulsa/CF] Fetching 2022-09-06
+[Tulsa/CF] Fetching 2022-09-07
+[Tulsa/CF] Fetching 2022-09-08
+[Tulsa/CF] Fetching 2022-09-09
+[Tulsa/CF] Fetching 2022-09-12
+[Tulsa/CF] Fetching 2022-09-13
+[Tulsa/CF] Fetching 2022-09-14
+  Checkpoint saved — total rows on disk: 10
+  [Tulsa/CF] Progress: 10/87 (11.5%)
+[Tulsa/CF] Fetching 2022-09-15
+[Tulsa/CF] Fetching 2022-09-16
+[Tulsa/CF] Fetching 2022-09-19
+[Tulsa/CF] Fetching 2022-09-20
+[Tulsa/CF] Fetching 2022-09-21
+[Tulsa/CF] Fetching 2022-09-22
+[Tulsa/CF] Fetching 2022-09-23
+[Tulsa/CF] Fetching 2022-09-26
+[Tulsa/CF] Fetching 2022-09-27
+[Tulsa/CF] Fetching 2022-09-28
+  Checkpoint saved — total rows on disk: 30
+  [Tulsa/CF] Progress: 20/87 (23%)
+[Tulsa/CF] Fetching 2022-09-29
+[Tulsa/CF] Fetching 2022-09-30
+[Tulsa/CF] Fetching 2022-10-03
+[Tulsa/CF] Fetching 2022-10-04
+[Tulsa/CF] Fetching 2022-10-05
+[Tulsa/CF] Fetching 2022-10-06
+[Tulsa/CF] Fetching 2022-10-07
+[Tulsa/CF] Fetching 2022-10-10
+[Tulsa/CF] Fetching 2022-10-11
+[Tulsa/CF] Fetching 2022-10-12
+  Checkpoint saved — total rows on disk: 50
+  [Tulsa/CF] Progress: 30/87 (34.5%)
+[Tulsa/CF] Fetching 2022-10-13
+[Tulsa/CF] Fetching 2022-10-14
+[Tulsa/CF] Fetching 2022-10-17
+[Tulsa/CF] Fetching 2022-10-18
+[Tulsa/CF] Fetching 2022-10-19
+[Tulsa/CF] Fetching 2022-10-20
+[Tulsa/CF] Fetching 2022-10-21
+[Tulsa/CF] Fetching 2022-10-24
+[Tulsa/CF] Fetching 2022-10-25
+[Tulsa/CF] Fetching 2022-10-26
+  Checkpoint saved — total rows on disk: 70
+  [Tulsa/CF] Progress: 40/87 (46%)
+[Tulsa/CF] Fetching 2022-10-27
+[Tulsa/CF] Fetching 2022-10-28
+[Tulsa/CF] Fetching 2022-10-31
+[Tulsa/CF] Fetching 2022-11-01
+[Tulsa/CF] Fetching 2022-11-02
+[Tulsa/CF] Fetching 2022-11-03
+[Tulsa/CF] Fetching 2022-11-04
+[Tulsa/CF] Fetching 2022-11-07
+[Tulsa/CF] Fetching 2022-11-08
+[Tulsa/CF] Fetching 2022-11-09
+  Checkpoint saved — total rows on disk: 90
+  [Tulsa/CF] Progress: 50/87 (57.5%)
+[Tulsa/CF] Fetching 2022-11-10
+[Tulsa/CF] Fetching 2022-11-11
+[Tulsa/CF] Fetching 2022-11-14
+[Tulsa/CF] Fetching 2022-11-15
+[Tulsa/CF] Fetching 2022-11-16
+[Tulsa/CF] Fetching 2022-11-17
+[Tulsa/CF] Fetching 2022-11-18
+[Tulsa/CF] Fetching 2022-11-21
+[Tulsa/CF] Fetching 2022-11-22
+[Tulsa/CF] Fetching 2022-11-23
+  Checkpoint saved — total rows on disk: 110
+  [Tulsa/CF] Progress: 60/87 (69%)
+[Tulsa/CF] Fetching 2022-11-24
+[Tulsa/CF] Fetching 2022-11-25
+[Tulsa/CF] Fetching 2022-11-28
+[Tulsa/CF] Fetching 2022-11-29
+[Tulsa/CF] Fetching 2022-11-30
+[Tulsa/CF] Fetching 2022-12-01
+[Tulsa/CF] Fetching 2022-12-02
+[Tulsa/CF] Fetching 2022-12-05
+[Tulsa/CF] Fetching 2022-12-06
+[Tulsa/CF] Fetching 2022-12-07
+  Checkpoint saved — total rows on disk: 130
+  [Tulsa/CF] Progress: 70/87 (80.5%)
+[Tulsa/CF] Fetching 2022-12-08
+[Tulsa/CF] Fetching 2022-12-09
+[Tulsa/CF] Fetching 2022-12-12
+[Tulsa/CF] Fetching 2022-12-13
+[Tulsa/CF] Fetching 2022-12-14
+[Tulsa/CF] Fetching 2022-12-15
+[Tulsa/CF] Fetching 2022-12-16
+[Tulsa/CF] Fetching 2022-12-19
+[Tulsa/CF] Fetching 2022-12-20
+[Tulsa/CF] Fetching 2022-12-21
+  Checkpoint saved — total rows on disk: 150
+  [Tulsa/CF] Progress: 80/87 (92%)
+[Tulsa/CF] Fetching 2022-12-22
+[Tulsa/CF] Fetching 2022-12-23
+[Tulsa/CF] Fetching 2022-12-26
+[Tulsa/CF] Fetching 2022-12-27
+[Tulsa/CF] Fetching 2022-12-28
+[Tulsa/CF] Fetching 2022-12-29
+[Tulsa/CF] Fetching 2022-12-30
+  Checkpoint saved — total rows on disk: 167
+=== Finished Tulsa/CF → data/pilot_tulsa_CF.parquet ===
+
+
+=== Starting Tulsa/CM ===
+
+Dates remaining for Tulsa/CM: 87
+[Tulsa/CM] Fetching 2022-09-01
+[Tulsa/CM] Fetching 2022-09-02
+[Tulsa/CM] Fetching 2022-09-05
+[Tulsa/CM] Fetching 2022-09-06
+[Tulsa/CM] Fetching 2022-09-07
+[Tulsa/CM] Fetching 2022-09-08
+[Tulsa/CM] Fetching 2022-09-09
+[Tulsa/CM] Fetching 2022-09-12
+[Tulsa/CM] Fetching 2022-09-13
+[Tulsa/CM] Fetching 2022-09-14
+  Checkpoint saved — total rows on disk: 20
+  [Tulsa/CM] Progress: 10/87 (11.5%)
+[Tulsa/CM] Fetching 2022-09-15
+[Tulsa/CM] Fetching 2022-09-16
+[Tulsa/CM] Fetching 2022-09-19
+[Tulsa/CM] Fetching 2022-09-20
+[Tulsa/CM] Fetching 2022-09-21
+[Tulsa/CM] Fetching 2022-09-22
+[Tulsa/CM] Fetching 2022-09-23
+[Tulsa/CM] Fetching 2022-09-26
+[Tulsa/CM] Fetching 2022-09-27
+[Tulsa/CM] Fetching 2022-09-28
+  Checkpoint saved — total rows on disk: 40
+  [Tulsa/CM] Progress: 20/87 (23%)
+[Tulsa/CM] Fetching 2022-09-29
+[Tulsa/CM] Fetching 2022-09-30
+[Tulsa/CM] Fetching 2022-10-03
+[Tulsa/CM] Fetching 2022-10-04
+[Tulsa/CM] Fetching 2022-10-05
+[Tulsa/CM] Fetching 2022-10-06
+[Tulsa/CM] Fetching 2022-10-07
+[Tulsa/CM] Fetching 2022-10-10
+[Tulsa/CM] Fetching 2022-10-11
+[Tulsa/CM] Fetching 2022-10-12
+  Checkpoint saved — total rows on disk: 60
+  [Tulsa/CM] Progress: 30/87 (34.5%)
+[Tulsa/CM] Fetching 2022-10-13
+[Tulsa/CM] Fetching 2022-10-14
+[Tulsa/CM] Fetching 2022-10-17
+[Tulsa/CM] Fetching 2022-10-18
+[Tulsa/CM] Fetching 2022-10-19
+[Tulsa/CM] Fetching 2022-10-20
+[Tulsa/CM] Fetching 2022-10-21
+[Tulsa/CM] Fetching 2022-10-24
+[Tulsa/CM] Fetching 2022-10-25
+[Tulsa/CM] Fetching 2022-10-26
+  Checkpoint saved — total rows on disk: 80
+  [Tulsa/CM] Progress: 40/87 (46%)
+[Tulsa/CM] Fetching 2022-10-27
+[Tulsa/CM] Fetching 2022-10-28
+[Tulsa/CM] Fetching 2022-10-31
+[Tulsa/CM] Fetching 2022-11-01
+[Tulsa/CM] Fetching 2022-11-02
+[Tulsa/CM] Fetching 2022-11-03
+[Tulsa/CM] Fetching 2022-11-04
+[Tulsa/CM] Fetching 2022-11-07
+[Tulsa/CM] Fetching 2022-11-08
+[Tulsa/CM] Fetching 2022-11-09
+  Checkpoint saved — total rows on disk: 90
+  [Tulsa/CM] Progress: 50/87 (57.5%)
+[Tulsa/CM] Fetching 2022-11-10
+[Tulsa/CM] Fetching 2022-11-11
+[Tulsa/CM] Fetching 2022-11-14
+[Tulsa/CM] Fetching 2022-11-15
+[Tulsa/CM] Fetching 2022-11-16
+[Tulsa/CM] Fetching 2022-11-17
+[Tulsa/CM] Fetching 2022-11-18
+[Tulsa/CM] Fetching 2022-11-21
+[Tulsa/CM] Fetching 2022-11-22
+[Tulsa/CM] Fetching 2022-11-23
+  Checkpoint saved — total rows on disk: 110
+  [Tulsa/CM] Progress: 60/87 (69%)
+[Tulsa/CM] Fetching 2022-11-24
+[Tulsa/CM] Fetching 2022-11-25
+[Tulsa/CM] Fetching 2022-11-28
+[Tulsa/CM] Fetching 2022-11-29
+[Tulsa/CM] Fetching 2022-11-30
+[Tulsa/CM] Fetching 2022-12-01
+[Tulsa/CM] Fetching 2022-12-02
+[Tulsa/CM] Fetching 2022-12-05
+[Tulsa/CM] Fetching 2022-12-06
+[Tulsa/CM] Fetching 2022-12-07
+  Checkpoint saved — total rows on disk: 130
+  [Tulsa/CM] Progress: 70/87 (80.5%)
+[Tulsa/CM] Fetching 2022-12-08
+[Tulsa/CM] Fetching 2022-12-09
+[Tulsa/CM] Fetching 2022-12-12
+[Tulsa/CM] Fetching 2022-12-13
+[Tulsa/CM] Fetching 2022-12-14
+[Tulsa/CM] Fetching 2022-12-15
+[Tulsa/CM] Fetching 2022-12-16
+[Tulsa/CM] Fetching 2022-12-19
+[Tulsa/CM] Fetching 2022-12-20
+[Tulsa/CM] Fetching 2022-12-21
+  Checkpoint saved — total rows on disk: 150
+  [Tulsa/CM] Progress: 80/87 (92%)
+[Tulsa/CM] Fetching 2022-12-22
+[Tulsa/CM] Fetching 2022-12-23
+[Tulsa/CM] Fetching 2022-12-26
+[Tulsa/CM] Fetching 2022-12-27
+[Tulsa/CM] Fetching 2022-12-28
+[Tulsa/CM] Fetching 2022-12-29
+[Tulsa/CM] Fetching 2022-12-30
+  Checkpoint saved — total rows on disk: 167
+=== Finished Tulsa/CM → data/pilot_tulsa_CM.parquet ===
+
+
+=== Starting Cleveland/CF ===
+
+Dates remaining for Cleveland/CF: 87
+[Cleveland/CF] Fetching 2022-09-01
+[Cleveland/CF] Fetching 2022-09-02
+[Cleveland/CF] Fetching 2022-09-05
+[Cleveland/CF] Fetching 2022-09-06
+[Cleveland/CF] Fetching 2022-09-07
+[Cleveland/CF] Fetching 2022-09-08
+[Cleveland/CF] Fetching 2022-09-09
+[Cleveland/CF] Fetching 2022-09-12
+[Cleveland/CF] Fetching 2022-09-13
+[Cleveland/CF] Fetching 2022-09-14
+  Checkpoint saved — total rows on disk: 10
+  [Cleveland/CF] Progress: 10/87 (11.5%)
+[Cleveland/CF] Fetching 2022-09-15
+[Cleveland/CF] Fetching 2022-09-16
+[Cleveland/CF] Fetching 2022-09-19
+[Cleveland/CF] Fetching 2022-09-20
+[Cleveland/CF] Fetching 2022-09-21
+[Cleveland/CF] Fetching 2022-09-22
+[Cleveland/CF] Fetching 2022-09-23
+[Cleveland/CF] Fetching 2022-09-26
+[Cleveland/CF] Fetching 2022-09-27
+[Cleveland/CF] Fetching 2022-09-28
+  Checkpoint saved — total rows on disk: 30
+  [Cleveland/CF] Progress: 20/87 (23%)
+[Cleveland/CF] Fetching 2022-09-29
+[Cleveland/CF] Fetching 2022-09-30
+[Cleveland/CF] Fetching 2022-10-03
+[Cleveland/CF] Fetching 2022-10-04
+[Cleveland/CF] Fetching 2022-10-05
+[Cleveland/CF] Fetching 2022-10-06
+[Cleveland/CF] Fetching 2022-10-07
+[Cleveland/CF] Fetching 2022-10-10
+[Cleveland/CF] Fetching 2022-10-11
+[Cleveland/CF] Fetching 2022-10-12
+  Checkpoint saved — total rows on disk: 50
+  [Cleveland/CF] Progress: 30/87 (34.5%)
+[Cleveland/CF] Fetching 2022-10-13
+[Cleveland/CF] Fetching 2022-10-14
+[Cleveland/CF] Fetching 2022-10-17
+[Cleveland/CF] Fetching 2022-10-18
+[Cleveland/CF] Fetching 2022-10-19
+[Cleveland/CF] Fetching 2022-10-20
+[Cleveland/CF] Fetching 2022-10-21
+[Cleveland/CF] Fetching 2022-10-24
+[Cleveland/CF] Fetching 2022-10-25
+[Cleveland/CF] Fetching 2022-10-26
+  Checkpoint saved — total rows on disk: 70
+  [Cleveland/CF] Progress: 40/87 (46%)
+[Cleveland/CF] Fetching 2022-10-27
+[Cleveland/CF] Fetching 2022-10-28
+[Cleveland/CF] Fetching 2022-10-31
+[Cleveland/CF] Fetching 2022-11-01
+[Cleveland/CF] Fetching 2022-11-02
+[Cleveland/CF] Fetching 2022-11-03
+[Cleveland/CF] Fetching 2022-11-04
+[Cleveland/CF] Fetching 2022-11-07
+[Cleveland/CF] Fetching 2022-11-08
+[Cleveland/CF] Fetching 2022-11-09
+  Checkpoint saved — total rows on disk: 90
+  [Cleveland/CF] Progress: 50/87 (57.5%)
+[Cleveland/CF] Fetching 2022-11-10
+[Cleveland/CF] Fetching 2022-11-11
+[Cleveland/CF] Fetching 2022-11-14
+[Cleveland/CF] Fetching 2022-11-15
+[Cleveland/CF] Fetching 2022-11-16
+[Cleveland/CF] Fetching 2022-11-17
+[Cleveland/CF] Fetching 2022-11-18
+[Cleveland/CF] Fetching 2022-11-21
+[Cleveland/CF] Fetching 2022-11-22
+[Cleveland/CF] Fetching 2022-11-23
+  Checkpoint saved — total rows on disk: 110
+  [Cleveland/CF] Progress: 60/87 (69%)
+[Cleveland/CF] Fetching 2022-11-24
+[Cleveland/CF] Fetching 2022-11-25
+[Cleveland/CF] Fetching 2022-11-28
+[Cleveland/CF] Fetching 2022-11-29
+[Cleveland/CF] Fetching 2022-11-30
+[Cleveland/CF] Fetching 2022-12-01
+[Cleveland/CF] Fetching 2022-12-02
+[Cleveland/CF] Fetching 2022-12-05
+[Cleveland/CF] Fetching 2022-12-06
+[Cleveland/CF] Fetching 2022-12-07
+  Checkpoint saved — total rows on disk: 130
+  [Cleveland/CF] Progress: 70/87 (80.5%)
+[Cleveland/CF] Fetching 2022-12-08
+[Cleveland/CF] Fetching 2022-12-09
+[Cleveland/CF] Fetching 2022-12-12
+[Cleveland/CF] Fetching 2022-12-13
+[Cleveland/CF] Fetching 2022-12-14
+[Cleveland/CF] Fetching 2022-12-15
+[Cleveland/CF] Fetching 2022-12-16
+[Cleveland/CF] Fetching 2022-12-19
+[Cleveland/CF] Fetching 2022-12-20
+[Cleveland/CF] Fetching 2022-12-21
+  Checkpoint saved — total rows on disk: 150
+  [Cleveland/CF] Progress: 80/87 (92%)
+[Cleveland/CF] Fetching 2022-12-22
+[Cleveland/CF] Fetching 2022-12-23
+[Cleveland/CF] Fetching 2022-12-26
+[Cleveland/CF] Fetching 2022-12-27
+[Cleveland/CF] Fetching 2022-12-28
+[Cleveland/CF] Fetching 2022-12-29
+[Cleveland/CF] Fetching 2022-12-30
+  Checkpoint saved — total rows on disk: 167
+=== Finished Cleveland/CF → data/pilot_cleveland_CF.parquet ===
+
+
+=== Starting Cleveland/CM ===
+
+Dates remaining for Cleveland/CM: 87
+[Cleveland/CM] Fetching 2022-09-01
+[Cleveland/CM] Fetching 2022-09-02
+[Cleveland/CM] Fetching 2022-09-05
+[Cleveland/CM] Fetching 2022-09-06
+[Cleveland/CM] Fetching 2022-09-07
+[Cleveland/CM] Fetching 2022-09-08
+[Cleveland/CM] Fetching 2022-09-09
+[Cleveland/CM] Fetching 2022-09-12
+[Cleveland/CM] Fetching 2022-09-13
+[Cleveland/CM] Fetching 2022-09-14
+  Checkpoint saved — total rows on disk: 10
+  [Cleveland/CM] Progress: 10/87 (11.5%)
+[Cleveland/CM] Fetching 2022-09-15
+[Cleveland/CM] Fetching 2022-09-16
+[Cleveland/CM] Fetching 2022-09-19
+[Cleveland/CM] Fetching 2022-09-20
+[Cleveland/CM] Fetching 2022-09-21
+[Cleveland/CM] Fetching 2022-09-22
+[Cleveland/CM] Fetching 2022-09-23
+[Cleveland/CM] Fetching 2022-09-26
+[Cleveland/CM] Fetching 2022-09-27
+[Cleveland/CM] Fetching 2022-09-28
+  Checkpoint saved — total rows on disk: 30
+  [Cleveland/CM] Progress: 20/87 (23%)
+[Cleveland/CM] Fetching 2022-09-29
+[Cleveland/CM] Fetching 2022-09-30
+[Cleveland/CM] Fetching 2022-10-03
+[Cleveland/CM] Fetching 2022-10-04
+[Cleveland/CM] Fetching 2022-10-05
+[Cleveland/CM] Fetching 2022-10-06
+[Cleveland/CM] Fetching 2022-10-07
+[Cleveland/CM] Fetching 2022-10-10
+[Cleveland/CM] Fetching 2022-10-11
+[Cleveland/CM] Fetching 2022-10-12
+  Checkpoint saved — total rows on disk: 50
+  [Cleveland/CM] Progress: 30/87 (34.5%)
+[Cleveland/CM] Fetching 2022-10-13
+[Cleveland/CM] Fetching 2022-10-14
+[Cleveland/CM] Fetching 2022-10-17
+[Cleveland/CM] Fetching 2022-10-18
+[Cleveland/CM] Fetching 2022-10-19
+[Cleveland/CM] Fetching 2022-10-20
+[Cleveland/CM] Fetching 2022-10-21
+[Cleveland/CM] Fetching 2022-10-24
+[Cleveland/CM] Fetching 2022-10-25
+[Cleveland/CM] Fetching 2022-10-26
+  Checkpoint saved — total rows on disk: 70
+  [Cleveland/CM] Progress: 40/87 (46%)
+[Cleveland/CM] Fetching 2022-10-27
+[Cleveland/CM] Fetching 2022-10-28
+[Cleveland/CM] Fetching 2022-10-31
+[Cleveland/CM] Fetching 2022-11-01
+[Cleveland/CM] Fetching 2022-11-02
+[Cleveland/CM] Fetching 2022-11-03
+[Cleveland/CM] Fetching 2022-11-04
+[Cleveland/CM] Fetching 2022-11-07
+[Cleveland/CM] Fetching 2022-11-08
+[Cleveland/CM] Fetching 2022-11-09
+  Checkpoint saved — total rows on disk: 90
+  [Cleveland/CM] Progress: 50/87 (57.5%)
+[Cleveland/CM] Fetching 2022-11-10
+[Cleveland/CM] Fetching 2022-11-11
+[Cleveland/CM] Fetching 2022-11-14
+[Cleveland/CM] Fetching 2022-11-15
+[Cleveland/CM] Fetching 2022-11-16
+[Cleveland/CM] Fetching 2022-11-17
+[Cleveland/CM] Fetching 2022-11-18
+[Cleveland/CM] Fetching 2022-11-21
+[Cleveland/CM] Fetching 2022-11-22
+[Cleveland/CM] Fetching 2022-11-23
+  Checkpoint saved — total rows on disk: 110
+  [Cleveland/CM] Progress: 60/87 (69%)
+[Cleveland/CM] Fetching 2022-11-24
+[Cleveland/CM] Fetching 2022-11-25
+[Cleveland/CM] Fetching 2022-11-28
+[Cleveland/CM] Fetching 2022-11-29
+[Cleveland/CM] Fetching 2022-11-30
+[Cleveland/CM] Fetching 2022-12-01
+[Cleveland/CM] Fetching 2022-12-02
+[Cleveland/CM] Fetching 2022-12-05
+[Cleveland/CM] Fetching 2022-12-06
+[Cleveland/CM] Fetching 2022-12-07
+  Checkpoint saved — total rows on disk: 130
+  [Cleveland/CM] Progress: 70/87 (80.5%)
+[Cleveland/CM] Fetching 2022-12-08
+[Cleveland/CM] Fetching 2022-12-09
+[Cleveland/CM] Fetching 2022-12-12
+[Cleveland/CM] Fetching 2022-12-13
+[Cleveland/CM] Fetching 2022-12-14
+[Cleveland/CM] Fetching 2022-12-15
+[Cleveland/CM] Fetching 2022-12-16
+[Cleveland/CM] Fetching 2022-12-19
+[Cleveland/CM] Fetching 2022-12-20
+[Cleveland/CM] Fetching 2022-12-21
+  Checkpoint saved — total rows on disk: 150
+  [Cleveland/CM] Progress: 80/87 (92%)
+[Cleveland/CM] Fetching 2022-12-22
+[Cleveland/CM] Fetching 2022-12-23
+[Cleveland/CM] Fetching 2022-12-26
+[Cleveland/CM] Fetching 2022-12-27
+[Cleveland/CM] Fetching 2022-12-28
+[Cleveland/CM] Fetching 2022-12-29
+[Cleveland/CM] Fetching 2022-12-30
+  Checkpoint saved — total rows on disk: 167
+=== Finished Cleveland/CM → data/pilot_cleveland_CM.parquet ===
+
+
+=== Starting Comanche/CF ===
+
+Dates remaining for Comanche/CF: 87
+[Comanche/CF] Fetching 2022-09-01
+[Comanche/CF] Fetching 2022-09-02
+[Comanche/CF] Fetching 2022-09-05
+[Comanche/CF] Fetching 2022-09-06
+[Comanche/CF] Fetching 2022-09-07
+[Comanche/CF] Fetching 2022-09-08
+[Comanche/CF] Fetching 2022-09-09
+[Comanche/CF] Fetching 2022-09-12
+[Comanche/CF] Fetching 2022-09-13
+[Comanche/CF] Fetching 2022-09-14
+  Checkpoint saved — total rows on disk: 10
+  [Comanche/CF] Progress: 10/87 (11.5%)
+[Comanche/CF] Fetching 2022-09-15
+[Comanche/CF] Fetching 2022-09-16
+[Comanche/CF] Fetching 2022-09-19
+[Comanche/CF] Fetching 2022-09-20
+[Comanche/CF] Fetching 2022-09-21
+[Comanche/CF] Fetching 2022-09-22
+[Comanche/CF] Fetching 2022-09-23
+[Comanche/CF] Fetching 2022-09-26
+[Comanche/CF] Fetching 2022-09-27
+[Comanche/CF] Fetching 2022-09-28
+  Checkpoint saved — total rows on disk: 30
+  [Comanche/CF] Progress: 20/87 (23%)
+[Comanche/CF] Fetching 2022-09-29
+[Comanche/CF] Fetching 2022-09-30
+[Comanche/CF] Fetching 2022-10-03
+[Comanche/CF] Fetching 2022-10-04
+[Comanche/CF] Fetching 2022-10-05
+[Comanche/CF] Fetching 2022-10-06
+[Comanche/CF] Fetching 2022-10-07
+[Comanche/CF] Fetching 2022-10-10
+[Comanche/CF] Fetching 2022-10-11
+[Comanche/CF] Fetching 2022-10-12
+  Checkpoint saved — total rows on disk: 50
+  [Comanche/CF] Progress: 30/87 (34.5%)
+[Comanche/CF] Fetching 2022-10-13
+[Comanche/CF] Fetching 2022-10-14
+[Comanche/CF] Fetching 2022-10-17
+[Comanche/CF] Fetching 2022-10-18
+[Comanche/CF] Fetching 2022-10-19
+[Comanche/CF] Fetching 2022-10-20
+[Comanche/CF] Fetching 2022-10-21
+[Comanche/CF] Fetching 2022-10-24
+[Comanche/CF] Fetching 2022-10-25
+[Comanche/CF] Fetching 2022-10-26
+  Checkpoint saved — total rows on disk: 70
+  [Comanche/CF] Progress: 40/87 (46%)
+[Comanche/CF] Fetching 2022-10-27
+[Comanche/CF] Fetching 2022-10-28
+[Comanche/CF] Fetching 2022-10-31
+[Comanche/CF] Fetching 2022-11-01
+[Comanche/CF] Fetching 2022-11-02
+[Comanche/CF] Fetching 2022-11-03
+[Comanche/CF] Fetching 2022-11-04
+[Comanche/CF] Fetching 2022-11-07
+[Comanche/CF] Fetching 2022-11-08
+[Comanche/CF] Fetching 2022-11-09
+  Checkpoint saved — total rows on disk: 90
+  [Comanche/CF] Progress: 50/87 (57.5%)
+[Comanche/CF] Fetching 2022-11-10
+[Comanche/CF] Fetching 2022-11-11
+[Comanche/CF] Fetching 2022-11-14
+[Comanche/CF] Fetching 2022-11-15
+[Comanche/CF] Fetching 2022-11-16
+[Comanche/CF] Fetching 2022-11-17
+[Comanche/CF] Fetching 2022-11-18
+[Comanche/CF] Fetching 2022-11-21
+[Comanche/CF] Fetching 2022-11-22
+[Comanche/CF] Fetching 2022-11-23
+  Checkpoint saved — total rows on disk: 110
+  [Comanche/CF] Progress: 60/87 (69%)
+[Comanche/CF] Fetching 2022-11-24
+[Comanche/CF] Fetching 2022-11-25
+[Comanche/CF] Fetching 2022-11-28
+[Comanche/CF] Fetching 2022-11-29
+[Comanche/CF] Fetching 2022-11-30
+[Comanche/CF] Fetching 2022-12-01
+[Comanche/CF] Fetching 2022-12-02
+[Comanche/CF] Fetching 2022-12-05
+[Comanche/CF] Fetching 2022-12-06
+[Comanche/CF] Fetching 2022-12-07
+  Checkpoint saved — total rows on disk: 130
+  [Comanche/CF] Progress: 70/87 (80.5%)
+[Comanche/CF] Fetching 2022-12-08
+[Comanche/CF] Fetching 2022-12-09
+[Comanche/CF] Fetching 2022-12-12
+[Comanche/CF] Fetching 2022-12-13
+[Comanche/CF] Fetching 2022-12-14
+[Comanche/CF] Fetching 2022-12-15
+[Comanche/CF] Fetching 2022-12-16
+[Comanche/CF] Fetching 2022-12-19
+[Comanche/CF] Fetching 2022-12-20
+[Comanche/CF] Fetching 2022-12-21
+  Checkpoint saved — total rows on disk: 150
+  [Comanche/CF] Progress: 80/87 (92%)
+[Comanche/CF] Fetching 2022-12-22
+[Comanche/CF] Fetching 2022-12-23
+[Comanche/CF] Fetching 2022-12-26
+[Comanche/CF] Fetching 2022-12-27
+[Comanche/CF] Fetching 2022-12-28
+[Comanche/CF] Fetching 2022-12-29
+[Comanche/CF] Fetching 2022-12-30
+  Checkpoint saved — total rows on disk: 167
+=== Finished Comanche/CF → data/pilot_comanche_CF.parquet ===
+
+
+=== Starting Comanche/CM ===
+
+Dates remaining for Comanche/CM: 87
+[Comanche/CM] Fetching 2022-09-01
+[Comanche/CM] Fetching 2022-09-02
+[Comanche/CM] Fetching 2022-09-05
+[Comanche/CM] Fetching 2022-09-06
+[Comanche/CM] Fetching 2022-09-07
+[Comanche/CM] Fetching 2022-09-08
+[Comanche/CM] Fetching 2022-09-09
+[Comanche/CM] Fetching 2022-09-12
+[Comanche/CM] Fetching 2022-09-13
+[Comanche/CM] Fetching 2022-09-14
+  Checkpoint saved — total rows on disk: 10
+  [Comanche/CM] Progress: 10/87 (11.5%)
+[Comanche/CM] Fetching 2022-09-15
+[Comanche/CM] Fetching 2022-09-16
+[Comanche/CM] Fetching 2022-09-19
+[Comanche/CM] Fetching 2022-09-20
+[Comanche/CM] Fetching 2022-09-21
+[Comanche/CM] Fetching 2022-09-22
+[Comanche/CM] Fetching 2022-09-23
+[Comanche/CM] Fetching 2022-09-26
+[Comanche/CM] Fetching 2022-09-27
+[Comanche/CM] Fetching 2022-09-28
+  Checkpoint saved — total rows on disk: 30
+  [Comanche/CM] Progress: 20/87 (23%)
+[Comanche/CM] Fetching 2022-09-29
+[Comanche/CM] Fetching 2022-09-30
+[Comanche/CM] Fetching 2022-10-03
+[Comanche/CM] Fetching 2022-10-04
+[Comanche/CM] Fetching 2022-10-05
+[Comanche/CM] Fetching 2022-10-06
+[Comanche/CM] Fetching 2022-10-07
+[Comanche/CM] Fetching 2022-10-10
+[Comanche/CM] Fetching 2022-10-11
+[Comanche/CM] Fetching 2022-10-12
+  Checkpoint saved — total rows on disk: 50
+  [Comanche/CM] Progress: 30/87 (34.5%)
+[Comanche/CM] Fetching 2022-10-13
+[Comanche/CM] Fetching 2022-10-14
+[Comanche/CM] Fetching 2022-10-17
+[Comanche/CM] Fetching 2022-10-18
+[Comanche/CM] Fetching 2022-10-19
+[Comanche/CM] Fetching 2022-10-20
+  failed: HTTP 403 Forbidden.
+  Checkpoint saved — total rows on disk: 65
+
+!!! [Comanche/CM] 403 detected (#1)
+!!! Pausing 60 min, resuming at 19:59:28
+[Comanche/CM] Fetching 2022-10-20
+[Comanche/CM] Fetching 2022-10-21
+[Comanche/CM] Fetching 2022-10-24
+[Comanche/CM] Fetching 2022-10-25
+[Comanche/CM] Fetching 2022-10-26
+[Comanche/CM] Fetching 2022-10-27
+[Comanche/CM] Fetching 2022-10-28
+[Comanche/CM] Fetching 2022-10-31
+[Comanche/CM] Fetching 2022-11-01
+[Comanche/CM] Fetching 2022-11-02
+  Checkpoint saved — total rows on disk: 101
+  [Comanche/CM] Progress: 45/87 (51.7%)
+[Comanche/CM] Fetching 2022-11-03
+[Comanche/CM] Fetching 2022-11-04
+[Comanche/CM] Fetching 2022-11-07
+[Comanche/CM] Fetching 2022-11-08
+[Comanche/CM] Fetching 2022-11-09
+[Comanche/CM] Fetching 2022-11-10
+[Comanche/CM] Fetching 2022-11-11
+[Comanche/CM] Fetching 2022-11-14
+[Comanche/CM] Fetching 2022-11-15
+[Comanche/CM] Fetching 2022-11-16
+  Checkpoint saved — total rows on disk: 134
+  [Comanche/CM] Progress: 55/87 (63.2%)
+[Comanche/CM] Fetching 2022-11-17
+[Comanche/CM] Fetching 2022-11-18
+[Comanche/CM] Fetching 2022-11-21
+[Comanche/CM] Fetching 2022-11-22
+[Comanche/CM] Fetching 2022-11-23
+[Comanche/CM] Fetching 2022-11-24
+[Comanche/CM] Fetching 2022-11-25
+[Comanche/CM] Fetching 2022-11-28
+[Comanche/CM] Fetching 2022-11-29
+[Comanche/CM] Fetching 2022-11-30
+  Checkpoint saved — total rows on disk: 154
+  [Comanche/CM] Progress: 65/87 (74.7%)
+[Comanche/CM] Fetching 2022-12-01
+[Comanche/CM] Fetching 2022-12-02
+[Comanche/CM] Fetching 2022-12-05
+[Comanche/CM] Fetching 2022-12-06
+[Comanche/CM] Fetching 2022-12-07
+[Comanche/CM] Fetching 2022-12-08
+[Comanche/CM] Fetching 2022-12-09
+[Comanche/CM] Fetching 2022-12-12
+[Comanche/CM] Fetching 2022-12-13
+[Comanche/CM] Fetching 2022-12-14
+  Checkpoint saved — total rows on disk: 174
+  [Comanche/CM] Progress: 75/87 (86.2%)
+[Comanche/CM] Fetching 2022-12-15
+[Comanche/CM] Fetching 2022-12-16
+[Comanche/CM] Fetching 2022-12-19
+[Comanche/CM] Fetching 2022-12-20
+[Comanche/CM] Fetching 2022-12-21
+[Comanche/CM] Fetching 2022-12-22
+[Comanche/CM] Fetching 2022-12-23
+[Comanche/CM] Fetching 2022-12-26
+[Comanche/CM] Fetching 2022-12-27
+[Comanche/CM] Fetching 2022-12-28
+  Checkpoint saved — total rows on disk: 194
+  [Comanche/CM] Progress: 85/87 (97.7%)
+[Comanche/CM] Fetching 2022-12-29
+[Comanche/CM] Fetching 2022-12-30
+  Checkpoint saved — total rows on disk: 196
+=== Finished Comanche/CM → data/pilot_comanche_CM.parquet ===
+
+
+All pilot combinations processed.
