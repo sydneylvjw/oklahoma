@@ -4,3 +4,4 @@
 .Ruserdata
 .parquet
 data/
+.DS_Store
