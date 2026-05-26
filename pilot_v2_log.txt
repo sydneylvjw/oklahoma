@@ -1,0 +1,828 @@
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+
+Attaching package: ‘arrow’
+
+The following object is masked from ‘package:utils’:
+
+    timestamp
+
+
+Attaching package: ‘xml2’
+
+The following object is masked from ‘package:httr2’:
+
+    url_parse
+
+Warning messages:
+1: package ‘httr2’ was built under R version 4.4.3 
+2: package ‘arrow’ was built under R version 4.4.3 
+3: package ‘fs’ was built under R version 4.4.3 
+4: package ‘purrr’ was built under R version 4.4.3 
+=== Pilot v2: 4 counties × 2 case types ===
+Window: 2022-09-01 to 2022-12-30
+Expected combos: 8
+
+
+=== Starting Tulsa/CF ===
+Chunk directory: data/pilot_chunks/tulsa/CF
+Date range: 2022-09-01 to 2022-12-30 (87 weekdays)
+Already done: 87
+To fetch: 0
+=== Tulsa/CF: already complete ===
+
+=== Starting Tulsa/CM ===
+Chunk directory: data/pilot_chunks/tulsa/CM
+Date range: 2022-09-01 to 2022-12-30 (87 weekdays)
+Already done: 0
+To fetch: 87
+[Tulsa/CM] Fetching 2022-09-01
+[Tulsa/CM] Fetching 2022-09-02
+[Tulsa/CM] Fetching 2022-09-05
+[Tulsa/CM] Fetching 2022-09-06
+[Tulsa/CM] Fetching 2022-09-07
+[Tulsa/CM] Fetching 2022-09-08
+[Tulsa/CM] Fetching 2022-09-09
+[Tulsa/CM] Fetching 2022-09-12
+[Tulsa/CM] Fetching 2022-09-13
+[Tulsa/CM] Fetching 2022-09-14
+  ✓ Chunk 1 written: chunk_0001.parquet (10 rows, 4 cols, 1.3 KB)
+  Progress: 10/87 (11.5%)
+[Tulsa/CM] Fetching 2022-09-15
+[Tulsa/CM] Fetching 2022-09-16
+[Tulsa/CM] Fetching 2022-09-19
+[Tulsa/CM] Fetching 2022-09-20
+[Tulsa/CM] Fetching 2022-09-21
+[Tulsa/CM] Fetching 2022-09-22
+[Tulsa/CM] Fetching 2022-09-23
+[Tulsa/CM] Fetching 2022-09-26
+[Tulsa/CM] Fetching 2022-09-27
+[Tulsa/CM] Fetching 2022-09-28
+  ✓ Chunk 2 written: chunk_0002.parquet (10 rows, 4 cols, 1.3 KB)
+  Progress: 20/87 (23%)
+[Tulsa/CM] Fetching 2022-09-29
+[Tulsa/CM] Fetching 2022-09-30
+[Tulsa/CM] Fetching 2022-10-03
+[Tulsa/CM] Fetching 2022-10-04
+[Tulsa/CM] Fetching 2022-10-05
+[Tulsa/CM] Fetching 2022-10-06
+[Tulsa/CM] Fetching 2022-10-07
+[Tulsa/CM] Fetching 2022-10-10
+[Tulsa/CM] Fetching 2022-10-11
+[Tulsa/CM] Fetching 2022-10-12
+  ✓ Chunk 3 written: chunk_0003.parquet (10 rows, 4 cols, 1.3 KB)
+  Progress: 30/87 (34.5%)
+[Tulsa/CM] Fetching 2022-10-13
+[Tulsa/CM] Fetching 2022-10-14
+[Tulsa/CM] Fetching 2022-10-17
+[Tulsa/CM] Fetching 2022-10-18
+[Tulsa/CM] Fetching 2022-10-19
+[Tulsa/CM] Fetching 2022-10-20
+[Tulsa/CM] Fetching 2022-10-21
+[Tulsa/CM] Fetching 2022-10-24
+[Tulsa/CM] Fetching 2022-10-25
+[Tulsa/CM] Fetching 2022-10-26
+  ✓ Chunk 4 written: chunk_0004.parquet (10 rows, 4 cols, 1.3 KB)
+  Progress: 40/87 (46%)
+[Tulsa/CM] Fetching 2022-10-27
+[Tulsa/CM] Fetching 2022-10-28
+[Tulsa/CM] Fetching 2022-10-31
+[Tulsa/CM] Fetching 2022-11-01
+[Tulsa/CM] Fetching 2022-11-02
+[Tulsa/CM] Fetching 2022-11-03
+[Tulsa/CM] Fetching 2022-11-04
+[Tulsa/CM] Fetching 2022-11-07
+[Tulsa/CM] Fetching 2022-11-08
+[Tulsa/CM] Fetching 2022-11-09
+  ✓ Chunk 5 written: chunk_0005.parquet (10 rows, 4 cols, 1.3 KB)
+  Progress: 50/87 (57.5%)
+[Tulsa/CM] Fetching 2022-11-10
+[Tulsa/CM] Fetching 2022-11-11
+[Tulsa/CM] Fetching 2022-11-14
+[Tulsa/CM] Fetching 2022-11-15
+[Tulsa/CM] Fetching 2022-11-16
+[Tulsa/CM] Fetching 2022-11-17
+[Tulsa/CM] Fetching 2022-11-18
+[Tulsa/CM] Fetching 2022-11-21
+[Tulsa/CM] Fetching 2022-11-22
+[Tulsa/CM] Fetching 2022-11-23
+  ✓ Chunk 6 written: chunk_0006.parquet (10 rows, 4 cols, 1.3 KB)
+  Progress: 60/87 (69%)
+[Tulsa/CM] Fetching 2022-11-24
+[Tulsa/CM] Fetching 2022-11-25
+[Tulsa/CM] Fetching 2022-11-28
+[Tulsa/CM] Fetching 2022-11-29
+[Tulsa/CM] Fetching 2022-11-30
+[Tulsa/CM] Fetching 2022-12-01
+[Tulsa/CM] Fetching 2022-12-02
+[Tulsa/CM] Fetching 2022-12-05
+[Tulsa/CM] Fetching 2022-12-06
+[Tulsa/CM] Fetching 2022-12-07
+  ✓ Chunk 7 written: chunk_0007.parquet (10 rows, 4 cols, 1.3 KB)
+  Progress: 70/87 (80.5%)
+[Tulsa/CM] Fetching 2022-12-08
+[Tulsa/CM] Fetching 2022-12-09
+[Tulsa/CM] Fetching 2022-12-12
+[Tulsa/CM] Fetching 2022-12-13
+[Tulsa/CM] Fetching 2022-12-14
+[Tulsa/CM] Fetching 2022-12-15
+[Tulsa/CM] Fetching 2022-12-16
+[Tulsa/CM] Fetching 2022-12-19
+[Tulsa/CM] Fetching 2022-12-20
+[Tulsa/CM] Fetching 2022-12-21
+  ✓ Chunk 8 written: chunk_0008.parquet (10 rows, 4 cols, 1.3 KB)
+  Progress: 80/87 (92%)
+[Tulsa/CM] Fetching 2022-12-22
+[Tulsa/CM] Fetching 2022-12-23
+[Tulsa/CM] Fetching 2022-12-26
+[Tulsa/CM] Fetching 2022-12-27
+[Tulsa/CM] Fetching 2022-12-28
+[Tulsa/CM] Fetching 2022-12-29
+[Tulsa/CM] Fetching 2022-12-30
+  ✓ Chunk 9 written: chunk_0009.parquet (7 rows, 4 cols, 1.3 KB)
+=== Finished Tulsa/CM ===
+
+
+=== Starting Cleveland/CF ===
+Chunk directory: data/pilot_chunks/cleveland/CF
+Date range: 2022-09-01 to 2022-12-30 (87 weekdays)
+Already done: 0
+To fetch: 87
+[Cleveland/CF] Fetching 2022-09-01
+[Cleveland/CF] Fetching 2022-09-02
+[Cleveland/CF] Fetching 2022-09-05
+[Cleveland/CF] Fetching 2022-09-06
+[Cleveland/CF] Fetching 2022-09-07
+[Cleveland/CF] Fetching 2022-09-08
+[Cleveland/CF] Fetching 2022-09-09
+[Cleveland/CF] Fetching 2022-09-12
+[Cleveland/CF] Fetching 2022-09-13
+[Cleveland/CF] Fetching 2022-09-14
+  ✓ Chunk 1 written: chunk_0001.parquet (10 rows, 4 cols, 1.3 KB)
+  Progress: 10/87 (11.5%)
+[Cleveland/CF] Fetching 2022-09-15
+[Cleveland/CF] Fetching 2022-09-16
+[Cleveland/CF] Fetching 2022-09-19
+[Cleveland/CF] Fetching 2022-09-20
+[Cleveland/CF] Fetching 2022-09-21
+[Cleveland/CF] Fetching 2022-09-22
+[Cleveland/CF] Fetching 2022-09-23
+[Cleveland/CF] Fetching 2022-09-26
+[Cleveland/CF] Fetching 2022-09-27
+[Cleveland/CF] Fetching 2022-09-28
+  ✓ Chunk 2 written: chunk_0002.parquet (10 rows, 4 cols, 1.3 KB)
+  Progress: 20/87 (23%)
+[Cleveland/CF] Fetching 2022-09-29
+[Cleveland/CF] Fetching 2022-09-30
+[Cleveland/CF] Fetching 2022-10-03
+[Cleveland/CF] Fetching 2022-10-04
+[Cleveland/CF] Fetching 2022-10-05
+[Cleveland/CF] Fetching 2022-10-06
+[Cleveland/CF] Fetching 2022-10-07
+[Cleveland/CF] Fetching 2022-10-10
+[Cleveland/CF] Fetching 2022-10-11
+[Cleveland/CF] Fetching 2022-10-12
+  ✓ Chunk 3 written: chunk_0003.parquet (10 rows, 4 cols, 1.3 KB)
+  Progress: 30/87 (34.5%)
+[Cleveland/CF] Fetching 2022-10-13
+[Cleveland/CF] Fetching 2022-10-14
+[Cleveland/CF] Fetching 2022-10-17
+[Cleveland/CF] Fetching 2022-10-18
+[Cleveland/CF] Fetching 2022-10-19
+[Cleveland/CF] Fetching 2022-10-20
+[Cleveland/CF] Fetching 2022-10-21
+[Cleveland/CF] Fetching 2022-10-24
+[Cleveland/CF] Fetching 2022-10-25
+[Cleveland/CF] Fetching 2022-10-26
+  ✓ Chunk 4 written: chunk_0004.parquet (10 rows, 4 cols, 1.3 KB)
+  Progress: 40/87 (46%)
+[Cleveland/CF] Fetching 2022-10-27
+[Cleveland/CF] Fetching 2022-10-28
+[Cleveland/CF] Fetching 2022-10-31
+[Cleveland/CF] Fetching 2022-11-01
+[Cleveland/CF] Fetching 2022-11-02
+[Cleveland/CF] Fetching 2022-11-03
+[Cleveland/CF] Fetching 2022-11-04
+[Cleveland/CF] Fetching 2022-11-07
+[Cleveland/CF] Fetching 2022-11-08
+[Cleveland/CF] Fetching 2022-11-09
+  ✓ Chunk 5 written: chunk_0005.parquet (10 rows, 4 cols, 1.3 KB)
+  Progress: 50/87 (57.5%)
+[Cleveland/CF] Fetching 2022-11-10
+[Cleveland/CF] Fetching 2022-11-11
+[Cleveland/CF] Fetching 2022-11-14
+[Cleveland/CF] Fetching 2022-11-15
+[Cleveland/CF] Fetching 2022-11-16
+[Cleveland/CF] Fetching 2022-11-17
+[Cleveland/CF] Fetching 2022-11-18
+[Cleveland/CF] Fetching 2022-11-21
+[Cleveland/CF] Fetching 2022-11-22
+[Cleveland/CF] Fetching 2022-11-23
+  ✓ Chunk 6 written: chunk_0006.parquet (10 rows, 4 cols, 1.3 KB)
+  Progress: 60/87 (69%)
+[Cleveland/CF] Fetching 2022-11-24
+[Cleveland/CF] Fetching 2022-11-25
+[Cleveland/CF] Fetching 2022-11-28
+[Cleveland/CF] Fetching 2022-11-29
+[Cleveland/CF] Fetching 2022-11-30
+[Cleveland/CF] Fetching 2022-12-01
+[Cleveland/CF] Fetching 2022-12-02
+[Cleveland/CF] Fetching 2022-12-05
+[Cleveland/CF] Fetching 2022-12-06
+[Cleveland/CF] Fetching 2022-12-07
+  ✓ Chunk 7 written: chunk_0007.parquet (10 rows, 4 cols, 1.3 KB)
+  Progress: 70/87 (80.5%)
+[Cleveland/CF] Fetching 2022-12-08
+[Cleveland/CF] Fetching 2022-12-09
+[Cleveland/CF] Fetching 2022-12-12
+[Cleveland/CF] Fetching 2022-12-13
+[Cleveland/CF] Fetching 2022-12-14
+[Cleveland/CF] Fetching 2022-12-15
+[Cleveland/CF] Fetching 2022-12-16
+[Cleveland/CF] Fetching 2022-12-19
+[Cleveland/CF] Fetching 2022-12-20
+[Cleveland/CF] Fetching 2022-12-21
+  ✓ Chunk 8 written: chunk_0008.parquet (10 rows, 4 cols, 1.3 KB)
+  Progress: 80/87 (92%)
+[Cleveland/CF] Fetching 2022-12-22
+[Cleveland/CF] Fetching 2022-12-23
+[Cleveland/CF] Fetching 2022-12-26
+[Cleveland/CF] Fetching 2022-12-27
+[Cleveland/CF] Fetching 2022-12-28
+[Cleveland/CF] Fetching 2022-12-29
+[Cleveland/CF] Fetching 2022-12-30
+  ✓ Chunk 9 written: chunk_0009.parquet (7 rows, 4 cols, 1.3 KB)
+=== Finished Cleveland/CF ===
+
+
+=== Starting Cleveland/CM ===
+Chunk directory: data/pilot_chunks/cleveland/CM
+Date range: 2022-09-01 to 2022-12-30 (87 weekdays)
+Already done: 0
+To fetch: 87
+[Cleveland/CM] Fetching 2022-09-01
+[Cleveland/CM] Fetching 2022-09-02
+[Cleveland/CM] Fetching 2022-09-05
+[Cleveland/CM] Fetching 2022-09-06
+[Cleveland/CM] Fetching 2022-09-07
+[Cleveland/CM] Fetching 2022-09-08
+[Cleveland/CM] Fetching 2022-09-09
+[Cleveland/CM] Fetching 2022-09-12
+[Cleveland/CM] Fetching 2022-09-13
+[Cleveland/CM] Fetching 2022-09-14
+  ✓ Chunk 1 written: chunk_0001.parquet (10 rows, 4 cols, 1.3 KB)
+  Progress: 10/87 (11.5%)
+[Cleveland/CM] Fetching 2022-09-15
+[Cleveland/CM] Fetching 2022-09-16
+[Cleveland/CM] Fetching 2022-09-19
+[Cleveland/CM] Fetching 2022-09-20
+[Cleveland/CM] Fetching 2022-09-21
+[Cleveland/CM] Fetching 2022-09-22
+[Cleveland/CM] Fetching 2022-09-23
+[Cleveland/CM] Fetching 2022-09-26
+[Cleveland/CM] Fetching 2022-09-27
+[Cleveland/CM] Fetching 2022-09-28
+  ✓ Chunk 2 written: chunk_0002.parquet (10 rows, 4 cols, 1.3 KB)
+  Progress: 20/87 (23%)
+[Cleveland/CM] Fetching 2022-09-29
+[Cleveland/CM] Fetching 2022-09-30
+[Cleveland/CM] Fetching 2022-10-03
+[Cleveland/CM] Fetching 2022-10-04
+[Cleveland/CM] Fetching 2022-10-05
+[Cleveland/CM] Fetching 2022-10-06
+[Cleveland/CM] Fetching 2022-10-07
+[Cleveland/CM] Fetching 2022-10-10
+[Cleveland/CM] Fetching 2022-10-11
+[Cleveland/CM] Fetching 2022-10-12
+  ✓ Chunk 3 written: chunk_0003.parquet (10 rows, 4 cols, 1.3 KB)
+  Progress: 30/87 (34.5%)
+[Cleveland/CM] Fetching 2022-10-13
+[Cleveland/CM] Fetching 2022-10-14
+[Cleveland/CM] Fetching 2022-10-17
+[Cleveland/CM] Fetching 2022-10-18
+[Cleveland/CM] Fetching 2022-10-19
+[Cleveland/CM] Fetching 2022-10-20
+[Cleveland/CM] Fetching 2022-10-21
+[Cleveland/CM] Fetching 2022-10-24
+[Cleveland/CM] Fetching 2022-10-25
+[Cleveland/CM] Fetching 2022-10-26
+  ✓ Chunk 4 written: chunk_0004.parquet (10 rows, 4 cols, 1.3 KB)
+  Progress: 40/87 (46%)
+[Cleveland/CM] Fetching 2022-10-27
+[Cleveland/CM] Fetching 2022-10-28
+[Cleveland/CM] Fetching 2022-10-31
+[Cleveland/CM] Fetching 2022-11-01
+[Cleveland/CM] Fetching 2022-11-02
+[Cleveland/CM] Fetching 2022-11-03
+[Cleveland/CM] Fetching 2022-11-04
+[Cleveland/CM] Fetching 2022-11-07
+[Cleveland/CM] Fetching 2022-11-08
+[Cleveland/CM] Fetching 2022-11-09
+  ✓ Chunk 5 written: chunk_0005.parquet (10 rows, 4 cols, 1.3 KB)
+  Progress: 50/87 (57.5%)
+[Cleveland/CM] Fetching 2022-11-10
+[Cleveland/CM] Fetching 2022-11-11
+[Cleveland/CM] Fetching 2022-11-14
+[Cleveland/CM] Fetching 2022-11-15
+[Cleveland/CM] Fetching 2022-11-16
+[Cleveland/CM] Fetching 2022-11-17
+[Cleveland/CM] Fetching 2022-11-18
+[Cleveland/CM] Fetching 2022-11-21
+[Cleveland/CM] Fetching 2022-11-22
+[Cleveland/CM] Fetching 2022-11-23
+  ✓ Chunk 6 written: chunk_0006.parquet (10 rows, 4 cols, 1.3 KB)
+  Progress: 60/87 (69%)
+[Cleveland/CM] Fetching 2022-11-24
+[Cleveland/CM] Fetching 2022-11-25
+[Cleveland/CM] Fetching 2022-11-28
+[Cleveland/CM] Fetching 2022-11-29
+[Cleveland/CM] Fetching 2022-11-30
+[Cleveland/CM] Fetching 2022-12-01
+[Cleveland/CM] Fetching 2022-12-02
+[Cleveland/CM] Fetching 2022-12-05
+[Cleveland/CM] Fetching 2022-12-06
+[Cleveland/CM] Fetching 2022-12-07
+  ✓ Chunk 7 written: chunk_0007.parquet (10 rows, 4 cols, 1.3 KB)
+  Progress: 70/87 (80.5%)
+[Cleveland/CM] Fetching 2022-12-08
+[Cleveland/CM] Fetching 2022-12-09
+[Cleveland/CM] Fetching 2022-12-12
+[Cleveland/CM] Fetching 2022-12-13
+[Cleveland/CM] Fetching 2022-12-14
+[Cleveland/CM] Fetching 2022-12-15
+[Cleveland/CM] Fetching 2022-12-16
+[Cleveland/CM] Fetching 2022-12-19
+[Cleveland/CM] Fetching 2022-12-20
+[Cleveland/CM] Fetching 2022-12-21
+  ✓ Chunk 8 written: chunk_0008.parquet (10 rows, 4 cols, 1.3 KB)
+  Progress: 80/87 (92%)
+[Cleveland/CM] Fetching 2022-12-22
+[Cleveland/CM] Fetching 2022-12-23
+[Cleveland/CM] Fetching 2022-12-26
+[Cleveland/CM] Fetching 2022-12-27
+[Cleveland/CM] Fetching 2022-12-28
+[Cleveland/CM] Fetching 2022-12-29
+[Cleveland/CM] Fetching 2022-12-30
+  ✓ Chunk 9 written: chunk_0009.parquet (7 rows, 4 cols, 1.3 KB)
+=== Finished Cleveland/CM ===
+
+
+=== Starting Garfield/CF ===
+Chunk directory: data/pilot_chunks/garfield/CF
+Date range: 2022-09-01 to 2022-12-30 (87 weekdays)
+Already done: 0
+To fetch: 87
+[Garfield/CF] Fetching 2022-09-01
+[Garfield/CF] Fetching 2022-09-02
+[Garfield/CF] Fetching 2022-09-05
+[Garfield/CF] Fetching 2022-09-06
+[Garfield/CF] Fetching 2022-09-07
+[Garfield/CF] Fetching 2022-09-08
+[Garfield/CF] Fetching 2022-09-09
+[Garfield/CF] Fetching 2022-09-12
+[Garfield/CF] Fetching 2022-09-13
+[Garfield/CF] Fetching 2022-09-14
+  ✓ Chunk 1 written: chunk_0001.parquet (10 rows, 4 cols, 1.3 KB)
+  Progress: 10/87 (11.5%)
+[Garfield/CF] Fetching 2022-09-15
+[Garfield/CF] Fetching 2022-09-16
+[Garfield/CF] Fetching 2022-09-19
+[Garfield/CF] Fetching 2022-09-20
+[Garfield/CF] Fetching 2022-09-21
+[Garfield/CF] Fetching 2022-09-22
+[Garfield/CF] Fetching 2022-09-23
+[Garfield/CF] Fetching 2022-09-26
+[Garfield/CF] Fetching 2022-09-27
+[Garfield/CF] Fetching 2022-09-28
+  ✓ Chunk 2 written: chunk_0002.parquet (10 rows, 4 cols, 1.3 KB)
+  Progress: 20/87 (23%)
+[Garfield/CF] Fetching 2022-09-29
+[Garfield/CF] Fetching 2022-09-30
+[Garfield/CF] Fetching 2022-10-03
+[Garfield/CF] Fetching 2022-10-04
+[Garfield/CF] Fetching 2022-10-05
+[Garfield/CF] Fetching 2022-10-06
+[Garfield/CF] Fetching 2022-10-07
+[Garfield/CF] Fetching 2022-10-10
+[Garfield/CF] Fetching 2022-10-11
+[Garfield/CF] Fetching 2022-10-12
+  ✓ Chunk 3 written: chunk_0003.parquet (10 rows, 4 cols, 1.3 KB)
+  Progress: 30/87 (34.5%)
+[Garfield/CF] Fetching 2022-10-13
+[Garfield/CF] Fetching 2022-10-14
+[Garfield/CF] Fetching 2022-10-17
+[Garfield/CF] Fetching 2022-10-18
+[Garfield/CF] Fetching 2022-10-19
+[Garfield/CF] Fetching 2022-10-20
+[Garfield/CF] Fetching 2022-10-21
+[Garfield/CF] Fetching 2022-10-24
+[Garfield/CF] Fetching 2022-10-25
+[Garfield/CF] Fetching 2022-10-26
+  ✓ Chunk 4 written: chunk_0004.parquet (10 rows, 4 cols, 1.3 KB)
+  Progress: 40/87 (46%)
+[Garfield/CF] Fetching 2022-10-27
+[Garfield/CF] Fetching 2022-10-28
+[Garfield/CF] Fetching 2022-10-31
+[Garfield/CF] Fetching 2022-11-01
+[Garfield/CF] Fetching 2022-11-02
+[Garfield/CF] Fetching 2022-11-03
+[Garfield/CF] Fetching 2022-11-04
+[Garfield/CF] Fetching 2022-11-07
+[Garfield/CF] Fetching 2022-11-08
+[Garfield/CF] Fetching 2022-11-09
+  ✓ Chunk 5 written: chunk_0005.parquet (10 rows, 4 cols, 1.3 KB)
+  Progress: 50/87 (57.5%)
+[Garfield/CF] Fetching 2022-11-10
+[Garfield/CF] Fetching 2022-11-11
+[Garfield/CF] Fetching 2022-11-14
+[Garfield/CF] Fetching 2022-11-15
+[Garfield/CF] Fetching 2022-11-16
+[Garfield/CF] Fetching 2022-11-17
+[Garfield/CF] Fetching 2022-11-18
+[Garfield/CF] Fetching 2022-11-21
+[Garfield/CF] Fetching 2022-11-22
+[Garfield/CF] Fetching 2022-11-23
+  ✓ Chunk 6 written: chunk_0006.parquet (10 rows, 4 cols, 1.3 KB)
+  Progress: 60/87 (69%)
+[Garfield/CF] Fetching 2022-11-24
+[Garfield/CF] Fetching 2022-11-25
+[Garfield/CF] Fetching 2022-11-28
+[Garfield/CF] Fetching 2022-11-29
+[Garfield/CF] Fetching 2022-11-30
+[Garfield/CF] Fetching 2022-12-01
+[Garfield/CF] Fetching 2022-12-02
+[Garfield/CF] Fetching 2022-12-05
+[Garfield/CF] Fetching 2022-12-06
+[Garfield/CF] Fetching 2022-12-07
+  ✓ Chunk 7 written: chunk_0007.parquet (10 rows, 4 cols, 1.3 KB)
+  Progress: 70/87 (80.5%)
+[Garfield/CF] Fetching 2022-12-08
+[Garfield/CF] Fetching 2022-12-09
+[Garfield/CF] Fetching 2022-12-12
+[Garfield/CF] Fetching 2022-12-13
+[Garfield/CF] Fetching 2022-12-14
+[Garfield/CF] Fetching 2022-12-15
+[Garfield/CF] Fetching 2022-12-16
+[Garfield/CF] Fetching 2022-12-19
+[Garfield/CF] Fetching 2022-12-20
+[Garfield/CF] Fetching 2022-12-21
+  ✓ Chunk 8 written: chunk_0008.parquet (10 rows, 4 cols, 1.3 KB)
+  Progress: 80/87 (92%)
+[Garfield/CF] Fetching 2022-12-22
+[Garfield/CF] Fetching 2022-12-23
+[Garfield/CF] Fetching 2022-12-26
+[Garfield/CF] Fetching 2022-12-27
+[Garfield/CF] Fetching 2022-12-28
+[Garfield/CF] Fetching 2022-12-29
+[Garfield/CF] Fetching 2022-12-30
+  ✓ Chunk 9 written: chunk_0009.parquet (7 rows, 4 cols, 1.3 KB)
+=== Finished Garfield/CF ===
+
+
+=== Starting Garfield/CM ===
+Chunk directory: data/pilot_chunks/garfield/CM
+Date range: 2022-09-01 to 2022-12-30 (87 weekdays)
+Already done: 0
+To fetch: 87
+[Garfield/CM] Fetching 2022-09-01
+[Garfield/CM] Fetching 2022-09-02
+[Garfield/CM] Fetching 2022-09-05
+[Garfield/CM] Fetching 2022-09-06
+[Garfield/CM] Fetching 2022-09-07
+[Garfield/CM] Fetching 2022-09-08
+[Garfield/CM] Fetching 2022-09-09
+[Garfield/CM] Fetching 2022-09-12
+[Garfield/CM] Fetching 2022-09-13
+[Garfield/CM] Fetching 2022-09-14
+  ✓ Chunk 1 written: chunk_0001.parquet (10 rows, 4 cols, 1.3 KB)
+  Progress: 10/87 (11.5%)
+[Garfield/CM] Fetching 2022-09-15
+[Garfield/CM] Fetching 2022-09-16
+[Garfield/CM] Fetching 2022-09-19
+[Garfield/CM] Fetching 2022-09-20
+[Garfield/CM] Fetching 2022-09-21
+[Garfield/CM] Fetching 2022-09-22
+[Garfield/CM] Fetching 2022-09-23
+[Garfield/CM] Fetching 2022-09-26
+[Garfield/CM] Fetching 2022-09-27
+[Garfield/CM] Fetching 2022-09-28
+  ✓ Chunk 2 written: chunk_0002.parquet (10 rows, 4 cols, 1.3 KB)
+  Progress: 20/87 (23%)
+[Garfield/CM] Fetching 2022-09-29
+[Garfield/CM] Fetching 2022-09-30
+[Garfield/CM] Fetching 2022-10-03
+[Garfield/CM] Fetching 2022-10-04
+[Garfield/CM] Fetching 2022-10-05
+[Garfield/CM] Fetching 2022-10-06
+[Garfield/CM] Fetching 2022-10-07
+[Garfield/CM] Fetching 2022-10-10
+[Garfield/CM] Fetching 2022-10-11
+[Garfield/CM] Fetching 2022-10-12
+  ✓ Chunk 3 written: chunk_0003.parquet (10 rows, 4 cols, 1.3 KB)
+  Progress: 30/87 (34.5%)
+[Garfield/CM] Fetching 2022-10-13
+[Garfield/CM] Fetching 2022-10-14
+[Garfield/CM] Fetching 2022-10-17
+[Garfield/CM] Fetching 2022-10-18
+[Garfield/CM] Fetching 2022-10-19
+[Garfield/CM] Fetching 2022-10-20
+[Garfield/CM] Fetching 2022-10-21
+[Garfield/CM] Fetching 2022-10-24
+[Garfield/CM] Fetching 2022-10-25
+[Garfield/CM] Fetching 2022-10-26
+  ✓ Chunk 4 written: chunk_0004.parquet (10 rows, 4 cols, 1.3 KB)
+  Progress: 40/87 (46%)
+[Garfield/CM] Fetching 2022-10-27
+[Garfield/CM] Fetching 2022-10-28
+[Garfield/CM] Fetching 2022-10-31
+[Garfield/CM] Fetching 2022-11-01
+[Garfield/CM] Fetching 2022-11-02
+[Garfield/CM] Fetching 2022-11-03
+[Garfield/CM] Fetching 2022-11-04
+[Garfield/CM] Fetching 2022-11-07
+[Garfield/CM] Fetching 2022-11-08
+[Garfield/CM] Fetching 2022-11-09
+  ✓ Chunk 5 written: chunk_0005.parquet (10 rows, 4 cols, 1.3 KB)
+  Progress: 50/87 (57.5%)
+[Garfield/CM] Fetching 2022-11-10
+[Garfield/CM] Fetching 2022-11-11
+[Garfield/CM] Fetching 2022-11-14
+[Garfield/CM] Fetching 2022-11-15
+[Garfield/CM] Fetching 2022-11-16
+[Garfield/CM] Fetching 2022-11-17
+[Garfield/CM] Fetching 2022-11-18
+[Garfield/CM] Fetching 2022-11-21
+[Garfield/CM] Fetching 2022-11-22
+[Garfield/CM] Fetching 2022-11-23
+  ✓ Chunk 6 written: chunk_0006.parquet (10 rows, 4 cols, 1.3 KB)
+  Progress: 60/87 (69%)
+[Garfield/CM] Fetching 2022-11-24
+[Garfield/CM] Fetching 2022-11-25
+[Garfield/CM] Fetching 2022-11-28
+[Garfield/CM] Fetching 2022-11-29
+[Garfield/CM] Fetching 2022-11-30
+[Garfield/CM] Fetching 2022-12-01
+[Garfield/CM] Fetching 2022-12-02
+[Garfield/CM] Fetching 2022-12-05
+[Garfield/CM] Fetching 2022-12-06
+[Garfield/CM] Fetching 2022-12-07
+  ✓ Chunk 7 written: chunk_0007.parquet (10 rows, 4 cols, 1.3 KB)
+  Progress: 70/87 (80.5%)
+[Garfield/CM] Fetching 2022-12-08
+[Garfield/CM] Fetching 2022-12-09
+[Garfield/CM] Fetching 2022-12-12
+[Garfield/CM] Fetching 2022-12-13
+[Garfield/CM] Fetching 2022-12-14
+[Garfield/CM] Fetching 2022-12-15
+[Garfield/CM] Fetching 2022-12-16
+[Garfield/CM] Fetching 2022-12-19
+[Garfield/CM] Fetching 2022-12-20
+[Garfield/CM] Fetching 2022-12-21
+  ✓ Chunk 8 written: chunk_0008.parquet (10 rows, 4 cols, 1.3 KB)
+  Progress: 80/87 (92%)
+[Garfield/CM] Fetching 2022-12-22
+[Garfield/CM] Fetching 2022-12-23
+[Garfield/CM] Fetching 2022-12-26
+[Garfield/CM] Fetching 2022-12-27
+[Garfield/CM] Fetching 2022-12-28
+[Garfield/CM] Fetching 2022-12-29
+[Garfield/CM] Fetching 2022-12-30
+  ✓ Chunk 9 written: chunk_0009.parquet (7 rows, 4 cols, 1.3 KB)
+=== Finished Garfield/CM ===
+
+
+=== Starting Comanche/CF ===
+Chunk directory: data/pilot_chunks/comanche/CF
+Date range: 2022-09-01 to 2022-12-30 (87 weekdays)
+Already done: 0
+To fetch: 87
+[Comanche/CF] Fetching 2022-09-01
+[Comanche/CF] Fetching 2022-09-02
+[Comanche/CF] Fetching 2022-09-05
+[Comanche/CF] Fetching 2022-09-06
+[Comanche/CF] Fetching 2022-09-07
+[Comanche/CF] Fetching 2022-09-08
+[Comanche/CF] Fetching 2022-09-09
+[Comanche/CF] Fetching 2022-09-12
+[Comanche/CF] Fetching 2022-09-13
+[Comanche/CF] Fetching 2022-09-14
+  ✓ Chunk 1 written: chunk_0001.parquet (10 rows, 4 cols, 1.3 KB)
+  Progress: 10/87 (11.5%)
+[Comanche/CF] Fetching 2022-09-15
+[Comanche/CF] Fetching 2022-09-16
+[Comanche/CF] Fetching 2022-09-19
+[Comanche/CF] Fetching 2022-09-20
+[Comanche/CF] Fetching 2022-09-21
+[Comanche/CF] Fetching 2022-09-22
+[Comanche/CF] Fetching 2022-09-23
+[Comanche/CF] Fetching 2022-09-26
+[Comanche/CF] Fetching 2022-09-27
+[Comanche/CF] Fetching 2022-09-28
+  ✓ Chunk 2 written: chunk_0002.parquet (10 rows, 4 cols, 1.3 KB)
+  Progress: 20/87 (23%)
+[Comanche/CF] Fetching 2022-09-29
+[Comanche/CF] Fetching 2022-09-30
+[Comanche/CF] Fetching 2022-10-03
+[Comanche/CF] Fetching 2022-10-04
+[Comanche/CF] Fetching 2022-10-05
+[Comanche/CF] Fetching 2022-10-06
+[Comanche/CF] Fetching 2022-10-07
+[Comanche/CF] Fetching 2022-10-10
+[Comanche/CF] Fetching 2022-10-11
+[Comanche/CF] Fetching 2022-10-12
+  ✓ Chunk 3 written: chunk_0003.parquet (10 rows, 4 cols, 1.3 KB)
+  Progress: 30/87 (34.5%)
+[Comanche/CF] Fetching 2022-10-13
+[Comanche/CF] Fetching 2022-10-14
+[Comanche/CF] Fetching 2022-10-17
+[Comanche/CF] Fetching 2022-10-18
+[Comanche/CF] Fetching 2022-10-19
+[Comanche/CF] Fetching 2022-10-20
+[Comanche/CF] Fetching 2022-10-21
+[Comanche/CF] Fetching 2022-10-24
+[Comanche/CF] Fetching 2022-10-25
+[Comanche/CF] Fetching 2022-10-26
+  ✓ Chunk 4 written: chunk_0004.parquet (10 rows, 4 cols, 1.3 KB)
+  Progress: 40/87 (46%)
+[Comanche/CF] Fetching 2022-10-27
+[Comanche/CF] Fetching 2022-10-28
+[Comanche/CF] Fetching 2022-10-31
+[Comanche/CF] Fetching 2022-11-01
+[Comanche/CF] Fetching 2022-11-02
+[Comanche/CF] Fetching 2022-11-03
+[Comanche/CF] Fetching 2022-11-04
+[Comanche/CF] Fetching 2022-11-07
+[Comanche/CF] Fetching 2022-11-08
+[Comanche/CF] Fetching 2022-11-09
+  ✓ Chunk 5 written: chunk_0005.parquet (10 rows, 4 cols, 1.3 KB)
+  Progress: 50/87 (57.5%)
+[Comanche/CF] Fetching 2022-11-10
+[Comanche/CF] Fetching 2022-11-11
+[Comanche/CF] Fetching 2022-11-14
+[Comanche/CF] Fetching 2022-11-15
+[Comanche/CF] Fetching 2022-11-16
+[Comanche/CF] Fetching 2022-11-17
+[Comanche/CF] Fetching 2022-11-18
+[Comanche/CF] Fetching 2022-11-21
+[Comanche/CF] Fetching 2022-11-22
+[Comanche/CF] Fetching 2022-11-23
+  ✓ Chunk 6 written: chunk_0006.parquet (10 rows, 4 cols, 1.3 KB)
+  Progress: 60/87 (69%)
+[Comanche/CF] Fetching 2022-11-24
+[Comanche/CF] Fetching 2022-11-25
+[Comanche/CF] Fetching 2022-11-28
+[Comanche/CF] Fetching 2022-11-29
+[Comanche/CF] Fetching 2022-11-30
+[Comanche/CF] Fetching 2022-12-01
+[Comanche/CF] Fetching 2022-12-02
+[Comanche/CF] Fetching 2022-12-05
+[Comanche/CF] Fetching 2022-12-06
+[Comanche/CF] Fetching 2022-12-07
+  ✓ Chunk 7 written: chunk_0007.parquet (10 rows, 4 cols, 1.3 KB)
+  Progress: 70/87 (80.5%)
+[Comanche/CF] Fetching 2022-12-08
+[Comanche/CF] Fetching 2022-12-09
+[Comanche/CF] Fetching 2022-12-12
+[Comanche/CF] Fetching 2022-12-13
+[Comanche/CF] Fetching 2022-12-14
+[Comanche/CF] Fetching 2022-12-15
+[Comanche/CF] Fetching 2022-12-16
+[Comanche/CF] Fetching 2022-12-19
+[Comanche/CF] Fetching 2022-12-20
+[Comanche/CF] Fetching 2022-12-21
+  ✓ Chunk 8 written: chunk_0008.parquet (10 rows, 4 cols, 1.3 KB)
+  Progress: 80/87 (92%)
+[Comanche/CF] Fetching 2022-12-22
+[Comanche/CF] Fetching 2022-12-23
+[Comanche/CF] Fetching 2022-12-26
+[Comanche/CF] Fetching 2022-12-27
+[Comanche/CF] Fetching 2022-12-28
+[Comanche/CF] Fetching 2022-12-29
+[Comanche/CF] Fetching 2022-12-30
+  ✓ Chunk 9 written: chunk_0009.parquet (7 rows, 4 cols, 1.3 KB)
+=== Finished Comanche/CF ===
+
+
+=== Starting Comanche/CM ===
+Chunk directory: data/pilot_chunks/comanche/CM
+Date range: 2022-09-01 to 2022-12-30 (87 weekdays)
+Already done: 0
+To fetch: 87
+[Comanche/CM] Fetching 2022-09-01
+[Comanche/CM] Fetching 2022-09-02
+[Comanche/CM] Fetching 2022-09-05
+[Comanche/CM] Fetching 2022-09-06
+[Comanche/CM] Fetching 2022-09-07
+[Comanche/CM] Fetching 2022-09-08
+[Comanche/CM] Fetching 2022-09-09
+[Comanche/CM] Fetching 2022-09-12
+[Comanche/CM] Fetching 2022-09-13
+[Comanche/CM] Fetching 2022-09-14
+  ✓ Chunk 1 written: chunk_0001.parquet (10 rows, 4 cols, 1.3 KB)
+  Progress: 10/87 (11.5%)
+[Comanche/CM] Fetching 2022-09-15
+[Comanche/CM] Fetching 2022-09-16
+[Comanche/CM] Fetching 2022-09-19
+[Comanche/CM] Fetching 2022-09-20
+[Comanche/CM] Fetching 2022-09-21
+[Comanche/CM] Fetching 2022-09-22
+[Comanche/CM] Fetching 2022-09-23
+[Comanche/CM] Fetching 2022-09-26
+[Comanche/CM] Fetching 2022-09-27
+[Comanche/CM] Fetching 2022-09-28
+  ✓ Chunk 2 written: chunk_0002.parquet (10 rows, 4 cols, 1.3 KB)
+  Progress: 20/87 (23%)
+[Comanche/CM] Fetching 2022-09-29
+[Comanche/CM] Fetching 2022-09-30
+[Comanche/CM] Fetching 2022-10-03
+[Comanche/CM] Fetching 2022-10-04
+[Comanche/CM] Fetching 2022-10-05
+[Comanche/CM] Fetching 2022-10-06
+[Comanche/CM] Fetching 2022-10-07
+[Comanche/CM] Fetching 2022-10-10
+[Comanche/CM] Fetching 2022-10-11
+[Comanche/CM] Fetching 2022-10-12
+  ✓ Chunk 3 written: chunk_0003.parquet (10 rows, 4 cols, 1.3 KB)
+  Progress: 30/87 (34.5%)
+[Comanche/CM] Fetching 2022-10-13
+[Comanche/CM] Fetching 2022-10-14
+[Comanche/CM] Fetching 2022-10-17
+[Comanche/CM] Fetching 2022-10-18
+[Comanche/CM] Fetching 2022-10-19
+[Comanche/CM] Fetching 2022-10-20
+[Comanche/CM] Fetching 2022-10-21
+[Comanche/CM] Fetching 2022-10-24
+[Comanche/CM] Fetching 2022-10-25
+[Comanche/CM] Fetching 2022-10-26
+  ✓ Chunk 4 written: chunk_0004.parquet (10 rows, 4 cols, 1.3 KB)
+  Progress: 40/87 (46%)
+[Comanche/CM] Fetching 2022-10-27
+[Comanche/CM] Fetching 2022-10-28
+[Comanche/CM] Fetching 2022-10-31
+[Comanche/CM] Fetching 2022-11-01
+[Comanche/CM] Fetching 2022-11-02
+[Comanche/CM] Fetching 2022-11-03
+[Comanche/CM] Fetching 2022-11-04
+[Comanche/CM] Fetching 2022-11-07
+[Comanche/CM] Fetching 2022-11-08
+[Comanche/CM] Fetching 2022-11-09
+  ✓ Chunk 5 written: chunk_0005.parquet (10 rows, 4 cols, 1.3 KB)
+  Progress: 50/87 (57.5%)
+[Comanche/CM] Fetching 2022-11-10
+[Comanche/CM] Fetching 2022-11-11
+[Comanche/CM] Fetching 2022-11-14
+[Comanche/CM] Fetching 2022-11-15
+[Comanche/CM] Fetching 2022-11-16
+[Comanche/CM] Fetching 2022-11-17
+[Comanche/CM] Fetching 2022-11-18
+[Comanche/CM] Fetching 2022-11-21
+[Comanche/CM] Fetching 2022-11-22
+[Comanche/CM] Fetching 2022-11-23
+  ✓ Chunk 6 written: chunk_0006.parquet (10 rows, 4 cols, 1.3 KB)
+  Progress: 60/87 (69%)
+[Comanche/CM] Fetching 2022-11-24
+[Comanche/CM] Fetching 2022-11-25
+[Comanche/CM] Fetching 2022-11-28
+[Comanche/CM] Fetching 2022-11-29
+[Comanche/CM] Fetching 2022-11-30
+[Comanche/CM] Fetching 2022-12-01
+[Comanche/CM] Fetching 2022-12-02
+[Comanche/CM] Fetching 2022-12-05
+[Comanche/CM] Fetching 2022-12-06
+[Comanche/CM] Fetching 2022-12-07
+  ✓ Chunk 7 written: chunk_0007.parquet (10 rows, 4 cols, 1.3 KB)
+  Progress: 70/87 (80.5%)
+[Comanche/CM] Fetching 2022-12-08
+[Comanche/CM] Fetching 2022-12-09
+[Comanche/CM] Fetching 2022-12-12
+[Comanche/CM] Fetching 2022-12-13
+[Comanche/CM] Fetching 2022-12-14
+[Comanche/CM] Fetching 2022-12-15
+[Comanche/CM] Fetching 2022-12-16
+[Comanche/CM] Fetching 2022-12-19
+[Comanche/CM] Fetching 2022-12-20
+[Comanche/CM] Fetching 2022-12-21
+  ✓ Chunk 8 written: chunk_0008.parquet (10 rows, 4 cols, 1.3 KB)
+  Progress: 80/87 (92%)
+[Comanche/CM] Fetching 2022-12-22
+[Comanche/CM] Fetching 2022-12-23
+[Comanche/CM] Fetching 2022-12-26
+[Comanche/CM] Fetching 2022-12-27
+[Comanche/CM] Fetching 2022-12-28
+[Comanche/CM] Fetching 2022-12-29
+[Comanche/CM] Fetching 2022-12-30
+  ✓ Chunk 9 written: chunk_0009.parquet (7 rows, 4 cols, 1.3 KB)
+=== Finished Comanche/CM ===
+
+
+=== All pilot combinations processed ===
+Run scripts/pilot_v2/combine_chunks.R to build final parquet files.
