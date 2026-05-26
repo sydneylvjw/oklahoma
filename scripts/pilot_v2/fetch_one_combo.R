@@ -67,6 +67,14 @@ fetch_one_combo <- function(county, case_type_id, case_type_label,
     }
     
     body <- resp_body_string(resp)
+    
+    # NEW: Detect Cloudflare Turnstile challenge page
+    if (grepl("OSCN Turnstile|cf-turnstile|challenges\\.cloudflare\\.com", body)) {
+      message("  ⚠ Cloudflare Turnstile detected — treating as rate limit")
+      return("RATE_LIMITED")
+    }
+    
+    # Empty body check
     if (is.na(body) || nchar(body) < 500) {
       return(tibble(query_date = as.character(date), county = county,
                     case_type = case_type_label, empty = TRUE,
@@ -181,7 +189,7 @@ fetch_one_combo <- function(county, case_type_id, case_type_label,
     current_pause <- pause_minutes_initial
     results[[length(results) + 1]] <- result
     
-    Sys.sleep(runif(1, 4, 7))
+    Sys.sleep(runif(1, 12, 18))
     
     # Write chunk every chunk_size fetches
     if (length(results) >= chunk_size) {
