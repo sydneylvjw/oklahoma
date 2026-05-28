@@ -5,7 +5,7 @@ from curl_cffi import requests
 
 url = ("https://www.oscn.net/applications/oscn/report.asp"
        "?report=WebJudicialDocketCaseTypeAll&errorcheck=true"
-       "&database=&db=Tulsa&CaseTypeID=31&StartDate=2022-10-17"
+       "&database=&db=Comanche&CaseTypeID=31&StartDate=2022-10-17"
        "&GeneralNumber=1&generalnumber1=1")
 
 # impersonate Safari TLS fingerprint + headers
@@ -16,7 +16,7 @@ print(f"Body length: {len(resp.text)}")
 print(f"Contains Turnstile: {'Turnstile' in resp.text or 'cf-turnstile' in resp.text}")
 print(f"Contains case info: {'GetCaseInformation' in resp.text}")
 
-with open("data/diagnostic/python_test_tulsa.html", "w") as f:
+with open("data/diagnostic/python_test_comanche.html", "w") as f:
     f.write(resp.text)
 
-print("\nSaved to data/diagnostic/python_test_tulsa.html")
+print("\nSaved to data/diagnostic/python_test_comanche.html")

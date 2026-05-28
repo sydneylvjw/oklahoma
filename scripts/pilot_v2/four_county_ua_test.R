@@ -36,7 +36,7 @@ test_one("Oklahoma 2022-09-01", "Oklahoma", "2022-09-01", 31)
 Sys.sleep(15)
 
 # Test 2: Tulsa County on the same date
-test_one("Tulsa 2022-09-01", "Tulsa", "2022-09-01", 31)s
+test_one("Tulsa 2022-09-01", "Tulsa", "2022-09-01", 31)
 
 Sys.sleep(15)
 
