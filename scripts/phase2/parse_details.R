@@ -58,6 +58,15 @@ run_parse <- function(batch_size = 300, parallel = FALSE) {
         ok <- !vapply(parsed, is.null, logical(1))
         if (any(ok)) {
           df   <- dplyr::bind_rows(parsed[ok])
+          # Authoritative provenance from the folder + filename -- the parser's
+          # JSON metadata can be absent on some pages, so never trust it for the
+          # keys. county/case_type come from the directory; case_number is
+          # backfilled from the filename when the page didn't yield one.
+          df$county    <- cty
+          df$case_type <- ct
+          df$case_number <- ifelse(
+            is.na(df$case_number) | df$case_number == "",
+            sub("\\.html\\.gz$", "", df$source_file), df$case_number)
           path <- write_docket_chunk(df, cty, ct)          # write chunk first
           man  <- df |> count(source_file, county, case_type, case_number, name = "n_rows") |>
                         mutate(status = "ok", chunk = as.character(path))
@@ -76,4 +85,4 @@ run_parse <- function(batch_size = 300, parallel = FALSE) {
   message("[parse] done")
 }
 
-if (!interactive()) run_parse()
+if (.oscn_should_autorun()) run_parse()

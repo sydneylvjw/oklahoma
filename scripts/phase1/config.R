@@ -26,11 +26,16 @@ if (is.na(OSCN_UA_GUID) || !nzchar(OSCN_UA_GUID)) {
 USER_AGENT <- OSCN_UA_GUID
 
 # ---- Scope -----------------------------------------------------------------
-COUNTIES <- c("tulsa", "cleveland", "garfield", "comanche")  # OSCN db codes
+# All 13 OCIS counties (OSCN db codes = lowercase county name, no spaces).
+# NOTE: "rogermills" is a best guess for the two-word county -- VERIFY with
+# verify_counties() before the full pull (the others match known-good codes).
+COUNTIES <- c("adair", "canadian", "cleveland", "comanche", "ellis",
+              "garfield", "logan", "oklahoma", "payne", "pushmataha",
+              "rogermills", "rogers", "tulsa")
 
 # OSCN CaseTypeID integers for the WebJudicialDocketCaseTypeAll report.
 # The URL takes the numeric ID; the label is used for paths/columns.
-# >>> Fill these from your existing config (fetch_one_combo.R). <<<
+# Confirmed empirically against OSCN docket pages.
 CASE_TYPE_IDS <- c(CF = 31L, CM = 32L, TR = 18L)
 CASE_TYPES <- names(CASE_TYPE_IDS)
 
@@ -47,7 +52,9 @@ MIN_INTERVAL_S <- 1.0   # hard floor between request starts
 JITTER_MAX_S   <- 0.4   # jitter added on top, so effective rate is < 1/sec
 
 # ---- Paths (match existing repo layout) ------------------------------------
-PROJECT_ROOT <- "/Users/sydneyjoneswellborn/Documents/GitHub/oklahoma"
+# Machine-independent: anchor to the repo root (finds .git / .Rproj), never a
+# hardcoded path -- so it's correct on any machine and safe to commit.
+PROJECT_ROOT <- if (requireNamespace("here", quietly = TRUE)) here::here() else normalizePath(getwd())
 CHUNK_ROOT   <- fs::path(PROJECT_ROOT, "data", "pilot_chunks")
 LOG_DIR      <- fs::path(PROJECT_ROOT, "logs", "phase1")
 fs::dir_create(LOG_DIR)
@@ -65,4 +72,13 @@ build_date_grid <- function() {
     d <- d[wd <= 5, , drop = FALSE]
   }
   d[order(d$date), , drop = FALSE]
+}
+
+# ---- Auto-run guard --------------------------------------------------------
+# TRUE only when a script is the top-level Rscript job AND auto-run hasn't been
+# suppressed. Wrapper scripts set options(oscn.autorun.suppress = TRUE) before
+# sourcing worker files so they can control execution order without those files
+# firing their own runs at source time.
+.oscn_should_autorun <- function() {
+  !interactive() && !isTRUE(getOption("oscn.autorun.suppress"))
 }

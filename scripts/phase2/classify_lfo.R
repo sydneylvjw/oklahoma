@@ -73,7 +73,7 @@ summarise_cases <- function(cl) {
     )
 }
 
-if (!interactive()) {
+if (.oscn_should_autorun()) {
   cl <- run_classify()
   cat("\n--- Unmapped money-bearing codes (edit lfo_codes.csv) ---\n")
   print(unmapped_codes(cl), n = 40)

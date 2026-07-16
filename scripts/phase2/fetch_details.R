@@ -85,7 +85,7 @@ run_details <- function(queue = build_queue()) {
   message("[phase2] done")
 }
 
-# Auto-run ONLY as a script (Rscript); never on an interactive source().
-if (!interactive()) {
+# Auto-run only as a top-level script, and only if not suppressed by a wrapper.
+if (.oscn_should_autorun()) {
   run_details()
 }
