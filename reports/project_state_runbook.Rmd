@@ -1,0 +1,462 @@
+---
+title: "Oklahoma HB 2259 / Rule 8 Ability-to-Pay — Project State & Runbook"
+author: "Sydney Jones Wellborn"
+date: "`r format(Sys.Date())`"
+output:
+  html_document:
+    toc: true
+    toc_float: true
+    toc_depth: 3
+    number_sections: true
+editor_options: 
+  markdown: 
+    wrap: 72
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(eval = FALSE)  # this is a runbook; chunks document commands, not knit output
+```
+
+# Project overview
+
+**Research question.** How did Oklahoma Rule 8 *ability-to-pay* hearing
+practices change after **HB 2259 took effect on 2022-11-01**? The design
+is a pre/post comparison of court docket activity and
+legal-financial-obligation (LFO) events drawn from the Oklahoma State
+Courts Network (OSCN).
+
+**Data source & access.** OSCN, governed by *2009 OK 78*.
+Screen-scraping is permitted at **1 request/second**; **bulk
+redistribution of raw data is prohibited** (a data-retention statement
+confirms no redistribution). Automated clients were previously blocked
+by a Cloudflare **Turnstile** challenge (TLS-fingerprint based). This is
+now resolved: the OSCN webmaster issued a **personal whitelist GUID**,
+sent as the `User-Agent` string, which lets a plain `httr2` client
+through at 1 req/sec. The GUID lives in `~/.Renviron` as `OSCN_UA_GUID`
+and is never hardcoded, committed, or pasted anywhere.
+
+**Windows.**
+
+| Period | Range                   | Notes                             |
+|--------|-------------------------|-----------------------------------|
+| Pre    | 2022-08-03 → 2022-10-31 | 90 calendar days before HB 2259   |
+| Post   | 2022-11-01 → 2023-01-29 | 90 calendar days on/after HB 2259 |
+
+Weekdays only (courts don't sit weekends). This 90-day pre/post pass is
+a **validation / county-selection pass**, not the final dataset — the
+eventual analysis expands to **2018–2025**.
+
+------------------------------------------------------------------------
+
+# Architecture & standing principles
+
+These hold across all phases and are the reason the pipeline is
+restart-safe and reproducible.
+
+-   **Immutable, write-once chunks.** Every checkpoint writes a *new*
+    parquet file (`chunk_NNNN.parquet`) via a temp-name + atomic rename.
+    Existing files are never modified. This is the fix for an earlier
+    silent-data-loss bug (a read-modify-write merge).
+-   **Append-only manifests = resume-safety.** Each stage logs every
+    unit of work to a `manifest.csv`. Reruns skip completed work. You
+    can `Esc`/kill/restart R freely — at most one in-flight request is
+    lost and re-fetched. **Trust the disk, not the console.**
+-   **The pipeline is authoritative for provenance.** County, case type,
+    case number, query date, and scrape timestamp are stamped from
+    *ground truth* (the request parameters, the folder, the filename) —
+    never trusted from parsed page metadata, which can be absent.
+-   **Reproducibility.** Sampling uses a fixed seed **and**
+    deterministic frame ordering (parquet read order isn't guaranteed),
+    with the RNG kind pinned; the drawn sample is saved to CSV.
+-   **Politeness / safety.** A hard ≥1s inter-request floor plus jitter;
+    a **challenge tripwire** halts the run if a 403/Turnstile ever
+    appears (it shouldn't, with the whitelist).
+-   **Machine-independent config.** `PROJECT_ROOT` is resolved with
+    `here::here()`; the only per-machine setting is `OSCN_UA_GUID` in
+    `~/.Renviron`. Config is safe to commit.
+-   **Auto-run guards.** Worker files (`fetch_details.R`,
+    `parse_details.R`, `classify_lfo.R`) auto-run only when they're the
+    top-level `Rscript` job *and* not suppressed
+    (`.oscn_should_autorun()`); wrapper scripts set
+    `options(oscn.autorun.suppress = TRUE)` before sourcing them and
+    guard their **own** entry point with plain `!interactive()`.
+
+> **Two files named `config.R`.** `scripts/phase1/config.R`
+> (credentials, counties, CaseTypeIDs, windows, paths) and
+> `scripts/phase2/config.R` (detail-fetch paths; sources phase 1's).
+> **Do not swap them** — this has bitten us. Paths in this doc are
+> always given in full.
+
+------------------------------------------------------------------------
+
+# Repository layout
+
+```         
+scripts/
+  parser.R                         # validated daily-docket listing parser (parse_oscn_page)
+  phase1/
+    config.R                       # GUID, 13 counties, CaseTypeIDs (CF=31,CM=32,TR=18), windows, paths
+    http.R                         # rate-limited httr2 GET + challenge tripwire (oscn_get, is_challenge)
+    pipeline.R                     # build_url, fetch_and_parse, make_combos, run_combos, provenance
+    run_smoke.R                    # small validation slice
+    run_phase1.R                   # full 13-county x CF/CM/TR x pre/post pull
+    verify_counties.R              # 1 request/county to confirm db codes resolve
+    screening_report.R             # OPTION A: pre/post volume table by county
+  phase2/
+    config.R                       # DETAIL_ROOT, DETAIL_LOG, PHASE1_CHUNK_ROOT (sources phase1/config.R)
+    build_queue.R                  # unique (county, case_type, case_number) work queue
+    fetch_details.R                # STAGE 1: fetch GetCaseInformation pages -> raw .html.gz
+    parse_case_detail.R            # STAGE 2 parser: one page -> tidy docket rows + metadata
+    parse_details.R                # STAGE 2 driver: all pages -> data/case_docket chunks
+    lfo_codes.csv                  # the (county, code) LFO dictionary
+    classify_lfo.R                 # STAGE 3: tag rows vs dictionary, coverage, per-case summary
+    build_dictionary_todo.R        # scaffold unmapped codes -> lfo_codes_TODO.csv
+    merge_dictionary.R             # append filled TODO rows into lfo_codes.csv (dedup, backup)
+    sample_counties.R              # OPTION B: balanced sample frame/draw + PI markdown summary
+    run_sample.R                   # OPTION B end-to-end, seeded & reproducible
+    status.R                       # fetched-vs-parsed per county (diagnostics)
+data/
+  pilot_chunks/{county}/{case_type}/chunk_NNNN.parquet     # Phase 1 docket listings
+  case_details/{county}/{case_type}/{case}.html.gz          # Phase 2 raw detail pages
+  case_docket/{county}/{case_type}/chunk_NNNN.parquet       # Phase 2 parsed dockets
+  case_docket_classified/                                    # Phase 2 classified (regenerable)
+logs/
+  phase1/manifest.csv              # Phase 1 combos
+  phase2/manifest.csv              # Phase 2 detail-fetch manifest
+  phase2_parse/manifest.csv        # Phase 2 parse manifest
+  sample_draw.{rds,csv}            # the reproducible Option B draw
+reports/
+  county_screening.md              # PI-facing screening summary
+```
+
+> `data/` and `.Renviron` must be **git-ignored** — raw OSCN data cannot
+> be redistributed.
+
+------------------------------------------------------------------------
+
+# Phase 1 — Daily docket collection
+
+**Goal.** For each county × case type × weekday, pull the day's docket
+listing and record which cases had activity that day. Cheap: **1 request
+per county × case-type × day**, regardless of county size.
+
+**Mechanics.** URL is the `WebJudicialDocketCaseTypeAll` report:
+`report.asp?...&db=<county>&CaseTypeID=<id>&StartDate=<YYYY-MM-DD>...`,
+where `CaseTypeID` is numeric (**CF=31, CM=32, TR=18**, confirmed
+empirically). A `StartDate` returns every case with a docket *event* on
+that date, regardless of filing year — so **one row = one case-day**,
+not one case (a case active on 5 days appears 5 times).
+
+**Scope.** 13 OCIS counties:
+`adair, canadian, cleveland, comanche, ellis, garfield, logan, oklahoma, payne, pushmataha, rogermills, rogers, tulsa`.
+
+**Run.**
+
+```{bash phase1-run}
+# 0. one-time: confirm all 13 db codes resolve (esp. rogermills)
+Rscript scripts/phase1/verify_counties.R
+
+# 1. full pull (resume-safe; skips anything already in the manifest)
+caffeinate -i Rscript scripts/phase1/run_phase1.R
+```
+
+**Output.** `data/pilot_chunks/{county}/{case_type}/chunk_NNNN.parquet`
+(17 data columns + stamped provenance:
+`county, case_type, case_type_id, query_date, scraped_at, scrape_run`)
+and `logs/phase1/manifest.csv` (one row per combo, with `status` = ok /
+empty / error / parse_error). `empty`/zero-row days cluster on court
+holidays — expected, not missing data.
+
+**State.** The original **4-county** pull validated end-to-end (\~69k
+docket rows). The config is now expanded to **all 13 counties** for the
+screening pass (§Phase 3). Extending the run only fetches the 9 new
+counties — the manifest skips the original 4.
+
+------------------------------------------------------------------------
+
+# Phase 2 — Case-detail collection, parsing & LFO classification
+
+**Guiding decision (standing).** *Pull broad once, filter locally.* The
+daily-docket listing text is inconsistent across counties, so LFO/Rule 8
+relevance **cannot** be filtered at the listing level. We therefore
+fetch the full detail page for **every** case, store it, and classify
+locally — and re-classify (never re-fetch) as the dictionary evolves.
+
+## Stage 1 — Fetch detail pages (`fetch_details.R`)
+
+Fetches `GetCaseInformation.aspx?db=<county>&number=<case_number>` for
+each unique `(county, case_type, case_number)` from Phase 1, and stores
+the **raw HTML** write-once as
+`data/case_details/{county}/{case_type}/{case}.html.gz`. Rate-limited,
+resume-safe (`logs/phase2/manifest.csv`). Storing raw HTML means the
+expensive fetch happens **once** even if the parser changes later.
+
+```{bash phase2-fetch}
+caffeinate -i Rscript scripts/phase2/fetch_details.R   # ~1/sec; the full 31k pull is ~8-9 hrs
+```
+
+## Stage 2 — Parse (`parse_case_detail.R` + `parse_details.R`)
+
+`parse_case_detail()` turns one page into tidy docket rows: from the
+embedded `<script id="json_style">` JSON (case metadata) and the
+`table.docketlist` (six columns: **date, code, description, count,
+party, amount**; `addtl-text` rows are merged into the entry above).
+**Amounts are signed** — `$255.00` → `255`. `parse_details.R` maps this
+over all stored pages into `data/case_docket/...` chunks and **stamps
+county/case_type/case_number from the folder+filename** (authoritative —
+the JSON can be absent on some pages).
+
+```{bash phase2-parse}
+Rscript scripts/phase2/parse_details.R
+Rscript scripts/phase2/status.R          # fetched-vs-parsed per county; any gap = failures to inspect
+```
+
+## Stage 3 — Classify (`classify_lfo.R` + `lfo_codes.csv`)
+
+Tags each docket row against the **`(county, code)`-keyed** dictionary
+and writes row-level classified data to `data/case_docket_classified/`
+(regenerable — safe to overwrite). It is **outcome-agnostic**: it does
+*not* pick a single outcome. From the tagged rows, all four quantities
+are computable (see `summarise_cases()`):
+
+-   **`total_debits`** — sum of positive amounts (LFOs *assessed*),
+    excluding conversion artifacts
+-   **`total_credits`** — sum of negative amounts (waivers / credits /
+    time-served)
+-   **`net_balance`** — net of the above
+-   **`n_rule8_events`** — count of Rule 8 / ability-to-pay events
+
+**Two data-integrity notes baked in:**
+
+1.  **Signed ledger.** The docket is a running account: debits
+    (assessments) *and* credits (`CTS` credit-time-served, `CFOWAV`
+    waiver, etc., negative). "Assessed", "waived", and "net" are three
+    different sums — never blindly sum `amount`.
+2.  **Mainframe-conversion artifacts.** `AC##` codes dated `1999-10-11`
+    are lump balances dumped at digitization, not real-time assessments.
+    They're flagged `is_conversion_artifact` and quarantined so they
+    don't corrupt event-timed pre/post comparisons. (Note: a few `AC##`
+    codes are *real* current fees — mapped individually, not by prefix.)
+
+**Rule 8 detection.** Code-based (`RULE8`, `BWIR8`, `NOHM`, `DUNLT`) for
+the confirmatory analysis; a **text fallback** (`"RULE 8"` /
+`"ABILITY TO PAY"`) is used for cross-county screening so it works
+before the dictionary is complete.
+
+**State.** **2,723 cases parsed across all 13 counties, zero parse
+errors.** The dictionary is currently **Cleveland-seeded (\~48 codes)**;
+the other counties' codes are correctly *keyed* but mostly `UNMAPPED`
+until the TODO is filled (next section). Amounts are captured regardless
+of mapping; **`total_debits`/`total_credits` are not trustworthy until
+`unmapped_codes()` is near zero for the counties of interest.**
+
+------------------------------------------------------------------------
+
+# LFO code dictionary — the manual workflow (do this from here)
+
+The dictionary (`scripts/phase2/lfo_codes.csv`) maps each
+`(county, code)` to a `category`, `direction` (debit/credit/neutral),
+`is_rule8`, and `is_conversion_artifact`. Building it is the one
+irreducibly **manual** step (it's a taxonomy judgment). The loop is
+three scripts + one edit, fully reproducible:
+
+### Step 1 — Scaffold the unmapped codes
+
+```{bash dict-step1}
+Rscript scripts/phase2/build_dictionary_todo.R
+```
+
+Writes `scripts/phase2/lfo_codes_TODO.csv`: every money-bearing code
+**not** yet in the dictionary, **per county**, sorted by dollar total,
+pre-filled with `n_rows`, `total_amount`, and its own description in
+`notes`.
+
+### Step 2 — Fill it in (manual)
+
+Open `scripts/phase2/lfo_codes_TODO.csv` and, for each row, fill:
+
+-   **`category`** — e.g. `court_cost`, `fee`, `admin_fee`, `fine`,
+    `state_assessment`, `jail_cost`, `warrant`,
+    `rule8_hearing`/`rule8_enforcement`, `credit`, `waiver`,
+    `collection_fee`, `bond`, `conversion_artifact`, or
+    `noise`/`exclude` for ledger junk (e.g. "LUNCH FOR JURY").
+-   **`direction`** — `debit` (assessment, positive), `credit`
+    (waiver/payment, negative), or `neutral` (informational/fund
+    allocation).
+-   **`is_rule8`** — `TRUE` for ability-to-pay / Rule 8 codes.
+-   **`is_conversion_artifact`** — `TRUE` only for genuine
+    mainframe-conversion balances.
+
+Work biggest-dollar-first (rows are pre-sorted); the top \~30 codes
+usually carry 90%+ of the money. **Spot-check descriptions across
+counties** before copying a category — most codes are statewide, but
+per-county keying exists precisely because some (e.g. cost-hearing
+terminology, CCH vs RCC) diverge.
+
+> Rows left with a **blank `category` are skipped** by the merge (they
+> stay `UNMAPPED` and resurface next time), so you can't half-map a
+> code.
+
+### Step 3 — Merge into the dictionary
+
+```{bash dict-step3}
+Rscript scripts/phase2/merge_dictionary.R
+```
+
+Appends filled rows into `lfo_codes.csv`, **refusing duplicate
+`(county, code)` pairs** and **backing up** to `lfo_codes.csv.bak`
+first.
+
+### Step 4 — Re-classify (no re-fetch, no re-parse)
+
+```{bash dict-step4}
+Rscript scripts/phase2/classify_lfo.R
+```
+
+Regenerates `data/case_docket_classified/` and prints remaining unmapped
+codes. **Repeat Steps 1–4** until `unmapped_codes()` is at (or near)
+zero for the counties you care about — or a deliberate ignore-set.
+
+> **Sampling caveat.** The current TODO is built from a
+> **150-case-per-county sample**, so it covers the *common/high-dollar*
+> codes but will miss rare ones. When you later pull *full* detail for
+> the chosen counties, **re-run Steps 1–4** — expect a fresh tail.
+
+------------------------------------------------------------------------
+
+# Phase 3 — County screening & selection (the PI decision)
+
+To choose which counties to study in depth, we screen **all 13**
+cheaply, then deep-pull only the winners. Two options were prepared;
+**the sample for both has already been drawn, fetched, and parsed**
+(seed `20221101`, 75 pre + 75 post per county, 1,806 case-strata;
+`logs/sample_draw.csv` is the reproducible record).
+
+## Option A — Structural screen (volume / coverage)
+
+For a design like **2 rural + 2 urban**: which counties have enough
+clean pre/post case volume?
+
+```{bash optA}
+Rscript scripts/phase1/screening_report.R   # pre/post unique-case table by county & case type
+```
+
+Answers "where is there adequate data." Does **not** speak to
+ability-to-pay frequency. (Note: Roger Mills returned only 3 sampled
+cases — likely genuinely too thin to study.)
+
+## Option B — Treatment-relevance screen (Rule 8 / LFO activity) *(PI likely choice)*
+
+Which counties actually show HB 2259-relevant activity? Uses the
+balanced sample to estimate per-county Rule 8 and LFO **rates**, pre vs
+post.
+
+```{bash optB}
+# end-to-end, reproducible: draw (seeded) -> fetch -> parse -> classify -> PI summary
+caffeinate -i Rscript scripts/phase2/run_sample.R
+# regenerate just the report after a dictionary update:
+# Rscript -e 'source("scripts/phase2/sample_counties.R"); write_pi_summary(readRDS("logs/sample_draw.rds"))'
+```
+
+Produces **`reports/county_screening.md`** with both tables for the PI.
+
+**How to read the screen (important):**
+
+-   **`LFO pre/post`** = share of sampled cases with **any** positive
+    amount assessed in that window (incidence, not disposition, not
+    severity). **`Rule 8 pre/post`** = share with any ability-to-pay
+    activity in that window.
+-   **Balanced 50/50 sampling measures rate/composition, not volume.**
+    Volume change comes from Option A's counts. (Rule 8 *volume* ≈
+    sampled rate × true period case-count.)
+-   **Screening only.** These rates guide selection; they are **not** an
+    effect estimate — a case active across the boundary contributes to
+    both columns, and cases were sampled by period, so the pre/post
+    columns are not independent groups.
+
+> For Option B to be trustworthy, **complete the LFO dictionary on the
+> 13-county sample first** (the manual workflow above) so `lfo_rate`
+> isn't undercounting on unmapped codes.
+
+------------------------------------------------------------------------
+
+# What happens next — by PI decision
+
+## If the PI chooses Option B (treatment-relevance — expected)
+
+1.  **Finish the dictionary on the 13-county sample** (LFO manual
+    workflow, Steps 1–4) so the rates in `county_screening.md` are
+    reliable.
+2.  **Regenerate** `county_screening.md`; PI picks the \~4 counties by
+    Rule 8 / LFO activity.
+3.  **Full detail pull for the chosen counties.** The sampled pages are
+    already on disk and will be skipped; fetch the *remaining* cases for
+    those counties (the full `(county, case_number)` set from Phase 1,
+    not just the sample). The original 4-county detail fetch was **never
+    completed** (\~986 + sample only), so this is a real, `caffeinate`d,
+    multi-hour, resume-safe run.
+4.  **Re-parse, re-run the dictionary loop** for the full data (expect a
+    new code tail), classify.
+5.  **Confirmatory analysis** — full data at *natural* volumes,
+    **code-based** classification, proper event-timed pre/post
+    comparison of assessed / waived / net / Rule 8 counts.
+
+## If the PI chooses Option A (structural — 2 rural + 2 urban)
+
+1.  Pick counties from `screening_report.R` against a minimum-N floor
+    (mind that Oklahoma/Tulsa dwarf the rurals — set a floor, don't rank
+    raw).
+2.  **Full detail pull** for the chosen 4 (sampled pages skipped), then
+    dictionary loop → classify.
+3.  Confirmatory analysis as above. (Option A skips the sampled-rate
+    step but the downstream is identical.)
+
+## Either way — scaling to the full study
+
+The pre/post pass is validation. To go to the **full 2018–2025** scope,
+the *only* substantive change is the **date grid** (`build_date_grid()`
+in `scripts/phase1/config.R`) — everything else (pipeline, chunk writer,
+manifests, throttle, parsers) is already year-agnostic and resume-safe.
+Re-run Phase 1 then Phase 2 for the chosen counties over the full span.
+(At \~10k files/county/case type over 8 years, consider compacting
+finished years into partitioned datasets later — the write-once design
+makes that safe.)
+
+------------------------------------------------------------------------
+
+# Gotchas & lessons log
+
+-   **Trust the disk, not the console.** Manifests + immutable chunks
+    mean a spinner, "suspended" session, or `Esc` never costs data.
+    Re-run to resume.
+-   **Auto-run guards.** Sourcing a worker file used to launch its full
+    run. Fixed: workers use `.oscn_should_autorun()` (suppressible);
+    wrappers use `!interactive()`. If a script "does nothing" when
+    `Rscript`-ed, check it isn't suppressing its own entry point.
+-   **Config drift across machines.** `CASE_TYPE_IDS` and `PROJECT_ROOT`
+    are now baked/derived; only `OSCN_UA_GUID` in `~/.Renviron` is
+    per-machine. `.Renviron` is read once at R startup — **restart R
+    after editing it.**
+-   **Provenance from ground truth.** NA counties came from trusting
+    page metadata; the driver now stamps county/case_type/case_number
+    from the folder+filename.
+-   **Pick one scrape machine** so the fetch manifest has a single
+    source of truth (currently the desktop). `caffeinate -i` keeps it
+    awake; the lid closing still sleeps on battery.
+-   **Two `config.R` files** — never swap phase 1's for phase 2's.
+-   **iCloud Drive** on `Documents/` can sync/alter files across
+    machines; pause/verify before reorganizing.
+
+# Immediate next actions
+
+1.  `Rscript scripts/phase1/verify_counties.R` — confirm `rogermills`
+    (and settle whether it's too small to keep).
+2.  Complete the **LFO dictionary** on the 13-county sample (manual
+    workflow, Steps 1–4) until `unmapped_codes()` is \~empty for the
+    counties of interest.
+3.  `Rscript scripts/phase2/run_sample.R` (or just regenerate the
+    report) → hand the PI **`reports/county_screening.md`** with both
+    options.
+4.  On the PI's county choice → **full detail pull** for the chosen
+    counties → dictionary loop → classify → confirmatory analysis. Then
+    expand to 2018–2025 via the date grid.

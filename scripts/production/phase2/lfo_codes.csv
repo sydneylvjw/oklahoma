@@ -1,0 +1,49 @@
+county,code,category,direction,is_rule8,is_conversion_artifact,notes
+cleveland,RULE8,rule8_hearing,neutral,TRUE,FALSE,Rule 8 ability-to-pay hearing
+cleveland,BWIR8,rule8_warrant,debit,TRUE,FALSE,Bench warrant issued - Rule 8
+cleveland,NOHM,rule8_hearing,neutral,TRUE,FALSE,Defendant to appear for Rule 8 hearing
+cleveland,DUNLT,rule8_enforcement,debit,TRUE,FALSE,Cost administration letter - late payment - Rule 8
+cleveland,COSTF,court_cost,debit,FALSE,FALSE,Court costs on felony
+cleveland,OCISR,court_fee,debit,FALSE,FALSE,OCIS revolving fund
+cleveland,CCADMIN,admin_fee,debit,FALSE,FALSE,Court clerk administrative fee on collections
+cleveland,CCADMIN25,admin_fee,debit,FALSE,FALSE,Court clerk admin fee on $25 collections
+cleveland,DCADMIN25,admin_fee,debit,FALSE,FALSE,District court admin fee on $25 collections
+cleveland,PFE7,fee,debit,FALSE,FALSE,Law library fee
+cleveland,SSF,fee,debit,FALSE,FALSE,Sheriff's service fee on arrests
+cleveland,BOJ,fee,debit,FALSE,FALSE,Bond initial filing jail fund fee
+cleveland,AIDS,indigent_defense_fee,debit,FALSE,FALSE,Application for indigent defense
+cleveland,FINE,fine,debit,FALSE,FALSE,Fines payable to county
+cleveland,VCA,state_assessment,debit,FALSE,FALSE,Victims compensation assessment
+cleveland,CLEET,state_assessment,debit,FALSE,FALSE,CLEET penalty assessment
+cleveland,CLEETA,admin_fee,debit,FALSE,FALSE,CLEET administrative fee
+cleveland,AFIS,state_assessment,debit,FALSE,FALSE,CLEET penalty assessment for AFIS
+cleveland,AFISA,admin_fee,debit,FALSE,FALSE,AFIS administrative fee
+cleveland,FOREN,state_assessment,debit,FALSE,FALSE,Forensic science improvement assessment
+cleveland,CRIJC,jail_cost,debit,FALSE,FALSE,DA council revolving fund - inmate jail costs
+cleveland,DAIJC,jail_cost,debit,FALSE,FALSE,DA fee - inmate jail costs
+cleveland,SFIJC,jail_cost,debit,FALSE,FALSE,Sheriff's fund - inmate jail costs
+cleveland,CBWF1,warrant_fee,debit,FALSE,FALSE,Clerk's bench warrant fee (22 OS 966A)
+cleveland,BWIFAP,warrant_fta_pay,debit,FALSE,FALSE,Bench warrant issued failed to appear and pay
+cleveland,BWIFA,warrant_fta,debit,FALSE,FALSE,Bench warrant issued failed to appear
+cleveland,BWIAR,warrant,debit,FALSE,FALSE,Bench warrant issued on MTR
+cleveland,BWIAA,warrant,debit,FALSE,FALSE,Bench warrant issued
+cleveland,WAI$,warrant,debit,FALSE,FALSE,Warrant of arrest issued
+cleveland,WHCI,writ,debit,FALSE,FALSE,Writ of habeas corpus issued
+cleveland,SFC,collection_referral,neutral,FALSE,FALSE,Case sent for collection
+cleveland,SFCCC,collection_fee,debit,FALSE,FALSE,Addition of 10% for warrant collection
+cleveland,SFCSF,collection_credit,credit,FALSE,FALSE,Reduction in bench warrant fee to sheriff (10%)
+cleveland,WICF,collection_fee,debit,FALSE,FALSE,Warrant intercept 3% collection fee
+cleveland,CTS,credit_time_served,credit,FALSE,FALSE,Credit time served
+cleveland,CFOWAV,waiver,credit,FALSE,FALSE,Waiver of court financial obligation
+cleveland,ADJUST,adjustment,neutral,FALSE,FALSE,Adjusting entry
+cleveland,BO,bond,neutral,FALSE,FALSE,Cash bond posted
+cleveland,PR,bond,neutral,FALSE,FALSE,Recognizance bond posted
+cleveland,J&S,sentence,neutral,FALSE,FALSE,Judgment and sentence issued
+cleveland,AC01,conversion_artifact,neutral,FALSE,TRUE,Mainframe conversion account balance
+cleveland,AC04,conversion_artifact,neutral,FALSE,TRUE,Mainframe conversion account balance
+cleveland,AC08,conversion_artifact,neutral,FALSE,TRUE,Mainframe conversion account balance
+cleveland,AC11,conversion_artifact,neutral,FALSE,TRUE,Mainframe conversion account balance
+cleveland,AC12,conversion_artifact,neutral,FALSE,TRUE,Mainframe conversion account balance
+cleveland,AC21,conversion_artifact,neutral,FALSE,TRUE,Mainframe conversion account balance
+cleveland,AC22,conversion_artifact,neutral,FALSE,TRUE,Mainframe conversion account balance
+cleveland,AC23,conversion_artifact,neutral,FALSE,TRUE,Mainframe conversion account balance
