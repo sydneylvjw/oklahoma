@@ -6,3 +6,4 @@
 .parquet
 data/
 .DS_Store
+/scripts/archive/

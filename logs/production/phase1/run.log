@@ -1,0 +1,483 @@
+
+Attaching package: ‘xml2’
+
+The following object is masked from ‘package:httr2’:
+
+    url_parse
+
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+Warning messages:
+1: package ‘httr2’ was built under R version 4.4.3 
+2: package ‘fs’ was built under R version 4.4.3 
+3: package ‘arrow’ was built under R version 4.4.3 
+4: package ‘purrr’ was built under R version 4.4.3 
+PRODUCTION Phase 1: 13 counties x 3 case types x 1172 weekdays (2022-01-03 to 2026-06-30) = 45,708 combos
+[phase1] 45708 combos total | 72 done | 45636 to fetch | est 15:12:43 at ~1.2s/req
+  [phase1] 100/45636 (0.2%) | 00:02:07 elapsed | ETA 16:00:15 | rows 3,352 | ok 100 empty 0 err 0 parse_err 0 | at 2022-01-07
+  [phase1] 200/45636 (0.4%) | 00:04:22 elapsed | ETA 16:33:17 | rows 7,528 | ok 200 empty 0 err 0 parse_err 0 | at 2022-01-11
+  [phase1] 300/45636 (0.7%) | 00:06:27 elapsed | ETA 16:14:45 | rows 10,700 | ok 300 empty 0 err 0 parse_err 0 | at 2022-01-14
+  [phase1] 400/45636 (0.9%) | 00:08:36 elapsed | ETA 16:12:34 | rows 13,258 | ok 400 empty 0 err 0 parse_err 0 | at 2022-01-19
+  [phase1] 500/45636 (1.1%) | 00:10:58 elapsed | ETA 16:30:43 | rows 18,284 | ok 500 empty 0 err 0 parse_err 0 | at 2022-01-21
+  [phase1] 600/45636 (1.3%) | 00:13:06 elapsed | ETA 16:22:41 | rows 21,267 | ok 600 empty 0 err 0 parse_err 0 | at 2022-01-26
+  [phase1] 700/45636 (1.5%) | 00:15:11 elapsed | ETA 16:15:01 | rows 23,848 | ok 700 empty 0 err 0 parse_err 0 | at 2022-01-28
+  [phase1] 800/45636 (1.8%) | 00:17:22 elapsed | ETA 16:12:59 | rows 27,121 | ok 800 empty 0 err 0 parse_err 0 | at 2022-02-02
+  [phase1] 900/45636 (2.0%) | 00:19:31 elapsed | ETA 16:10:16 | rows 30,082 | ok 900 empty 0 err 0 parse_err 0 | at 2022-02-04
+  [phase1] 1000/45636 (2.2%) | 00:21:36 elapsed | ETA 16:04:09 | rows 33,098 | ok 999 empty 1 err 0 parse_err 0 | at 2022-02-09
+  [phase1] 1100/45636 (2.4%) | 00:23:39 elapsed | ETA 15:57:16 | rows 35,866 | ok 1099 empty 1 err 0 parse_err 0 | at 2022-02-14
+  [phase1] 1200/45636 (2.6%) | 00:25:56 elapsed | ETA 16:00:23 | rows 40,606 | ok 1199 empty 1 err 0 parse_err 0 | at 2022-02-16
+  [phase1] 1300/45636 (2.8%) | 00:28:06 elapsed | ETA 15:58:09 | rows 43,935 | ok 1299 empty 1 err 0 parse_err 0 | at 2022-02-21
+  [phase1] 1400/45636 (3.1%) | 00:30:13 elapsed | ETA 15:54:51 | rows 46,394 | ok 1399 empty 1 err 0 parse_err 0 | at 2022-02-23
+  [phase1] 1500/45636 (3.3%) | 00:32:18 elapsed | ETA 15:50:36 | rows 49,821 | ok 1499 empty 1 err 0 parse_err 0 | at 2022-02-28
+  [phase1] 1600/45636 (3.5%) | 00:34:25 elapsed | ETA 15:47:17 | rows 53,085 | ok 1598 empty 2 err 0 parse_err 0 | at 2022-03-02
+  [phase1] 1700/45636 (3.7%) | 00:36:32 elapsed | ETA 15:44:19 | rows 55,999 | ok 1698 empty 2 err 0 parse_err 0 | at 2022-03-07
+  [phase1] 1800/45636 (3.9%) | 00:38:41 elapsed | ETA 15:42:15 | rows 60,410 | ok 1798 empty 2 err 0 parse_err 0 | at 2022-03-09
+  [phase1] 1900/45636 (4.2%) | 00:40:45 elapsed | ETA 15:38:03 | rows 63,970 | ok 1898 empty 2 err 0 parse_err 0 | at 2022-03-14
+  [phase1] 2000/45636 (4.4%) | 00:42:46 elapsed | ETA 15:33:07 | rows 66,112 | ok 1998 empty 2 err 0 parse_err 0 | at 2022-03-17
+  [phase1] 2100/45636 (4.6%) | 00:44:56 elapsed | ETA 15:31:35 | rows 69,055 | ok 2098 empty 2 err 0 parse_err 0 | at 2022-03-21
+  [phase1] 2200/45636 (4.8%) | 00:47:07 elapsed | ETA 15:30:11 | rows 73,627 | ok 2198 empty 2 err 0 parse_err 0 | at 2022-03-24
+  [phase1] 2300/45636 (5.0%) | 00:49:13 elapsed | ETA 15:27:11 | rows 76,767 | ok 2298 empty 2 err 0 parse_err 0 | at 2022-03-28
+  [phase1] 2400/45636 (5.3%) | 00:51:15 elapsed | ETA 15:23:09 | rows 79,674 | ok 2398 empty 2 err 0 parse_err 0 | at 2022-03-31
+  [phase1] 2500/45636 (5.5%) | 00:53:20 elapsed | ETA 15:20:12 | rows 82,503 | ok 2498 empty 2 err 0 parse_err 0 | at 2022-04-04
+  [phase1] 2600/45636 (5.7%) | 00:55:20 elapsed | ETA 15:15:48 | rows 84,732 | ok 2598 empty 2 err 0 parse_err 0 | at 2022-04-07
+  [phase1] 2700/45636 (5.9%) | 00:57:30 elapsed | ETA 15:14:19 | rows 88,288 | ok 2698 empty 2 err 0 parse_err 0 | at 2022-04-12
+  [phase1] 2800/45636 (6.1%) | 00:59:38 elapsed | ETA 15:12:24 | rows 92,622 | ok 2798 empty 2 err 0 parse_err 0 | at 2022-04-14
+  [phase1] 2900/45636 (6.4%) | 01:01:42 elapsed | ETA 15:09:12 | rows 95,033 | ok 2898 empty 2 err 0 parse_err 0 | at 2022-04-19
+  [phase1] 3000/45636 (6.6%) | 01:03:51 elapsed | ETA 15:07:31 | rows 98,399 | ok 2998 empty 2 err 0 parse_err 0 | at 2022-04-21
+  [phase1] 3100/45636 (6.8%) | 01:06:03 elapsed | ETA 15:06:11 | rows 101,609 | ok 3098 empty 2 err 0 parse_err 0 | at 2022-04-26
+  [phase1] 3200/45636 (7.0%) | 01:08:05 elapsed | ETA 15:02:57 | rows 104,033 | ok 3198 empty 2 err 0 parse_err 0 | at 2022-04-28
+  [phase1] 3300/45636 (7.2%) | 01:10:11 elapsed | ETA 15:00:24 | rows 107,169 | ok 3298 empty 2 err 0 parse_err 0 | at 2022-05-03
+  [phase1] 3400/45636 (7.5%) | 01:12:18 elapsed | ETA 14:58:05 | rows 110,512 | ok 3398 empty 2 err 0 parse_err 0 | at 2022-05-06
+  [phase1] 3500/45636 (7.7%) | 01:14:27 elapsed | ETA 14:56:14 | rows 113,967 | ok 3498 empty 2 err 0 parse_err 0 | at 2022-05-10
+  [phase1] 3600/45636 (7.9%) | 01:16:31 elapsed | ETA 14:53:25 | rows 117,627 | ok 3598 empty 2 err 0 parse_err 0 | at 2022-05-13
+  [phase1] 3700/45636 (8.1%) | 01:18:38 elapsed | ETA 14:51:11 | rows 121,151 | ok 3698 empty 2 err 0 parse_err 0 | at 2022-05-17
+  [phase1] 3800/45636 (8.3%) | 01:20:47 elapsed | ETA 14:49:27 | rows 124,836 | ok 3796 empty 4 err 0 parse_err 0 | at 2022-05-20
+  [phase1] 3900/45636 (8.5%) | 01:22:55 elapsed | ETA 14:47:16 | rows 128,289 | ok 3896 empty 4 err 0 parse_err 0 | at 2022-05-24
+  [phase1] 4000/45636 (8.8%) | 01:25:01 elapsed | ETA 14:44:51 | rows 131,405 | ok 3996 empty 4 err 0 parse_err 0 | at 2022-05-27
+  [phase1] 4100/45636 (9.0%) | 01:27:06 elapsed | ETA 14:42:25 | rows 133,177 | ok 4096 empty 4 err 0 parse_err 0 | at 2022-05-31
+  [phase1] 4200/45636 (9.2%) | 01:29:22 elapsed | ETA 14:41:35 | rows 135,859 | ok 4196 empty 4 err 0 parse_err 0 | at 2022-06-03
+  [phase1] 4300/45636 (9.4%) | 01:31:50 elapsed | ETA 14:42:48 | rows 139,092 | ok 4296 empty 4 err 0 parse_err 0 | at 2022-06-08
+  [phase1] 4400/45636 (9.6%) | 01:34:03 elapsed | ETA 14:41:26 | rows 141,215 | ok 4396 empty 4 err 0 parse_err 0 | at 2022-06-10
+  [phase1] 4500/45636 (9.9%) | 01:36:48 elapsed | ETA 14:44:55 | rows 145,158 | ok 4495 empty 5 err 0 parse_err 0 | at 2022-06-15
+  [phase1] 4600/45636 (10.1%) | 01:39:32 elapsed | ETA 14:47:58 | rows 148,423 | ok 4594 empty 6 err 0 parse_err 0 | at 2022-06-17
+  [phase1] 4700/45636 (10.3%) | 01:42:15 elapsed | ETA 14:50:37 | rows 151,489 | ok 4694 empty 6 err 0 parse_err 0 | at 2022-06-22
+  [phase1] 4800/45636 (10.5%) | 01:44:43 elapsed | ETA 14:50:51 | rows 154,028 | ok 4793 empty 7 err 0 parse_err 0 | at 2022-06-24
+  [phase1] 4900/45636 (10.7%) | 01:47:10 elapsed | ETA 14:50:54 | rows 156,884 | ok 4893 empty 7 err 0 parse_err 0 | at 2022-06-29
+  [phase1] 5000/45636 (11.0%) | 01:49:37 elapsed | ETA 14:50:51 | rows 159,430 | ok 4993 empty 7 err 0 parse_err 0 | at 2022-07-04
+  [phase1] 5100/45636 (11.2%) | 01:51:48 elapsed | ETA 14:48:33 | rows 161,239 | ok 5093 empty 7 err 0 parse_err 0 | at 2022-07-06
+  [phase1] 5200/45636 (11.4%) | 01:54:16 elapsed | ETA 14:48:33 | rows 164,554 | ok 5193 empty 7 err 0 parse_err 0 | at 2022-07-11
+  [phase1] 5300/45636 (11.6%) | 01:56:38 elapsed | ETA 14:47:35 | rows 168,480 | ok 5293 empty 7 err 0 parse_err 0 | at 2022-07-13
+  [phase1] 5400/45636 (11.8%) | 01:58:56 elapsed | ETA 14:46:11 | rows 170,514 | ok 5393 empty 7 err 0 parse_err 0 | at 2022-07-18
+  [phase1] 5500/45636 (12.1%) | 02:01:23 elapsed | ETA 14:45:47 | rows 174,877 | ok 5493 empty 7 err 0 parse_err 0 | at 2022-07-20
+  [phase1] 5600/45636 (12.3%) | 02:03:45 elapsed | ETA 14:44:42 | rows 177,340 | ok 5592 empty 8 err 0 parse_err 0 | at 2022-07-25
+  [phase1] 5700/45636 (12.5%) | 02:06:10 elapsed | ETA 14:43:56 | rows 180,542 | ok 5692 empty 8 err 0 parse_err 0 | at 2022-07-27
+  [phase1] 5800/45636 (12.7%) | 02:08:26 elapsed | ETA 14:42:10 | rows 183,064 | ok 5792 empty 8 err 0 parse_err 0 | at 2022-08-01
+  [phase1] 5900/45636 (12.9%) | 02:10:47 elapsed | ETA 14:40:48 | rows 185,860 | ok 5892 empty 8 err 0 parse_err 0 | at 2022-08-04
+  [phase1] 6000/45636 (13.1%) | 02:13:07 elapsed | ETA 14:39:20 | rows 188,801 | ok 5991 empty 9 err 0 parse_err 0 | at 2022-08-08
+  [phase1] 6100/45636 (13.4%) | 02:15:33 elapsed | ETA 14:38:30 | rows 192,599 | ok 6091 empty 9 err 0 parse_err 0 | at 2022-08-11
+  [phase1] 6200/45636 (13.6%) | 02:17:51 elapsed | ETA 14:36:50 | rows 195,900 | ok 6191 empty 9 err 0 parse_err 0 | at 2022-08-15
+  [phase1] 6300/45636 (13.8%) | 02:20:19 elapsed | ETA 14:36:06 | rows 199,622 | ok 6291 empty 9 err 0 parse_err 0 | at 2022-08-18
+  [phase1] 6400/45636 (14.0%) | 02:22:46 elapsed | ETA 14:35:12 | rows 202,802 | ok 6391 empty 9 err 0 parse_err 0 | at 2022-08-22
+  [phase1] 6500/45636 (14.2%) | 02:25:08 elapsed | ETA 14:33:51 | rows 205,972 | ok 6491 empty 9 err 0 parse_err 0 | at 2022-08-25
+  [phase1] 6600/45636 (14.5%) | 02:27:37 elapsed | ETA 14:33:02 | rows 209,603 | ok 6591 empty 9 err 0 parse_err 0 | at 2022-08-30
+  [phase1] 6700/45636 (14.7%) | 02:29:53 elapsed | ETA 14:31:04 | rows 212,466 | ok 6691 empty 9 err 0 parse_err 0 | at 2022-09-01
+  [phase1] 6800/45636 (14.9%) | 02:32:12 elapsed | ETA 14:29:12 | rows 213,908 | ok 6791 empty 9 err 0 parse_err 0 | at 2022-09-06
+  [phase1] 6900/45636 (15.1%) | 02:34:35 elapsed | ETA 14:27:50 | rows 217,800 | ok 6891 empty 9 err 0 parse_err 0 | at 2022-09-08
+  [phase1] 7000/45636 (15.3%) | 02:37:10 elapsed | ETA 14:27:28 | rows 222,340 | ok 6991 empty 9 err 0 parse_err 0 | at 2022-09-13
+  [phase1] 7100/45636 (15.6%) | 02:39:27 elapsed | ETA 14:25:27 | rows 225,320 | ok 7091 empty 9 err 0 parse_err 0 | at 2022-09-15
+  [phase1] 7200/45636 (15.8%) | 02:41:53 elapsed | ETA 14:24:11 | rows 228,607 | ok 7191 empty 9 err 0 parse_err 0 | at 2022-09-20
+  [phase1] 7300/45636 (16.0%) | 02:44:24 elapsed | ETA 14:23:21 | rows 232,983 | ok 7291 empty 9 err 0 parse_err 0 | at 2022-09-23
+  [phase1] 7400/45636 (16.2%) | 02:46:50 elapsed | ETA 14:22:02 | rows 236,340 | ok 7391 empty 9 err 0 parse_err 0 | at 2022-09-27
+  [phase1] 7500/45636 (16.4%) | 02:49:10 elapsed | ETA 14:20:10 | rows 238,788 | ok 7491 empty 9 err 0 parse_err 0 | at 2022-09-30
+  [phase1] 7600/45636 (16.7%) | 02:51:29 elapsed | ETA 14:18:13 | rows 241,758 | ok 7590 empty 10 err 0 parse_err 0 | at 2022-10-04
+  [phase1] 7700/45636 (16.9%) | 02:53:55 elapsed | ETA 14:16:49 | rows 244,561 | ok 7688 empty 12 err 0 parse_err 0 | at 2022-10-07
+  [phase1] 7800/45636 (17.1%) | 02:56:19 elapsed | ETA 14:15:14 | rows 247,708 | ok 7788 empty 12 err 0 parse_err 0 | at 2022-10-11
+  [phase1] 7900/45636 (17.3%) | 02:58:44 elapsed | ETA 14:13:44 | rows 251,308 | ok 7888 empty 12 err 0 parse_err 0 | at 2022-10-14
+  [phase1] 8000/45636 (17.5%) | 03:01:11 elapsed | ETA 14:12:21 | rows 255,088 | ok 7988 empty 12 err 0 parse_err 0 | at 2022-10-18
+  [phase1] 8100/45636 (17.7%) | 03:03:35 elapsed | ETA 14:10:44 | rows 258,644 | ok 8088 empty 12 err 0 parse_err 0 | at 2022-10-21
+  [phase1] 8200/45636 (18.0%) | 03:06:06 elapsed | ETA 14:09:37 | rows 261,911 | ok 8188 empty 12 err 0 parse_err 0 | at 2022-10-26
+  [phase1] 8300/45636 (18.2%) | 03:08:25 elapsed | ETA 14:07:33 | rows 264,491 | ok 8288 empty 12 err 0 parse_err 0 | at 2022-10-28
+  [phase1] 8400/45636 (18.4%) | 03:10:48 elapsed | ETA 14:05:45 | rows 267,021 | ok 8388 empty 12 err 0 parse_err 0 | at 2022-11-02
+  [phase1] 8500/45636 (18.6%) | 03:13:10 elapsed | ETA 14:03:54 | rows 270,104 | ok 8488 empty 12 err 0 parse_err 0 | at 2022-11-04
+  [phase1] 8600/45636 (18.8%) | 03:15:34 elapsed | ETA 14:02:14 | rows 273,418 | ok 8588 empty 12 err 0 parse_err 0 | at 2022-11-09
+  [phase1] 8700/45636 (19.1%) | 03:17:51 elapsed | ETA 14:00:00 | rows 275,760 | ok 8688 empty 12 err 0 parse_err 0 | at 2022-11-11
+  [phase1] 8800/45636 (19.3%) | 03:20:16 elapsed | ETA 13:58:17 | rows 279,152 | ok 8787 empty 13 err 0 parse_err 0 | at 2022-11-16
+  [phase1] 8900/45636 (19.5%) | 03:22:47 elapsed | ETA 13:56:59 | rows 283,267 | ok 8887 empty 13 err 0 parse_err 0 | at 2022-11-21
+  [phase1] 9000/45636 (19.7%) | 03:25:07 elapsed | ETA 13:54:57 | rows 286,110 | ok 8987 empty 13 err 0 parse_err 0 | at 2022-11-23
+  [phase1] 9100/45636 (19.9%) | 03:27:18 elapsed | ETA 13:52:18 | rows 286,766 | ok 9087 empty 13 err 0 parse_err 0 | at 2022-11-28
+  [phase1] 9200/45636 (20.2%) | 03:29:39 elapsed | ETA 13:50:17 | rows 290,305 | ok 9187 empty 13 err 0 parse_err 0 | at 2022-11-30
+  [phase1] 9300/45636 (20.4%) | 03:32:05 elapsed | ETA 13:48:38 | rows 293,552 | ok 9287 empty 13 err 0 parse_err 0 | at 2022-12-05
+  [phase1] 9400/45636 (20.6%) | 03:34:24 elapsed | ETA 13:46:29 | rows 296,182 | ok 9386 empty 14 err 0 parse_err 0 | at 2022-12-07
+  [phase1] 9500/45636 (20.8%) | 03:36:47 elapsed | ETA 13:44:35 | rows 299,008 | ok 9486 empty 14 err 0 parse_err 0 | at 2022-12-12
+  [phase1] 9600/45636 (21.0%) | 03:39:19 elapsed | ETA 13:43:15 | rows 303,966 | ok 9586 empty 14 err 0 parse_err 0 | at 2022-12-14
+  [phase1] 9700/45636 (21.3%) | 03:41:43 elapsed | ETA 13:41:25 | rows 307,860 | ok 9686 empty 14 err 0 parse_err 0 | at 2022-12-19
+  [phase1] 9800/45636 (21.5%) | 03:44:13 elapsed | ETA 13:39:54 | rows 311,460 | ok 9786 empty 14 err 0 parse_err 0 | at 2022-12-22
+  [phase1] 9900/45636 (21.7%) | 03:46:25 elapsed | ETA 13:37:19 | rows 312,464 | ok 9886 empty 14 err 0 parse_err 0 | at 2022-12-26
+Waiting 2s for retry backoff ■■■■■■■■■■■■■■■                 Waiting 2s for retry backoff ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                                                Waiting 4s for retry backoff ■■■■■■■■                        Waiting 4s for retry backoff ■■■■■■■■■                       Waiting 4s for retry backoff ■■■■■■■■■■■                     Waiting 4s for retry backoff ■■■■■■■■■■■■                    Waiting 4s for retry backoff ■■■■■■■■■■■■■                   Waiting 4s for retry backoff ■■■■■■■■■■■■■■■                 Waiting 4s for retry backoff ■■■■■■■■■■■■■■■■■               Waiting 4s for retry backoff ■■■■■■■■■■■■■■■■■■              Waiting 4s for retry backoff ■■■■■■■■■■■■■■■■■■■■            Waiting 4s for retry backoff ■■■■■■■■■■■■■■■■■■■■■■          Waiting 4s for retry backoff ■■■■■■■■■■■■■■■■■■■■■■■         Waiting 4s for retry backoff ■■■■■■■■■■■■■■■■■■■■■■■■        Waiting 4s for retry backoff ■■■■■■■■■■■■■■■■■■■■■■■■■■      Waiting 4s for retry backoff ■■■■■■■■■■■■■■■■■■■■■■■■■■■     Waiting 4s for retry backoff ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■   Waiting 4s for retry backoff ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                                               Waiting 2s for retry backoff ■■■■■■■■■■■■■■■■                Waiting 2s for retry backoff ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                                                  [phase1] 10000/45636 (21.9%) | 03:48:42 elapsed | ETA 13:34:59 | rows 313,379 | ok 9985 empty 14 err 1 parse_err 0 | at 2022-12-29
+  [phase1] 10100/45636 (22.1%) | 03:50:54 elapsed | ETA 13:32:25 | rows 314,164 | ok 10085 empty 14 err 1 parse_err 0 | at 2023-01-02
+  [phase1] 10200/45636 (22.4%) | 03:53:17 elapsed | ETA 13:30:27 | rows 317,305 | ok 10185 empty 14 err 1 parse_err 0 | at 2023-01-05
+  [phase1] 10300/45636 (22.6%) | 03:55:40 elapsed | ETA 13:28:30 | rows 320,715 | ok 10285 empty 14 err 1 parse_err 0 | at 2023-01-09
+  [phase1] 10400/45636 (22.8%) | 03:58:01 elapsed | ETA 13:26:24 | rows 323,009 | ok 10385 empty 14 err 1 parse_err 0 | at 2023-01-12
+  [phase1] 10500/45636 (23.0%) | 04:00:18 elapsed | ETA 13:24:05 | rows 324,760 | ok 10485 empty 14 err 1 parse_err 0 | at 2023-01-17
+  [phase1] 10600/45636 (23.2%) | 04:02:44 elapsed | ETA 13:22:18 | rows 329,094 | ok 10585 empty 14 err 1 parse_err 0 | at 2023-01-19
+  [phase1] 10700/45636 (23.4%) | 04:05:16 elapsed | ETA 13:20:48 | rows 333,126 | ok 10685 empty 14 err 1 parse_err 0 | at 2023-01-24
+  [phase1] 10800/45636 (23.7%) | 04:07:31 elapsed | ETA 13:18:23 | rows 335,203 | ok 10785 empty 14 err 1 parse_err 0 | at 2023-01-26
+  [phase1] 10900/45636 (23.9%) | 04:09:55 elapsed | ETA 13:16:25 | rows 338,002 | ok 10885 empty 14 err 1 parse_err 0 | at 2023-01-31
+  [phase1] 11000/45636 (24.1%) | 04:12:14 elapsed | ETA 13:14:14 | rows 340,700 | ok 10984 empty 15 err 1 parse_err 0 | at 2023-02-02
+  [phase1] 11100/45636 (24.3%) | 04:14:42 elapsed | ETA 13:12:26 | rows 344,104 | ok 11084 empty 15 err 1 parse_err 0 | at 2023-02-07
+  [phase1] 11200/45636 (24.5%) | 04:17:04 elapsed | ETA 13:10:24 | rows 347,966 | ok 11184 empty 15 err 1 parse_err 0 | at 2023-02-10
+  [phase1] 11300/45636 (24.8%) | 04:19:23 elapsed | ETA 13:08:08 | rows 350,741 | ok 11283 empty 16 err 1 parse_err 0 | at 2023-02-14
+  [phase1] 11400/45636 (25.0%) | 04:21:48 elapsed | ETA 13:06:14 | rows 354,226 | ok 11383 empty 16 err 1 parse_err 0 | at 2023-02-17
+  [phase1] 11500/45636 (25.2%) | 04:24:06 elapsed | ETA 13:03:56 | rows 356,443 | ok 11483 empty 16 err 1 parse_err 0 | at 2023-02-21
+  [phase1] 11600/45636 (25.4%) | 04:26:33 elapsed | ETA 13:02:06 | rows 360,102 | ok 11583 empty 16 err 1 parse_err 0 | at 2023-02-24
+  [phase1] 11700/45636 (25.6%) | 04:29:04 elapsed | ETA 13:00:25 | rows 363,252 | ok 11683 empty 16 err 1 parse_err 0 | at 2023-02-28
+  [phase1] 11800/45636 (25.9%) | 04:31:28 elapsed | ETA 12:58:24 | rows 365,789 | ok 11783 empty 16 err 1 parse_err 0 | at 2023-03-03
+  [phase1] 11900/45636 (26.1%) | 04:33:56 elapsed | ETA 12:56:37 | rows 370,009 | ok 11882 empty 17 err 1 parse_err 0 | at 2023-03-07
+  [phase1] 12000/45636 (26.3%) | 04:36:18 elapsed | ETA 12:54:27 | rows 373,488 | ok 11982 empty 17 err 1 parse_err 0 | at 2023-03-10
+  [phase1] 12100/45636 (26.5%) | 04:38:38 elapsed | ETA 12:52:16 | rows 375,680 | ok 12082 empty 17 err 1 parse_err 0 | at 2023-03-15
+  [phase1] 12200/45636 (26.7%) | 04:40:59 elapsed | ETA 12:50:05 | rows 378,538 | ok 12182 empty 17 err 1 parse_err 0 | at 2023-03-17
+  [phase1] 12300/45636 (27.0%) | 04:43:26 elapsed | ETA 12:48:11 | rows 382,115 | ok 12282 empty 17 err 1 parse_err 0 | at 2023-03-22
+  [phase1] 12400/45636 (27.2%) | 04:45:46 elapsed | ETA 12:45:57 | rows 385,425 | ok 12382 empty 17 err 1 parse_err 0 | at 2023-03-24
+  [phase1] 12500/45636 (27.4%) | 04:48:12 elapsed | ETA 12:43:58 | rows 388,507 | ok 12482 empty 17 err 1 parse_err 0 | at 2023-03-29
+  [phase1] 12600/45636 (27.6%) | 04:50:32 elapsed | ETA 12:41:45 | rows 391,048 | ok 12582 empty 17 err 1 parse_err 0 | at 2023-03-31
+  [phase1] 12700/45636 (27.8%) | 04:52:53 elapsed | ETA 12:39:34 | rows 394,299 | ok 12682 empty 17 err 1 parse_err 0 | at 2023-04-05
+  [phase1] 12800/45636 (28.0%) | 04:55:14 elapsed | ETA 12:37:23 | rows 396,618 | ok 12782 empty 17 err 1 parse_err 0 | at 2023-04-10
+  [phase1] 12900/45636 (28.3%) | 04:57:39 elapsed | ETA 12:35:21 | rows 400,506 | ok 12882 empty 17 err 1 parse_err 0 | at 2023-04-12
+  [phase1] 13000/45636 (28.5%) | 05:00:06 elapsed | ETA 12:33:23 | rows 403,418 | ok 12981 empty 18 err 1 parse_err 0 | at 2023-04-17
+  [phase1] 13100/45636 (28.7%) | 05:02:31 elapsed | ETA 12:31:21 | rows 407,372 | ok 13081 empty 18 err 1 parse_err 0 | at 2023-04-19
+  [phase1] 13200/45636 (28.9%) | 05:04:51 elapsed | ETA 12:29:07 | rows 409,720 | ok 13181 empty 18 err 1 parse_err 0 | at 2023-04-24
+  [phase1] 13300/45636 (29.1%) | 05:07:10 elapsed | ETA 12:26:48 | rows 412,395 | ok 13281 empty 18 err 1 parse_err 0 | at 2023-04-26
+  [phase1] 13400/45636 (29.4%) | 05:09:38 elapsed | ETA 12:24:53 | rows 415,482 | ok 13380 empty 19 err 1 parse_err 0 | at 2023-05-01
+  [phase1] 13500/45636 (29.6%) | 05:12:05 elapsed | ETA 12:22:53 | rows 419,136 | ok 13479 empty 20 err 1 parse_err 0 | at 2023-05-03
+  [phase1] 13600/45636 (29.8%) | 05:14:20 elapsed | ETA 12:20:26 | rows 421,919 | ok 13579 empty 20 err 1 parse_err 0 | at 2023-05-08
+  [phase1] 13700/45636 (30.0%) | 05:16:47 elapsed | ETA 12:18:26 | rows 425,150 | ok 13679 empty 20 err 1 parse_err 0 | at 2023-05-11
+  [phase1] 13800/45636 (30.2%) | 05:19:12 elapsed | ETA 12:16:23 | rows 428,336 | ok 13779 empty 20 err 1 parse_err 0 | at 2023-05-15
+  [phase1] 13900/45636 (30.5%) | 05:21:44 elapsed | ETA 12:14:34 | rows 432,338 | ok 13879 empty 20 err 1 parse_err 0 | at 2023-05-18
+  [phase1] 14000/45636 (30.7%) | 05:23:59 elapsed | ETA 12:12:07 | rows 434,539 | ok 13979 empty 20 err 1 parse_err 0 | at 2023-05-22
+  [phase1] 14100/45636 (30.9%) | 05:26:22 elapsed | ETA 12:09:57 | rows 437,520 | ok 14079 empty 20 err 1 parse_err 0 | at 2023-05-25
+  [phase1] 14200/45636 (31.1%) | 05:28:45 elapsed | ETA 12:07:48 | rows 439,784 | ok 14179 empty 20 err 1 parse_err 0 | at 2023-05-29
+  [phase1] 14300/45636 (31.3%) | 05:31:07 elapsed | ETA 12:05:36 | rows 442,935 | ok 14278 empty 21 err 1 parse_err 0 | at 2023-06-01
+  [phase1] 14400/45636 (31.6%) | 05:33:34 elapsed | ETA 12:03:33 | rows 446,103 | ok 14378 empty 21 err 1 parse_err 0 | at 2023-06-06
+  [phase1] 14500/45636 (31.8%) | 05:35:51 elapsed | ETA 12:01:11 | rows 448,616 | ok 14478 empty 21 err 1 parse_err 0 | at 2023-06-08
+  [phase1] 14600/45636 (32.0%) | 05:38:20 elapsed | ETA 11:59:12 | rows 451,802 | ok 14578 empty 21 err 1 parse_err 0 | at 2023-06-13
+  [phase1] 14700/45636 (32.2%) | 05:40:35 elapsed | ETA 11:56:44 | rows 454,133 | ok 14678 empty 21 err 1 parse_err 0 | at 2023-06-15
+  [phase1] 14800/45636 (32.4%) | 05:42:54 elapsed | ETA 11:54:25 | rows 455,556 | ok 14778 empty 21 err 1 parse_err 0 | at 2023-06-20
+  [phase1] 14900/45636 (32.6%) | 05:45:19 elapsed | ETA 11:52:19 | rows 460,031 | ok 14878 empty 21 err 1 parse_err 0 | at 2023-06-22
+  [phase1] 15000/45636 (32.9%) | 05:47:49 elapsed | ETA 11:50:23 | rows 463,778 | ok 14978 empty 21 err 1 parse_err 0 | at 2023-06-27
+  [phase1] 15100/45636 (33.1%) | 05:50:14 elapsed | ETA 11:48:16 | rows 466,924 | ok 15078 empty 21 err 1 parse_err 0 | at 2023-06-30
+  [phase1] 15200/45636 (33.3%) | 05:52:26 elapsed | ETA 11:45:42 | rows 468,082 | ok 15178 empty 21 err 1 parse_err 0 | at 2023-07-04
+  [phase1] 15300/45636 (33.5%) | 05:54:42 elapsed | ETA 11:43:18 | rows 470,585 | ok 15278 empty 21 err 1 parse_err 0 | at 2023-07-07
+  [phase1] 15400/45636 (33.7%) | 05:57:06 elapsed | ETA 11:41:07 | rows 473,800 | ok 15378 empty 21 err 1 parse_err 0 | at 2023-07-11
+  [phase1] 15500/45636 (34.0%) | 05:59:29 elapsed | ETA 11:38:55 | rows 475,658 | ok 15478 empty 21 err 1 parse_err 0 | at 2023-07-14
+  [phase1] 15600/45636 (34.2%) | 06:01:47 elapsed | ETA 11:36:33 | rows 478,175 | ok 15577 empty 22 err 1 parse_err 0 | at 2023-07-18
+  [phase1] 15700/45636 (34.4%) | 06:04:17 elapsed | ETA 11:34:36 | rows 482,282 | ok 15677 empty 22 err 1 parse_err 0 | at 2023-07-21
+  [phase1] 15800/45636 (34.6%) | 06:06:44 elapsed | ETA 11:32:31 | rows 485,700 | ok 15777 empty 22 err 1 parse_err 0 | at 2023-07-25
+  [phase1] 15900/45636 (34.8%) | 06:09:00 elapsed | ETA 11:30:05 | rows 488,214 | ok 15876 empty 23 err 1 parse_err 0 | at 2023-07-28
+  [phase1] 16000/45636 (35.1%) | 06:11:24 elapsed | ETA 11:27:56 | rows 490,683 | ok 15976 empty 23 err 1 parse_err 0 | at 2023-08-02
+  [phase1] 16100/45636 (35.3%) | 06:13:44 elapsed | ETA 11:25:38 | rows 493,920 | ok 16075 empty 24 err 1 parse_err 0 | at 2023-08-04
+  [phase1] 16200/45636 (35.5%) | 06:16:08 elapsed | ETA 11:23:26 | rows 497,499 | ok 16175 empty 24 err 1 parse_err 0 | at 2023-08-09
+  [phase1] 16300/45636 (35.7%) | 06:20:10 elapsed | ETA 11:24:12 | rows 500,489 | ok 16273 empty 24 err 3 parse_err 0 | at 2023-08-11
+  [phase1] 16400/45636 (35.9%) | 06:22:35 elapsed | ETA 11:22:01 | rows 503,854 | ok 16373 empty 24 err 3 parse_err 0 | at 2023-08-16
+  [phase1] 16500/45636 (36.2%) | 06:24:57 elapsed | ETA 11:19:45 | rows 506,597 | ok 16473 empty 24 err 3 parse_err 0 | at 2023-08-18
+  [phase1] 16600/45636 (36.4%) | 06:27:22 elapsed | ETA 11:17:34 | rows 509,744 | ok 16573 empty 24 err 3 parse_err 0 | at 2023-08-23
+  [phase1] 16700/45636 (36.6%) | 06:29:46 elapsed | ETA 11:15:21 | rows 512,791 | ok 16673 empty 24 err 3 parse_err 0 | at 2023-08-28
+  [phase1] 16800/45636 (36.8%) | 06:32:05 elapsed | ETA 11:13:00 | rows 516,038 | ok 16773 empty 24 err 3 parse_err 0 | at 2023-08-30
+  [phase1] 16900/45636 (37.0%) | 06:34:25 elapsed | ETA 11:10:38 | rows 517,994 | ok 16873 empty 24 err 3 parse_err 0 | at 2023-09-04
+  [phase1] 17000/45636 (37.3%) | 06:36:44 elapsed | ETA 11:08:16 | rows 521,168 | ok 16972 empty 25 err 3 parse_err 0 | at 2023-09-06
+  [phase1] 17100/45636 (37.5%) | 06:39:10 elapsed | ETA 11:06:07 | rows 524,781 | ok 17072 empty 25 err 3 parse_err 0 | at 2023-09-11
+  [phase1] 17200/45636 (37.7%) | 06:41:26 elapsed | ETA 11:03:40 | rows 527,662 | ok 17172 empty 25 err 3 parse_err 0 | at 2023-09-13
+  [phase1] 17300/45636 (37.9%) | 06:43:46 elapsed | ETA 11:01:21 | rows 529,947 | ok 17272 empty 25 err 3 parse_err 0 | at 2023-09-18
+  [phase1] 17400/45636 (38.1%) | 06:46:19 elapsed | ETA 10:59:21 | rows 534,620 | ok 17372 empty 25 err 3 parse_err 0 | at 2023-09-20
+  [phase1] 17500/45636 (38.3%) | 06:48:40 elapsed | ETA 10:57:03 | rows 537,858 | ok 17472 empty 25 err 3 parse_err 0 | at 2023-09-25
+  [phase1] 17600/45636 (38.6%) | 06:51:04 elapsed | ETA 10:54:48 | rows 540,771 | ok 17572 empty 25 err 3 parse_err 0 | at 2023-09-28
+  [phase1] 17700/45636 (38.8%) | 06:53:22 elapsed | ETA 10:52:25 | rows 543,369 | ok 17672 empty 25 err 3 parse_err 0 | at 2023-10-02
+  [phase1] 17800/45636 (39.0%) | 06:55:49 elapsed | ETA 10:50:15 | rows 547,269 | ok 17772 empty 25 err 3 parse_err 0 | at 2023-10-05
+  [phase1] 17900/45636 (39.2%) | 06:58:11 elapsed | ETA 10:47:58 | rows 549,733 | ok 17872 empty 25 err 3 parse_err 0 | at 2023-10-09
+  [phase1] 18000/45636 (39.4%) | 07:00:34 elapsed | ETA 10:45:43 | rows 552,530 | ok 17972 empty 25 err 3 parse_err 0 | at 2023-10-12
+  [phase1] 18100/45636 (39.7%) | 07:02:54 elapsed | ETA 10:43:21 | rows 555,512 | ok 18071 empty 26 err 3 parse_err 0 | at 2023-10-16
+  [phase1] 18200/45636 (39.9%) | 07:05:19 elapsed | ETA 10:41:09 | rows 559,294 | ok 18171 empty 26 err 3 parse_err 0 | at 2023-10-19
+  [phase1] 18300/45636 (40.1%) | 07:07:48 elapsed | ETA 10:39:03 | rows 562,719 | ok 18271 empty 26 err 3 parse_err 0 | at 2023-10-24
+  [phase1] 18400/45636 (40.3%) | 07:10:06 elapsed | ETA 10:36:39 | rows 565,449 | ok 18371 empty 26 err 3 parse_err 0 | at 2023-10-26
+  [phase1] 18500/45636 (40.5%) | 07:12:29 elapsed | ETA 10:34:22 | rows 567,876 | ok 18470 empty 27 err 3 parse_err 0 | at 2023-10-31
+  [phase1] 18600/45636 (40.8%) | 07:14:46 elapsed | ETA 10:31:57 | rows 570,326 | ok 18570 empty 27 err 3 parse_err 0 | at 2023-11-02
+  [phase1] 18700/45636 (41.0%) | 07:17:13 elapsed | ETA 10:29:46 | rows 573,899 | ok 18670 empty 27 err 3 parse_err 0 | at 2023-11-07
+  [phase1] 18800/45636 (41.2%) | 07:19:30 elapsed | ETA 10:27:21 | rows 577,056 | ok 18769 empty 28 err 3 parse_err 0 | at 2023-11-09
+  [phase1] 18900/45636 (41.4%) | 07:21:47 elapsed | ETA 10:24:57 | rows 578,897 | ok 18869 empty 28 err 3 parse_err 0 | at 2023-11-14
+  [phase1] 19000/45636 (41.6%) | 07:24:17 elapsed | ETA 10:22:50 | rows 583,228 | ok 18968 empty 29 err 3 parse_err 0 | at 2023-11-17
+  [phase1] 19100/45636 (41.9%) | 07:26:41 elapsed | ETA 10:20:35 | rows 586,942 | ok 19068 empty 29 err 3 parse_err 0 | at 2023-11-21
+  [phase1] 19200/45636 (42.1%) | 07:28:58 elapsed | ETA 10:18:10 | rows 588,226 | ok 19168 empty 29 err 3 parse_err 0 | at 2023-11-24
+  [phase1] 19300/45636 (42.3%) | 07:31:15 elapsed | ETA 10:15:45 | rows 590,579 | ok 19268 empty 29 err 3 parse_err 0 | at 2023-11-28
+  [phase1] 19400/45636 (42.5%) | 07:33:43 elapsed | ETA 10:13:35 | rows 594,335 | ok 19368 empty 29 err 3 parse_err 0 | at 2023-12-01
+  [phase1] 19500/45636 (42.7%) | 07:36:08 elapsed | ETA 10:11:22 | rows 598,045 | ok 19468 empty 29 err 3 parse_err 0 | at 2023-12-05
+  [phase1] 19600/45636 (42.9%) | 07:38:32 elapsed | ETA 10:09:06 | rows 601,406 | ok 19568 empty 29 err 3 parse_err 0 | at 2023-12-08
+  [phase1] 19700/45636 (43.2%) | 07:40:56 elapsed | ETA 10:06:50 | rows 604,797 | ok 19668 empty 29 err 3 parse_err 0 | at 2023-12-12
+  [phase1] 19800/45636 (43.4%) | 07:43:19 elapsed | ETA 10:04:34 | rows 608,405 | ok 19768 empty 29 err 3 parse_err 0 | at 2023-12-15
+  [phase1] 19900/45636 (43.6%) | 07:45:55 elapsed | ETA 10:02:33 | rows 613,014 | ok 19868 empty 29 err 3 parse_err 0 | at 2023-12-20
+  [phase1] 20000/45636 (43.8%) | 07:48:22 elapsed | ETA 10:00:21 | rows 616,966 | ok 19968 empty 29 err 3 parse_err 0 | at 2023-12-22
+  [phase1] 20100/45636 (44.0%) | 07:50:30 elapsed | ETA 09:57:45 | rows 617,348 | ok 20068 empty 29 err 3 parse_err 0 | at 2023-12-27
+  [phase1] 20200/45636 (44.3%) | 07:52:46 elapsed | ETA 09:55:18 | rows 618,856 | ok 20168 empty 29 err 3 parse_err 0 | at 2023-12-29
+  [phase1] 20300/45636 (44.5%) | 07:55:00 elapsed | ETA 09:52:50 | rows 620,332 | ok 20267 empty 30 err 3 parse_err 0 | at 2024-01-03
+  [phase1] 20400/45636 (44.7%) | 07:57:26 elapsed | ETA 09:50:36 | rows 623,638 | ok 20367 empty 30 err 3 parse_err 0 | at 2024-01-05
+  [phase1] 20500/45636 (44.9%) | 07:59:54 elapsed | ETA 09:48:26 | rows 628,284 | ok 20467 empty 30 err 3 parse_err 0 | at 2024-01-10
+  [phase1] 20600/45636 (45.1%) | 08:02:23 elapsed | ETA 09:46:15 | rows 631,469 | ok 20565 empty 32 err 3 parse_err 0 | at 2024-01-15
+  [phase1] 20700/45636 (45.4%) | 08:04:56 elapsed | ETA 09:44:10 | rows 636,147 | ok 20665 empty 32 err 3 parse_err 0 | at 2024-01-17
+  [phase1] 20800/45636 (45.6%) | 08:07:26 elapsed | ETA 09:42:01 | rows 639,767 | ok 20765 empty 32 err 3 parse_err 0 | at 2024-01-22
+  [phase1] 20900/45636 (45.8%) | 08:09:47 elapsed | ETA 09:39:40 | rows 642,775 | ok 20865 empty 32 err 3 parse_err 0 | at 2024-01-24
+  [phase1] 21000/45636 (46.0%) | 08:12:11 elapsed | ETA 09:37:24 | rows 644,645 | ok 20965 empty 32 err 3 parse_err 0 | at 2024-01-29
+  [phase1] 21100/45636 (46.2%) | 08:14:39 elapsed | ETA 09:35:12 | rows 648,613 | ok 21065 empty 32 err 3 parse_err 0 | at 2024-01-31
+  [phase1] 21200/45636 (46.5%) | 08:17:03 elapsed | ETA 09:32:55 | rows 651,064 | ok 21165 empty 32 err 3 parse_err 0 | at 2024-02-05
+  [phase1] 21300/45636 (46.7%) | 08:19:34 elapsed | ETA 09:30:47 | rows 655,638 | ok 21265 empty 32 err 3 parse_err 0 | at 2024-02-07
+  [phase1] 21400/45636 (46.9%) | 08:21:56 elapsed | ETA 09:28:27 | rows 658,667 | ok 21365 empty 32 err 3 parse_err 0 | at 2024-02-12
+  [phase1] 21500/45636 (47.1%) | 08:24:25 elapsed | ETA 09:26:16 | rows 663,016 | ok 21464 empty 33 err 3 parse_err 0 | at 2024-02-15
+  [phase1] 21600/45636 (47.3%) | 08:26:38 elapsed | ETA 09:23:46 | rows 664,796 | ok 21564 empty 33 err 3 parse_err 0 | at 2024-02-19
+  [phase1] 21700/45636 (47.6%) | 08:29:15 elapsed | ETA 09:21:43 | rows 669,185 | ok 21664 empty 33 err 3 parse_err 0 | at 2024-02-22
+  [phase1] 21800/45636 (47.8%) | 08:31:35 elapsed | ETA 09:19:22 | rows 672,306 | ok 21764 empty 33 err 3 parse_err 0 | at 2024-02-26
+  [phase1] 21900/45636 (48.0%) | 08:34:05 elapsed | ETA 09:17:11 | rows 675,947 | ok 21864 empty 33 err 3 parse_err 0 | at 2024-02-29
+  [phase1] 22000/45636 (48.2%) | 08:36:27 elapsed | ETA 09:14:51 | rows 678,636 | ok 21964 empty 33 err 3 parse_err 0 | at 2024-03-04
+  [phase1] 22100/45636 (48.4%) | 08:38:55 elapsed | ETA 09:12:38 | rows 683,115 | ok 22063 empty 34 err 3 parse_err 0 | at 2024-03-07
+  [phase1] 22200/45636 (48.6%) | 08:41:24 elapsed | ETA 09:10:25 | rows 686,734 | ok 22163 empty 34 err 3 parse_err 0 | at 2024-03-12
+  [phase1] 22300/45636 (48.9%) | 08:43:47 elapsed | ETA 09:08:07 | rows 690,470 | ok 22263 empty 34 err 3 parse_err 0 | at 2024-03-14
+  [phase1] 22400/45636 (49.1%) | 08:46:14 elapsed | ETA 09:05:52 | rows 693,319 | ok 22363 empty 34 err 3 parse_err 0 | at 2024-03-19
+  [phase1] 22500/45636 (49.3%) | 08:48:35 elapsed | ETA 09:03:32 | rows 696,572 | ok 22463 empty 34 err 3 parse_err 0 | at 2024-03-21
+  [phase1] 22600/45636 (49.5%) | 08:51:02 elapsed | ETA 09:01:17 | rows 699,652 | ok 22563 empty 34 err 3 parse_err 0 | at 2024-03-26
+  [phase1] 22700/45636 (49.7%) | 08:53:27 elapsed | ETA 08:59:00 | rows 703,433 | ok 22663 empty 34 err 3 parse_err 0 | at 2024-03-28
+  [phase1] 22800/45636 (50.0%) | 08:55:49 elapsed | ETA 08:56:40 | rows 706,278 | ok 22763 empty 34 err 3 parse_err 0 | at 2024-04-02
+  [phase1] 22900/45636 (50.2%) | 08:58:23 elapsed | ETA 08:54:31 | rows 710,947 | ok 22862 empty 35 err 3 parse_err 0 | at 2024-04-05
+  [phase1] 23000/45636 (50.4%) | 09:00:46 elapsed | ETA 08:52:13 | rows 713,990 | ok 22962 empty 35 err 3 parse_err 0 | at 2024-04-09
+  [phase1] 23100/45636 (50.6%) | 09:03:07 elapsed | ETA 08:49:51 | rows 716,596 | ok 23062 empty 35 err 3 parse_err 0 | at 2024-04-12
+  [phase1] 23200/45636 (50.8%) | 09:05:28 elapsed | ETA 08:47:30 | rows 720,033 | ok 23162 empty 35 err 3 parse_err 0 | at 2024-04-16
+  [phase1] 23300/45636 (51.1%) | 09:07:53 elapsed | ETA 08:45:13 | rows 723,000 | ok 23261 empty 36 err 3 parse_err 0 | at 2024-04-19
+  [phase1] 23400/45636 (51.3%) | 09:10:20 elapsed | ETA 08:42:57 | rows 726,439 | ok 23361 empty 36 err 3 parse_err 0 | at 2024-04-23
+  [phase1] 23500/45636 (51.5%) | 09:12:45 elapsed | ETA 08:40:40 | rows 729,358 | ok 23461 empty 36 err 3 parse_err 0 | at 2024-04-26
+  [phase1] 23600/45636 (51.7%) | 09:15:11 elapsed | ETA 08:38:23 | rows 732,317 | ok 23559 empty 38 err 3 parse_err 0 | at 2024-04-30
+  [phase1] 23700/45636 (51.9%) | 09:17:31 elapsed | ETA 08:36:01 | rows 735,233 | ok 23659 empty 38 err 3 parse_err 0 | at 2024-05-03
+  [phase1] 23800/45636 (52.2%) | 09:19:54 elapsed | ETA 08:33:42 | rows 738,533 | ok 23759 empty 38 err 3 parse_err 0 | at 2024-05-08
+  [phase1] 23900/45636 (52.4%) | 09:22:18 elapsed | ETA 08:31:23 | rows 742,042 | ok 23859 empty 38 err 3 parse_err 0 | at 2024-05-10
+  [phase1] 24000/45636 (52.6%) | 09:24:45 elapsed | ETA 08:29:08 | rows 745,695 | ok 23958 empty 39 err 3 parse_err 0 | at 2024-05-15
+  [phase1] 24100/45636 (52.8%) | 09:27:07 elapsed | ETA 08:26:47 | rows 748,728 | ok 24058 empty 39 err 3 parse_err 0 | at 2024-05-17
+  [phase1] 24200/45636 (53.0%) | 09:29:29 elapsed | ETA 08:24:26 | rows 751,925 | ok 24158 empty 39 err 3 parse_err 0 | at 2024-05-22
+  [phase1] 24300/45636 (53.2%) | 09:31:52 elapsed | ETA 08:22:07 | rows 754,492 | ok 24258 empty 39 err 3 parse_err 0 | at 2024-05-24
+  [phase1] 24400/45636 (53.5%) | 09:34:11 elapsed | ETA 08:19:43 | rows 756,708 | ok 24358 empty 39 err 3 parse_err 0 | at 2024-05-29
+  [phase1] 24500/45636 (53.7%) | 09:36:39 elapsed | ETA 08:17:28 | rows 759,648 | ok 24458 empty 39 err 3 parse_err 0 | at 2024-06-03
+  [phase1] 24600/45636 (53.9%) | 09:39:04 elapsed | ETA 08:15:10 | rows 763,843 | ok 24558 empty 39 err 3 parse_err 0 | at 2024-06-05
+  [phase1] 24700/45636 (54.1%) | 09:41:23 elapsed | ETA 08:12:47 | rows 766,070 | ok 24658 empty 39 err 3 parse_err 0 | at 2024-06-10
+  [phase1] 24800/45636 (54.3%) | 09:43:45 elapsed | ETA 08:10:27 | rows 769,727 | ok 24758 empty 39 err 3 parse_err 0 | at 2024-06-12
+  [phase1] 24900/45636 (54.6%) | 09:46:15 elapsed | ETA 08:08:13 | rows 773,325 | ok 24858 empty 39 err 3 parse_err 0 | at 2024-06-17
+  [phase1] 25000/45636 (54.8%) | 09:48:34 elapsed | ETA 08:05:49 | rows 776,569 | ok 24958 empty 39 err 3 parse_err 0 | at 2024-06-19
+  [phase1] 25100/45636 (55.0%) | 09:50:49 elapsed | ETA 08:03:24 | rows 778,737 | ok 25057 empty 40 err 3 parse_err 0 | at 2024-06-24
+  [phase1] 25200/45636 (55.2%) | 09:53:19 elapsed | ETA 08:01:09 | rows 783,023 | ok 25157 empty 40 err 3 parse_err 0 | at 2024-06-26
+  [phase1] 25300/45636 (55.4%) | 09:55:40 elapsed | ETA 07:58:48 | rows 785,991 | ok 25257 empty 40 err 3 parse_err 0 | at 2024-07-01
+  [phase1] 25400/45636 (55.7%) | 09:58:01 elapsed | ETA 07:56:26 | rows 788,500 | ok 25357 empty 40 err 3 parse_err 0 | at 2024-07-04
+  [phase1] 25500/45636 (55.9%) | 10:00:14 elapsed | ETA 07:53:58 | rows 789,517 | ok 25457 empty 40 err 3 parse_err 0 | at 2024-07-08
+  [phase1] 25600/45636 (56.1%) | 10:02:47 elapsed | ETA 07:51:46 | rows 792,663 | ok 25557 empty 40 err 3 parse_err 0 | at 2024-07-11
+  [phase1] 25700/45636 (56.3%) | 10:05:03 elapsed | ETA 07:49:21 | rows 794,547 | ok 25657 empty 40 err 3 parse_err 0 | at 2024-07-15
+  [phase1] 25800/45636 (56.5%) | 10:07:38 elapsed | ETA 07:47:10 | rows 798,989 | ok 25757 empty 40 err 3 parse_err 0 | at 2024-07-18
+  [phase1] 25900/45636 (56.8%) | 10:10:23 elapsed | ETA 07:45:07 | rows 802,763 | ok 25857 empty 40 err 3 parse_err 0 | at 2024-07-22
+  [phase1] 26000/45636 (57.0%) | 10:12:55 elapsed | ETA 07:42:54 | rows 805,915 | ok 25956 empty 41 err 3 parse_err 0 | at 2024-07-25
+  [phase1] 26100/45636 (57.2%) | 10:15:42 elapsed | ETA 07:40:51 | rows 809,377 | ok 26055 empty 42 err 3 parse_err 0 | at 2024-07-30
+  [phase1] 26200/45636 (57.4%) | 10:18:06 elapsed | ETA 07:38:32 | rows 813,074 | ok 26155 empty 42 err 3 parse_err 0 | at 2024-08-01
+  [phase1] 26300/45636 (57.6%) | 10:20:28 elapsed | ETA 07:36:10 | rows 815,563 | ok 26255 empty 42 err 3 parse_err 0 | at 2024-08-06
+  [phase1] 26400/45636 (57.8%) | 10:22:49 elapsed | ETA 07:33:49 | rows 819,364 | ok 26355 empty 42 err 3 parse_err 0 | at 2024-08-08
+  [phase1] 26500/45636 (58.1%) | 10:25:21 elapsed | ETA 07:31:34 | rows 822,891 | ok 26455 empty 42 err 3 parse_err 0 | at 2024-08-13
+  [phase1] 26600/45636 (58.3%) | 10:27:42 elapsed | ETA 07:29:12 | rows 826,602 | ok 26555 empty 42 err 3 parse_err 0 | at 2024-08-15
+  [phase1] 26700/45636 (58.5%) | 10:30:06 elapsed | ETA 07:26:53 | rows 829,414 | ok 26655 empty 42 err 3 parse_err 0 | at 2024-08-20
+  [phase1] 26800/45636 (58.7%) | 10:32:42 elapsed | ETA 07:24:41 | rows 833,945 | ok 26754 empty 43 err 3 parse_err 0 | at 2024-08-23
+  [phase1] 26900/45636 (58.9%) | 10:35:12 elapsed | ETA 07:22:26 | rows 837,561 | ok 26854 empty 43 err 3 parse_err 0 | at 2024-08-27
+  [phase1] 27000/45636 (59.2%) | 10:37:36 elapsed | ETA 07:20:05 | rows 840,542 | ok 26954 empty 43 err 3 parse_err 0 | at 2024-08-30
+  [phase1] 27100/45636 (59.4%) | 10:39:52 elapsed | ETA 07:17:40 | rows 842,602 | ok 27054 empty 43 err 3 parse_err 0 | at 2024-09-03
+  [phase1] 27200/45636 (59.6%) | 10:42:23 elapsed | ETA 07:15:24 | rows 846,492 | ok 27154 empty 43 err 3 parse_err 0 | at 2024-09-06
+  [phase1] 27300/45636 (59.8%) | 10:44:41 elapsed | ETA 07:13:00 | rows 849,757 | ok 27252 empty 45 err 3 parse_err 0 | at 2024-09-10
+  [phase1] 27400/45636 (60.0%) | 10:47:04 elapsed | ETA 07:10:39 | rows 852,887 | ok 27352 empty 45 err 3 parse_err 0 | at 2024-09-13
+  [phase1] 27500/45636 (60.3%) | 10:49:40 elapsed | ETA 07:08:27 | rows 857,983 | ok 27451 empty 46 err 3 parse_err 0 | at 2024-09-17
+  [phase1] 27600/45636 (60.5%) | 10:52:05 elapsed | ETA 07:06:07 | rows 861,369 | ok 27551 empty 46 err 3 parse_err 0 | at 2024-09-20
+  [phase1] 27700/45636 (60.7%) | 10:54:31 elapsed | ETA 07:03:48 | rows 863,895 | ok 27650 empty 47 err 3 parse_err 0 | at 2024-09-25
+  [phase1] 27800/45636 (60.9%) | 10:57:00 elapsed | ETA 07:01:31 | rows 867,492 | ok 27750 empty 47 err 3 parse_err 0 | at 2024-09-27
+  [phase1] 27900/45636 (61.1%) | 10:59:30 elapsed | ETA 06:59:15 | rows 871,284 | ok 27850 empty 47 err 3 parse_err 0 | at 2024-10-02
+  [phase1] 28000/45636 (61.4%) | 11:01:54 elapsed | ETA 06:56:54 | rows 874,313 | ok 27950 empty 47 err 3 parse_err 0 | at 2024-10-04
+  [phase1] 28100/45636 (61.6%) | 11:04:18 elapsed | ETA 06:54:34 | rows 878,264 | ok 28050 empty 47 err 3 parse_err 0 | at 2024-10-09
+  [phase1] 28200/45636 (61.8%) | 11:06:47 elapsed | ETA 06:52:16 | rows 882,203 | ok 28150 empty 47 err 3 parse_err 0 | at 2024-10-11
+  [phase1] 28300/45636 (62.0%) | 11:09:17 elapsed | ETA 06:49:59 | rows 885,631 | ok 28250 empty 47 err 3 parse_err 0 | at 2024-10-16
+  [phase1] 28400/45636 (62.2%) | 11:11:43 elapsed | ETA 06:47:40 | rows 888,594 | ok 28348 empty 49 err 3 parse_err 0 | at 2024-10-21
+  [phase1] 28500/45636 (62.5%) | 11:14:08 elapsed | ETA 06:45:20 | rows 892,571 | ok 28448 empty 49 err 3 parse_err 0 | at 2024-10-23
+  [phase1] 28600/45636 (62.7%) | 11:16:35 elapsed | ETA 06:43:01 | rows 895,051 | ok 28547 empty 50 err 3 parse_err 0 | at 2024-10-28
+  [phase1] 28700/45636 (62.9%) | 11:19:01 elapsed | ETA 06:40:41 | rows 898,929 | ok 28647 empty 50 err 3 parse_err 0 | at 2024-10-30
+  [phase1] 28800/45636 (63.1%) | 11:21:24 elapsed | ETA 06:38:20 | rows 901,186 | ok 28745 empty 52 err 3 parse_err 0 | at 2024-11-04
+  [phase1] 28900/45636 (63.3%) | 11:23:47 elapsed | ETA 06:35:59 | rows 904,362 | ok 28845 empty 52 err 3 parse_err 0 | at 2024-11-06
+  [phase1] 29000/45636 (63.5%) | 11:26:12 elapsed | ETA 06:33:39 | rows 906,843 | ok 28945 empty 52 err 3 parse_err 0 | at 2024-11-11
+  [phase1] 29100/45636 (63.8%) | 11:28:40 elapsed | ETA 06:31:20 | rows 910,808 | ok 29045 empty 52 err 3 parse_err 0 | at 2024-11-13
+  [phase1] 29200/45636 (64.0%) | 11:30:59 elapsed | ETA 06:28:56 | rows 913,852 | ok 29144 empty 53 err 3 parse_err 0 | at 2024-11-18
+  [phase1] 29300/45636 (64.2%) | 11:33:30 elapsed | ETA 06:26:39 | rows 918,284 | ok 29243 empty 54 err 3 parse_err 0 | at 2024-11-21
+  [phase1] 29400/45636 (64.4%) | 11:35:58 elapsed | ETA 06:24:21 | rows 921,782 | ok 29340 empty 57 err 3 parse_err 0 | at 2024-11-25
+  [phase1] 29500/45636 (64.6%) | 11:38:24 elapsed | ETA 06:22:01 | rows 924,440 | ok 29439 empty 58 err 3 parse_err 0 | at 2024-11-28
+  [phase1] 29600/45636 (64.9%) | 11:40:34 elapsed | ETA 06:19:32 | rows 925,735 | ok 29539 empty 58 err 3 parse_err 0 | at 2024-12-02
+  [phase1] 29700/45636 (65.1%) | 11:43:01 elapsed | ETA 06:17:13 | rows 929,772 | ok 29638 empty 59 err 3 parse_err 0 | at 2024-12-05
+  [phase1] 29800/45636 (65.3%) | 11:45:29 elapsed | ETA 06:14:54 | rows 933,294 | ok 29737 empty 60 err 3 parse_err 0 | at 2024-12-09
+  [phase1] 29900/45636 (65.5%) | 11:47:52 elapsed | ETA 06:12:33 | rows 936,702 | ok 29835 empty 62 err 3 parse_err 0 | at 2024-12-12
+  [phase1] 30000/45636 (65.7%) | 11:50:25 elapsed | ETA 06:10:16 | rows 940,835 | ok 29935 empty 62 err 3 parse_err 0 | at 2024-12-17
+  [phase1] 30100/45636 (66.0%) | 11:52:52 elapsed | ETA 06:07:56 | rows 945,755 | ok 30032 empty 65 err 3 parse_err 0 | at 2024-12-19
+  [phase1] 30200/45636 (66.2%) | 11:55:11 elapsed | ETA 06:05:33 | rows 947,306 | ok 30131 empty 66 err 3 parse_err 0 | at 2024-12-24
+  [phase1] 30300/45636 (66.4%) | 11:57:12 elapsed | ETA 06:03:00 | rows 947,487 | ok 30231 empty 66 err 3 parse_err 0 | at 2024-12-26
+  [phase1] 30400/45636 (66.6%) | 11:59:29 elapsed | ETA 06:00:35 | rows 948,363 | ok 30330 empty 67 err 3 parse_err 0 | at 2024-12-31
+  [phase1] 30500/45636 (66.8%) | 12:01:49 elapsed | ETA 05:58:13 | rows 949,524 | ok 30429 empty 68 err 3 parse_err 0 | at 2025-01-02
+  [phase1] 30600/45636 (67.1%) | 12:04:11 elapsed | ETA 05:55:51 | rows 952,302 | ok 30528 empty 69 err 3 parse_err 0 | at 2025-01-07
+  [phase1] 30700/45636 (67.3%) | 12:06:45 elapsed | ETA 05:53:34 | rows 956,964 | ok 30628 empty 69 err 3 parse_err 0 | at 2025-01-10
+  [phase1] 30800/45636 (67.5%) | 12:09:12 elapsed | ETA 05:51:15 | rows 960,891 | ok 30726 empty 71 err 3 parse_err 0 | at 2025-01-14
+  [phase1] 30900/45636 (67.7%) | 12:11:38 elapsed | ETA 05:48:55 | rows 964,512 | ok 30825 empty 72 err 3 parse_err 0 | at 2025-01-17
+  [phase1] 31000/45636 (67.9%) | 12:13:54 elapsed | ETA 05:46:30 | rows 966,669 | ok 30925 empty 72 err 3 parse_err 0 | at 2025-01-21
+  [phase1] 31100/45636 (68.1%) | 12:16:22 elapsed | ETA 05:44:11 | rows 969,939 | ok 31025 empty 72 err 3 parse_err 0 | at 2025-01-24
+  [phase1] 31200/45636 (68.4%) | 12:18:50 elapsed | ETA 05:41:51 | rows 973,916 | ok 31125 empty 72 err 3 parse_err 0 | at 2025-01-28
+  [phase1] 31300/45636 (68.6%) | 12:21:11 elapsed | ETA 05:39:29 | rows 976,156 | ok 31224 empty 73 err 3 parse_err 0 | at 2025-01-31
+  [phase1] 31400/45636 (68.8%) | 12:23:40 elapsed | ETA 05:37:10 | rows 979,668 | ok 31323 empty 74 err 3 parse_err 0 | at 2025-02-04
+  [phase1] 31500/45636 (69.0%) | 12:26:01 elapsed | ETA 05:34:47 | rows 982,449 | ok 31421 empty 76 err 3 parse_err 0 | at 2025-02-07
+  [phase1] 31600/45636 (69.2%) | 12:28:39 elapsed | ETA 05:32:32 | rows 986,677 | ok 31521 empty 76 err 3 parse_err 0 | at 2025-02-12
+  [phase1] 31700/45636 (69.5%) | 12:31:00 elapsed | ETA 05:30:10 | rows 989,593 | ok 31621 empty 76 err 3 parse_err 0 | at 2025-02-14
+  [phase1] 31800/45636 (69.7%) | 12:33:30 elapsed | ETA 05:27:51 | rows 992,588 | ok 31721 empty 76 err 3 parse_err 0 | at 2025-02-19
+  [phase1] 31900/45636 (69.9%) | 12:36:11 elapsed | ETA 05:25:37 | rows 995,641 | ok 31820 empty 77 err 3 parse_err 0 | at 2025-02-21
+  [phase1] 32000/45636 (70.1%) | 12:38:41 elapsed | ETA 05:23:18 | rows 999,369 | ok 31920 empty 77 err 3 parse_err 0 | at 2025-02-26
+  [phase1] 32100/45636 (70.3%) | 12:40:58 elapsed | ETA 05:20:53 | rows 1,001,589 | ok 32019 empty 78 err 3 parse_err 0 | at 2025-02-28
+  [phase1] 32200/45636 (70.6%) | 12:43:30 elapsed | ETA 05:18:35 | rows 1,006,088 | ok 32119 empty 78 err 3 parse_err 0 | at 2025-03-05
+  [phase1] 32300/45636 (70.8%) | 12:46:02 elapsed | ETA 05:16:17 | rows 1,009,846 | ok 32217 empty 80 err 3 parse_err 0 | at 2025-03-10
+  [phase1] 32400/45636 (71.0%) | 12:48:29 elapsed | ETA 05:13:56 | rows 1,014,458 | ok 32316 empty 81 err 3 parse_err 0 | at 2025-03-12
+  [phase1] 32500/45636 (71.2%) | 12:50:51 elapsed | ETA 05:11:34 | rows 1,016,898 | ok 32416 empty 81 err 3 parse_err 0 | at 2025-03-17
+  [phase1] 32600/45636 (71.4%) | 12:53:15 elapsed | ETA 05:09:12 | rows 1,020,275 | ok 32515 empty 82 err 3 parse_err 0 | at 2025-03-19
+  [phase1] 32700/45636 (71.7%) | 12:55:41 elapsed | ETA 05:06:51 | rows 1,022,383 | ok 32615 empty 82 err 3 parse_err 0 | at 2025-03-24
+  [phase1] 32800/45636 (71.9%) | 12:58:06 elapsed | ETA 05:04:30 | rows 1,026,477 | ok 32713 empty 84 err 3 parse_err 0 | at 2025-03-26
+  [phase1] 32900/45636 (72.1%) | 13:00:33 elapsed | ETA 05:02:10 | rows 1,029,390 | ok 32812 empty 85 err 3 parse_err 0 | at 2025-03-31
+  [phase1] 33000/45636 (72.3%) | 13:03:06 elapsed | ETA 04:59:51 | rows 1,033,874 | ok 32912 empty 85 err 3 parse_err 0 | at 2025-04-02
+  [phase1] 33100/45636 (72.5%) | 13:05:28 elapsed | ETA 04:57:29 | rows 1,036,945 | ok 33012 empty 85 err 3 parse_err 0 | at 2025-04-07
+  [phase1] 33200/45636 (72.7%) | 13:08:02 elapsed | ETA 04:55:11 | rows 1,040,511 | ok 33112 empty 85 err 3 parse_err 0 | at 2025-04-10
+  [phase1] 33300/45636 (73.0%) | 13:10:22 elapsed | ETA 04:52:48 | rows 1,043,024 | ok 33212 empty 85 err 3 parse_err 0 | at 2025-04-14
+  [phase1] 33400/45636 (73.2%) | 13:12:57 elapsed | ETA 04:50:30 | rows 1,047,252 | ok 33310 empty 87 err 3 parse_err 0 | at 2025-04-17
+  [phase1] 33500/45636 (73.4%) | 13:15:11 elapsed | ETA 04:48:04 | rows 1,049,184 | ok 33410 empty 87 err 3 parse_err 0 | at 2025-04-21
+  [phase1] 33600/45636 (73.6%) | 13:17:40 elapsed | ETA 04:45:44 | rows 1,052,749 | ok 33510 empty 87 err 3 parse_err 0 | at 2025-04-24
+  [phase1] 33700/45636 (73.8%) | 13:20:11 elapsed | ETA 04:43:25 | rows 1,056,455 | ok 33608 empty 89 err 3 parse_err 0 | at 2025-04-28
+  [phase1] 33800/45636 (74.1%) | 13:22:41 elapsed | ETA 04:41:05 | rows 1,060,618 | ok 33707 empty 90 err 3 parse_err 0 | at 2025-05-01
+  [phase1] 33900/45636 (74.3%) | 13:25:17 elapsed | ETA 04:38:47 | rows 1,064,387 | ok 33807 empty 90 err 3 parse_err 0 | at 2025-05-06
+  [phase1] 34000/45636 (74.5%) | 13:27:41 elapsed | ETA 04:36:25 | rows 1,068,664 | ok 33907 empty 90 err 3 parse_err 0 | at 2025-05-08
+  [phase1] 34100/45636 (74.7%) | 13:30:05 elapsed | ETA 04:34:03 | rows 1,071,542 | ok 34006 empty 91 err 3 parse_err 0 | at 2025-05-13
+  [phase1] 34200/45636 (74.9%) | 13:32:33 elapsed | ETA 04:31:42 | rows 1,075,830 | ok 34106 empty 91 err 3 parse_err 0 | at 2025-05-15
+  [phase1] 34300/45636 (75.2%) | 13:34:55 elapsed | ETA 04:29:20 | rows 1,079,024 | ok 34203 empty 94 err 3 parse_err 0 | at 2025-05-20
+  [phase1] 34400/45636 (75.4%) | 13:37:19 elapsed | ETA 04:26:57 | rows 1,082,645 | ok 34302 empty 95 err 3 parse_err 0 | at 2025-05-22
+  [phase1] 34500/45636 (75.6%) | 13:39:37 elapsed | ETA 04:24:33 | rows 1,083,834 | ok 34401 empty 96 err 3 parse_err 0 | at 2025-05-27
+  [phase1] 34600/45636 (75.8%) | 13:42:12 elapsed | ETA 04:22:15 | rows 1,087,666 | ok 34501 empty 96 err 3 parse_err 0 | at 2025-05-30
+  [phase1] 34700/45636 (76.0%) | 13:44:30 elapsed | ETA 04:19:51 | rows 1,090,195 | ok 34600 empty 97 err 3 parse_err 0 | at 2025-06-03
+  [phase1] 34800/45636 (76.3%) | 13:46:58 elapsed | ETA 04:17:30 | rows 1,093,857 | ok 34699 empty 98 err 3 parse_err 0 | at 2025-06-06
+  [phase1] 34900/45636 (76.5%) | 13:49:20 elapsed | ETA 04:15:07 | rows 1,096,764 | ok 34799 empty 98 err 3 parse_err 0 | at 2025-06-10
+  [phase1] 35000/45636 (76.7%) | 13:51:54 elapsed | ETA 04:12:48 | rows 1,100,509 | ok 34899 empty 98 err 3 parse_err 0 | at 2025-06-13
+  [phase1] 35100/45636 (76.9%) | 13:54:25 elapsed | ETA 04:10:28 | rows 1,104,280 | ok 34999 empty 98 err 3 parse_err 0 | at 2025-06-17
+  [phase1] 35200/45636 (77.1%) | 13:56:50 elapsed | ETA 04:08:06 | rows 1,107,250 | ok 35098 empty 99 err 3 parse_err 0 | at 2025-06-20
+  [phase1] 35300/45636 (77.4%) | 13:59:12 elapsed | ETA 04:05:43 | rows 1,109,867 | ok 35196 empty 101 err 3 parse_err 0 | at 2025-06-24
+  [phase1] 35400/45636 (77.6%) | 14:01:38 elapsed | ETA 04:03:22 | rows 1,113,177 | ok 35296 empty 101 err 3 parse_err 0 | at 2025-06-27
+  [phase1] 35500/45636 (77.8%) | 14:04:10 elapsed | ETA 04:01:02 | rows 1,117,071 | ok 35395 empty 102 err 3 parse_err 0 | at 2025-07-02
+  [phase1] 35600/45636 (78.0%) | 14:06:28 elapsed | ETA 03:58:38 | rows 1,118,938 | ok 35494 empty 103 err 3 parse_err 0 | at 2025-07-04
+  [phase1] 35700/45636 (78.2%) | 14:08:48 elapsed | ETA 03:56:14 | rows 1,121,836 | ok 35594 empty 103 err 3 parse_err 0 | at 2025-07-09
+  [phase1] 35800/45636 (78.4%) | 14:11:08 elapsed | ETA 03:53:51 | rows 1,125,025 | ok 35692 empty 105 err 3 parse_err 0 | at 2025-07-11
+  [phase1] 35900/45636 (78.7%) | 14:13:41 elapsed | ETA 03:51:31 | rows 1,128,935 | ok 35792 empty 105 err 3 parse_err 0 | at 2025-07-16
+  [phase1] 36000/45636 (78.9%) | 14:15:58 elapsed | ETA 03:49:07 | rows 1,130,485 | ok 35892 empty 105 err 3 parse_err 0 | at 2025-07-18
+  [phase1] 36100/45636 (79.1%) | 14:18:26 elapsed | ETA 03:46:46 | rows 1,133,855 | ok 35991 empty 106 err 3 parse_err 0 | at 2025-07-23
+  [phase1] 36200/45636 (79.3%) | 14:20:54 elapsed | ETA 03:44:24 | rows 1,136,410 | ok 36089 empty 108 err 3 parse_err 0 | at 2025-07-28
+  [phase1] 36300/45636 (79.5%) | 14:23:22 elapsed | ETA 03:42:03 | rows 1,140,166 | ok 36187 empty 110 err 3 parse_err 0 | at 2025-07-30
+  [phase1] 36400/45636 (79.8%) | 14:25:47 elapsed | ETA 03:39:41 | rows 1,142,570 | ok 36285 empty 112 err 3 parse_err 0 | at 2025-08-04
+  [phase1] 36500/45636 (80.0%) | 14:28:27 elapsed | ETA 03:37:23 | rows 1,146,696 | ok 36385 empty 112 err 3 parse_err 0 | at 2025-08-06
+  [phase1] 36600/45636 (80.2%) | 14:30:59 elapsed | ETA 03:35:02 | rows 1,149,292 | ok 36484 empty 113 err 3 parse_err 0 | at 2025-08-11
+  [phase1] 36700/45636 (80.4%) | 14:33:33 elapsed | ETA 03:32:42 | rows 1,153,993 | ok 36584 empty 113 err 3 parse_err 0 | at 2025-08-13
+  [phase1] 36800/45636 (80.6%) | 14:35:55 elapsed | ETA 03:30:19 | rows 1,156,534 | ok 36684 empty 113 err 3 parse_err 0 | at 2025-08-18
+  [phase1] 36900/45636 (80.9%) | 14:38:44 elapsed | ETA 03:28:02 | rows 1,162,071 | ok 36782 empty 115 err 3 parse_err 0 | at 2025-08-20
+  [phase1] 37000/45636 (81.1%) | 14:41:17 elapsed | ETA 03:25:42 | rows 1,165,813 | ok 36882 empty 115 err 3 parse_err 0 | at 2025-08-25
+  [phase1] 37100/45636 (81.3%) | 14:43:58 elapsed | ETA 03:23:23 | rows 1,169,702 | ok 36981 empty 116 err 3 parse_err 0 | at 2025-08-28
+  [phase1] 37200/45636 (81.5%) | 14:46:13 elapsed | ETA 03:20:58 | rows 1,171,386 | ok 37080 empty 117 err 3 parse_err 0 | at 2025-09-01
+  [phase1] 37300/45636 (81.7%) | 14:49:01 elapsed | ETA 03:18:41 | rows 1,174,980 | ok 37179 empty 118 err 3 parse_err 0 | at 2025-09-04
+  [phase1] 37400/45636 (82.0%) | 14:51:27 elapsed | ETA 03:16:18 | rows 1,178,117 | ok 37279 empty 118 err 3 parse_err 0 | at 2025-09-08
+  [phase1] 37500/45636 (82.2%) | 14:54:04 elapsed | ETA 03:13:58 | rows 1,181,889 | ok 37379 empty 118 err 3 parse_err 0 | at 2025-09-11
+  [phase1] 37600/45636 (82.4%) | 14:56:42 elapsed | ETA 03:11:39 | rows 1,186,123 | ok 37478 empty 119 err 3 parse_err 0 | at 2025-09-15
+  [phase1] 37700/45636 (82.6%) | 14:59:16 elapsed | ETA 03:09:18 | rows 1,189,720 | ok 37576 empty 121 err 3 parse_err 0 | at 2025-09-18
+  [phase1] 37800/45636 (82.8%) | 15:01:47 elapsed | ETA 03:06:57 | rows 1,192,498 | ok 37675 empty 122 err 3 parse_err 0 | at 2025-09-23
+Waiting 2s for retry backoff ■■■■■■■■■■■■■■■                 Waiting 2s for retry backoff ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                                                 [phase1] 37900/45636 (83.0%) | 15:04:11 elapsed | ETA 03:04:34 | rows 1,195,191 | ok 37774 empty 123 err 3 parse_err 0 | at 2025-09-25
+  [phase1] 38000/45636 (83.3%) | 15:06:41 elapsed | ETA 03:02:12 | rows 1,197,985 | ok 37872 empty 125 err 3 parse_err 0 | at 2025-09-30
+  [phase1] 38100/45636 (83.5%) | 15:09:09 elapsed | ETA 02:59:50 | rows 1,202,111 | ok 37970 empty 127 err 3 parse_err 0 | at 2025-10-02
+  [phase1] 38200/45636 (83.7%) | 15:11:41 elapsed | ETA 02:57:28 | rows 1,205,585 | ok 38069 empty 128 err 3 parse_err 0 | at 2025-10-07
+  [phase1] 38300/45636 (83.9%) | 15:14:05 elapsed | ETA 02:55:05 | rows 1,209,555 | ok 38168 empty 129 err 3 parse_err 0 | at 2025-10-09
+  [phase1] 38400/45636 (84.1%) | 15:16:40 elapsed | ETA 02:52:44 | rows 1,212,738 | ok 38266 empty 131 err 3 parse_err 0 | at 2025-10-14
+  [phase1] 38500/45636 (84.4%) | 15:19:13 elapsed | ETA 02:50:23 | rows 1,216,578 | ok 38364 empty 133 err 3 parse_err 0 | at 2025-10-17
+  [phase1] 38600/45636 (84.6%) | 15:21:41 elapsed | ETA 02:48:00 | rows 1,219,854 | ok 38462 empty 135 err 3 parse_err 0 | at 2025-10-21
+  [phase1] 38700/45636 (84.8%) | 15:24:12 elapsed | ETA 02:45:38 | rows 1,223,307 | ok 38562 empty 135 err 3 parse_err 0 | at 2025-10-24
+  [phase1] 38800/45636 (85.0%) | 15:26:37 elapsed | ETA 02:43:15 | rows 1,226,379 | ok 38660 empty 137 err 3 parse_err 0 | at 2025-10-28
+  [phase1] 38900/45636 (85.2%) | 15:29:17 elapsed | ETA 02:40:55 | rows 1,230,002 | ok 38758 empty 139 err 3 parse_err 0 | at 2025-10-31
+  [phase1] 39000/45636 (85.5%) | 15:31:42 elapsed | ETA 02:38:32 | rows 1,233,019 | ok 38858 empty 139 err 3 parse_err 0 | at 2025-11-04
+  [phase1] 39100/45636 (85.7%) | 15:34:11 elapsed | ETA 02:36:10 | rows 1,236,049 | ok 38958 empty 139 err 3 parse_err 0 | at 2025-11-07
+  [phase1] 39200/45636 (85.9%) | 15:36:39 elapsed | ETA 02:33:47 | rows 1,238,513 | ok 39058 empty 139 err 3 parse_err 0 | at 2025-11-11
+  [phase1] 39300/45636 (86.1%) | 15:39:10 elapsed | ETA 02:31:25 | rows 1,242,009 | ok 39158 empty 139 err 3 parse_err 0 | at 2025-11-14
+  [phase1] 39400/45636 (86.3%) | 15:41:48 elapsed | ETA 02:29:04 | rows 1,246,464 | ok 39256 empty 141 err 3 parse_err 0 | at 2025-11-19
+  [phase1] 39500/45636 (86.6%) | 15:44:15 elapsed | ETA 02:26:41 | rows 1,249,935 | ok 39353 empty 144 err 3 parse_err 0 | at 2025-11-21
+  [phase1] 39600/45636 (86.8%) | 15:46:46 elapsed | ETA 02:24:19 | rows 1,253,026 | ok 39453 empty 144 err 3 parse_err 0 | at 2025-11-26
+  [phase1] 39700/45636 (87.0%) | 15:49:01 elapsed | ETA 02:21:54 | rows 1,254,342 | ok 39552 empty 145 err 3 parse_err 0 | at 2025-11-28
+  [phase1] 39800/45636 (87.2%) | 15:51:34 elapsed | ETA 02:19:32 | rows 1,258,653 | ok 39652 empty 145 err 3 parse_err 0 | at 2025-12-03
+  [phase1] 39900/45636 (87.4%) | 15:54:10 elapsed | ETA 02:17:10 | rows 1,262,832 | ok 39751 empty 146 err 3 parse_err 0 | at 2025-12-05
+  [phase1] 40000/45636 (87.7%) | 15:56:37 elapsed | ETA 02:14:47 | rows 1,266,047 | ok 39851 empty 146 err 3 parse_err 0 | at 2025-12-10
+  [phase1] 40100/45636 (87.9%) | 15:59:07 elapsed | ETA 02:12:25 | rows 1,269,379 | ok 39951 empty 146 err 3 parse_err 0 | at 2025-12-15
+  [phase1] 40200/45636 (88.1%) | 16:01:43 elapsed | ETA 02:10:03 | rows 1,275,271 | ok 40050 empty 147 err 3 parse_err 0 | at 2025-12-17
+  [phase1] 40300/45636 (88.3%) | 16:04:11 elapsed | ETA 02:07:40 | rows 1,278,104 | ok 40147 empty 150 err 3 parse_err 0 | at 2025-12-22
+  [phase1] 40400/45636 (88.5%) | 16:06:28 elapsed | ETA 02:05:15 | rows 1,279,650 | ok 40247 empty 150 err 3 parse_err 0 | at 2025-12-24
+  [phase1] 40500/45636 (88.7%) | 16:08:36 elapsed | ETA 02:02:50 | rows 1,279,840 | ok 40347 empty 150 err 3 parse_err 0 | at 2025-12-29
+  [phase1] 40600/45636 (89.0%) | 16:10:56 elapsed | ETA 02:00:26 | rows 1,281,866 | ok 40446 empty 151 err 3 parse_err 0 | at 2025-12-31
+  [phase1] 40700/45636 (89.2%) | 16:13:15 elapsed | ETA 01:58:02 | rows 1,283,239 | ok 40546 empty 151 err 3 parse_err 0 | at 2026-01-05
+  [phase1] 40800/45636 (89.4%) | 16:15:59 elapsed | ETA 01:55:41 | rows 1,288,616 | ok 40644 empty 153 err 3 parse_err 0 | at 2026-01-07
+  [phase1] 40900/45636 (89.6%) | 16:18:22 elapsed | ETA 01:53:17 | rows 1,291,795 | ok 40742 empty 155 err 3 parse_err 0 | at 2026-01-12
+  [phase1] 41000/45636 (89.8%) | 16:20:59 elapsed | ETA 01:50:55 | rows 1,296,176 | ok 40842 empty 155 err 3 parse_err 0 | at 2026-01-15
+  [phase1] 41100/45636 (90.1%) | 16:23:14 elapsed | ETA 01:48:31 | rows 1,298,119 | ok 40942 empty 155 err 3 parse_err 0 | at 2026-01-19
+  [phase1] 41200/45636 (90.3%) | 16:25:50 elapsed | ETA 01:46:09 | rows 1,302,745 | ok 41040 empty 157 err 3 parse_err 0 | at 2026-01-22
+  [phase1] 41300/45636 (90.5%) | 16:28:25 elapsed | ETA 01:43:46 | rows 1,306,337 | ok 41140 empty 157 err 3 parse_err 0 | at 2026-01-26
+  [phase1] 41400/45636 (90.7%) | 16:30:56 elapsed | ETA 01:41:23 | rows 1,310,126 | ok 41240 empty 157 err 3 parse_err 0 | at 2026-01-29
+  [phase1] 41500/45636 (90.9%) | 16:33:21 elapsed | ETA 01:39:00 | rows 1,313,227 | ok 41340 empty 157 err 3 parse_err 0 | at 2026-02-02
+  [phase1] 41600/45636 (91.2%) | 16:35:51 elapsed | ETA 01:36:37 | rows 1,316,971 | ok 41439 empty 158 err 3 parse_err 0 | at 2026-02-05
+  [phase1] 41700/45636 (91.4%) | 16:38:26 elapsed | ETA 01:34:14 | rows 1,320,194 | ok 41538 empty 159 err 3 parse_err 0 | at 2026-02-10
+  [phase1] 41800/45636 (91.6%) | 16:40:50 elapsed | ETA 01:31:51 | rows 1,323,679 | ok 41637 empty 160 err 3 parse_err 0 | at 2026-02-12
+  [phase1] 41900/45636 (91.8%) | 16:43:11 elapsed | ETA 01:29:27 | rows 1,325,376 | ok 41737 empty 160 err 3 parse_err 0 | at 2026-02-17
+  [phase1] 42000/45636 (92.0%) | 16:45:47 elapsed | ETA 01:27:04 | rows 1,330,697 | ok 41837 empty 160 err 3 parse_err 0 | at 2026-02-19
+  [phase1] 42100/45636 (92.3%) | 16:48:21 elapsed | ETA 01:24:42 | rows 1,334,162 | ok 41935 empty 162 err 3 parse_err 0 | at 2026-02-24
+  [phase1] 42200/45636 (92.5%) | 16:50:49 elapsed | ETA 01:22:18 | rows 1,337,821 | ok 42035 empty 162 err 3 parse_err 0 | at 2026-02-26
+  [phase1] 42300/45636 (92.7%) | 16:53:15 elapsed | ETA 01:19:55 | rows 1,340,825 | ok 42133 empty 164 err 3 parse_err 0 | at 2026-03-03
+  [phase1] 42400/45636 (92.9%) | 16:55:54 elapsed | ETA 01:17:32 | rows 1,345,617 | ok 42233 empty 164 err 3 parse_err 0 | at 2026-03-06
+  [phase1] 42500/45636 (93.1%) | 16:58:16 elapsed | ETA 01:15:08 | rows 1,348,507 | ok 42331 empty 166 err 3 parse_err 0 | at 2026-03-10
+  [phase1] 42600/45636 (93.3%) | 17:00:43 elapsed | ETA 01:12:45 | rows 1,352,161 | ok 42431 empty 166 err 3 parse_err 0 | at 2026-03-13
+  [phase1] 42700/45636 (93.6%) | 17:03:08 elapsed | ETA 01:10:21 | rows 1,355,160 | ok 42530 empty 167 err 3 parse_err 0 | at 2026-03-17
+  [phase1] 42800/45636 (93.8%) | 17:05:42 elapsed | ETA 01:07:58 | rows 1,358,800 | ok 42630 empty 167 err 3 parse_err 0 | at 2026-03-20
+  [phase1] 42900/45636 (94.0%) | 17:08:09 elapsed | ETA 01:05:34 | rows 1,361,925 | ok 42729 empty 168 err 3 parse_err 0 | at 2026-03-24
+  [phase1] 43000/45636 (94.2%) | 17:10:43 elapsed | ETA 01:03:11 | rows 1,365,926 | ok 42828 empty 169 err 3 parse_err 0 | at 2026-03-27
+  [phase1] 43100/45636 (94.4%) | 17:13:15 elapsed | ETA 01:00:48 | rows 1,370,097 | ok 42928 empty 169 err 3 parse_err 0 | at 2026-03-31
+  [phase1] 43200/45636 (94.7%) | 17:15:40 elapsed | ETA 00:58:24 | rows 1,373,416 | ok 43028 empty 169 err 3 parse_err 0 | at 2026-04-03
+  [phase1] 43300/45636 (94.9%) | 17:18:12 elapsed | ETA 00:56:01 | rows 1,377,687 | ok 43128 empty 169 err 3 parse_err 0 | at 2026-04-08
+  [phase1] 43400/45636 (95.1%) | 17:20:53 elapsed | ETA 00:53:38 | rows 1,382,631 | ok 43228 empty 169 err 3 parse_err 0 | at 2026-04-10
+  [phase1] 43500/45636 (95.3%) | 17:23:29 elapsed | ETA 00:51:14 | rows 1,385,867 | ok 43328 empty 169 err 3 parse_err 0 | at 2026-04-15
+  [phase1] 43600/45636 (95.5%) | 17:25:52 elapsed | ETA 00:48:50 | rows 1,388,554 | ok 43428 empty 169 err 3 parse_err 0 | at 2026-04-17
+  [phase1] 43700/45636 (95.8%) | 17:28:26 elapsed | ETA 00:46:27 | rows 1,391,739 | ok 43527 empty 170 err 3 parse_err 0 | at 2026-04-22
+  [phase1] 43800/45636 (96.0%) | 17:30:50 elapsed | ETA 00:44:03 | rows 1,394,528 | ok 43626 empty 171 err 3 parse_err 0 | at 2026-04-24
+  [phase1] 43900/45636 (96.2%) | 17:33:28 elapsed | ETA 00:41:40 | rows 1,399,160 | ok 43726 empty 171 err 3 parse_err 0 | at 2026-04-29
+  [phase1] 44000/45636 (96.4%) | 17:36:11 elapsed | ETA 00:39:16 | rows 1,402,964 | ok 43826 empty 171 err 3 parse_err 0 | at 2026-05-04
+  [phase1] 44100/45636 (96.6%) | 17:38:44 elapsed | ETA 00:36:53 | rows 1,407,183 | ok 43926 empty 171 err 3 parse_err 0 | at 2026-05-06
+  [phase1] 44200/45636 (96.9%) | 17:41:18 elapsed | ETA 00:34:29 | rows 1,410,349 | ok 44026 empty 171 err 3 parse_err 0 | at 2026-05-11
+  [phase1] 44300/45636 (97.1%) | 17:43:56 elapsed | ETA 00:32:05 | rows 1,415,236 | ok 44126 empty 171 err 3 parse_err 0 | at 2026-05-13
+  [phase1] 44400/45636 (97.3%) | 17:46:27 elapsed | ETA 00:29:41 | rows 1,417,956 | ok 44226 empty 171 err 3 parse_err 0 | at 2026-05-18
+  [phase1] 44500/45636 (97.5%) | 17:49:07 elapsed | ETA 00:27:18 | rows 1,422,430 | ok 44325 empty 172 err 3 parse_err 0 | at 2026-05-20
+  [phase1] 44600/45636 (97.7%) | 17:51:34 elapsed | ETA 00:24:53 | rows 1,424,299 | ok 44424 empty 173 err 3 parse_err 0 | at 2026-05-25
+  [phase1] 44700/45636 (97.9%) | 17:54:11 elapsed | ETA 00:22:30 | rows 1,428,795 | ok 44524 empty 173 err 3 parse_err 0 | at 2026-05-27
+  [phase1] 44800/45636 (98.2%) | 17:56:35 elapsed | ETA 00:20:05 | rows 1,431,887 | ok 44624 empty 173 err 3 parse_err 0 | at 2026-06-01
+  [phase1] 44900/45636 (98.4%) | 17:59:07 elapsed | ETA 00:17:41 | rows 1,435,845 | ok 44724 empty 173 err 3 parse_err 0 | at 2026-06-04
+  [phase1] 45000/45636 (98.6%) | 18:01:36 elapsed | ETA 00:15:17 | rows 1,439,134 | ok 44824 empty 173 err 3 parse_err 0 | at 2026-06-08
+  [phase1] 45100/45636 (98.8%) | 18:04:11 elapsed | ETA 00:12:53 | rows 1,442,798 | ok 44923 empty 174 err 3 parse_err 0 | at 2026-06-11
+  [phase1] 45200/45636 (99.0%) | 18:06:28 elapsed | ETA 00:10:29 | rows 1,445,237 | ok 45022 empty 175 err 3 parse_err 0 | at 2026-06-15
+  [phase1] 45300/45636 (99.3%) | 18:09:13 elapsed | ETA 00:08:05 | rows 1,449,976 | ok 45121 empty 176 err 3 parse_err 0 | at 2026-06-18
+  [phase1] 45400/45636 (99.5%) | 18:11:38 elapsed | ETA 00:05:40 | rows 1,452,965 | ok 45221 empty 176 err 3 parse_err 0 | at 2026-06-22
+  [phase1] 45500/45636 (99.7%) | 18:14:14 elapsed | ETA 00:03:16 | rows 1,456,871 | ok 45321 empty 176 err 3 parse_err 0 | at 2026-06-25
+  [phase1] 45600/45636 (99.9%) | 18:16:44 elapsed | ETA 00:00:52 | rows 1,459,827 | ok 45420 empty 177 err 3 parse_err 0 | at 2026-06-30
+  [phase1] 45636/45636 (100.0%) | 18:17:59 elapsed | ETA 00:00:00 | rows 1,462,497 | ok 45456 empty 177 err 3 parse_err 0 | at 2026-06-30
+[phase1] complete in 18:17:59 | 1,462,497 rows
