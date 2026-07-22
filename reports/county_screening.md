@@ -1,6 +1,6 @@
 # OCIS County Screening — HB 2259 Pre/Post
 
-*Generated 2026-07-16. Pre: 2022-08-03 to 2022-10-31. Post: 2022-11-01 to 2023-01-29.*
+*Generated 2026-07-16. Pre: 2023-08-03 to 2023-10-31. Post: 2023-11-01 to 2024-01-29.*
 
 ## Option A — Case volume (all cases, unique)
 
@@ -8,45 +8,41 @@ Structural screen for coverage; use to pick counties by size (e.g. 2 rural + 2 u
 
 | County     | Pre   | Post  | Total | \% Change |
 |------------|-------|-------|-------|-----------|
-| oklahoma   | 16703 | 15833 | 32536 | -5.2%     |
-| tulsa      | 12854 | 10987 | 23841 | -14.5%    |
-| cleveland  | 5311  | 5168  | 10479 | -2.7%     |
-| canadian   | 4117  | 3613  | 7730  | -12.2%    |
-| payne      | 2366  | 2589  | 4955  | +9.4%     |
-| rogers     | 2344  | 1965  | 4309  | -16.2%    |
-| garfield   | 2137  | 1715  | 3852  | -19.7%    |
-| comanche   | 1635  | 1075  | 2710  | -34.3%    |
-| logan      | 958   | 991   | 1949  | +3.4%     |
-| adair      | 364   | 410   | 774   | +12.6%    |
-| pushmataha | 446   | 288   | 734   | -35.4%    |
-| ellis      | 132   | 85    | 217   | -35.6%    |
+| oklahoma   | 18328 | 21611 | 39939 | +17.9%    |
+| tulsa      | 11494 | 11285 | 22779 | -1.8%     |
+| cleveland  | 5639  | 5553  | 11192 | -1.5%     |
+| canadian   | 3755  | 3603  | 7358  | -4.0%     |
+| payne      | 2240  | 2490  | 4730  | +11.2%    |
+| garfield   | 2360  | 2162  | 4522  | -8.4%     |
+| rogers     | 1834  | 1750  | 3584  | -4.6%     |
+| comanche   | 1322  | 1244  | 2566  | -5.9%     |
+| logan      | 1110  | 894   | 2004  | -19.5%    |
+| pushmataha | 442   | 448   | 890   | +1.4%     |
+| adair      | 359   | 372   | 731   | +3.6%     |
+| ellis      | 118   | 140   | 258   | +18.6%    |
 | rogermills | 1     | 1     | 2     | +0.0%     |
 
 ## Option B — Sampled Rule 8 / LFO activity
 
 Balanced random sample (75 pre + 75 post per county). Rates are estimates for *selection only*. Rule 8 detected by text ("RULE 8"/"ABILITY TO PAY") or dictionary code; margins are 95%.
 
-The below is based on codes mapped from Cleveland County. Until we do a detailed pull of additional
+Rates represent the percentage of randomly sampled dates that contained at least one incident of a Rule 8 hearing or LFO assessment.
 
-The below pre/post figures are rates that represent the share of sampled cases that have at least
-
-\*\*LFO pre/post rate represents the share of sampled cases that have ***at least one incidence*** of an assessed amount on a docket entry during the 90-day period (excluding weekends and holidays).
-
-| County | N pre/post | Rule 8 pre | Rule 8 post | Rule 8 chg | LFO pre | LFO post |
+| County     | N pre/post | Rule 8 pre | Rule 8 post | Rule 8 chg | LFO pre | LFO post |
 |-----------|-----------|-----------|-----------|-----------|-----------|-----------|
-| adair | 75/75 | 4.0% | 10.1% | +6.1 pp | 85.3% | 73.9% |
-| [**canadian**]{.underline} | [**75/75**]{.underline} | [**34.7%**]{.underline} | [**48.6%**]{.underline} | [**+13.9 pp**]{.underline} | [**86.7%**]{.underline} | [**87.1%**]{.underline} |
-| cleveland | 75/75 | 18.7% | 23.0% | +4.3 pp | 92.0% | 85.1% |
-| comanche | 75/75 | 36.0% | 42.6% | +6.6 pp | 94.7% | 86.8% |
-| ellis | 75/75 | 31.1% | 36.2% | +5.2 pp | 91.9% | 84.1% |
-| garfield | 75/75 | 30.7% | 56.9% | +26.3 pp | 97.3% | 95.8% |
-| logan | 75/75 | 0.0% | 2.8% | +2.8 pp | 96.0% | 85.9% |
-| oklahoma | 75/75 | 2.7% | 2.7% | +0.0 pp | 86.7% | 81.1% |
-| payne | 75/75 | 0.0% | 1.4% | +1.4 pp | 94.6% | 88.6% |
-| pushmataha | 75/75 | 28.8% | 55.4% | +26.6 pp | 86.3% | 83.8% |
-| rogermills | 3/3 | — | — | NaN pp | — | — |
-| rogers | 75/75 | 38.7% | 46.6% | +7.9 pp | 92.0% | 91.8% |
-| tulsa | 75/75 | 32.0% | 50.0% | +18.0 pp | 86.7% | 85.1% |
+| adair      | 75/75      | 16.2%      | 6.8%        | -9.4 pp    | 86.5%   | 67.1%    |
+| canadian   | 75/75      | 54.7%      | 32.4%       | -22.3 pp   | 93.3%   | 77.5%    |
+| cleveland  | 75/75      | 10.7%      | 8.2%        | -2.4 pp    | 92.0%   | 72.6%    |
+| comanche   | 75/75      | 21.3%      | 23.3%       | +2.0 pp    | 92.0%   | 87.7%    |
+| ellis      | 75/75      | 16.2%      | 20.3%       | +4.1 pp    | 83.8%   | 89.9%    |
+| garfield   | 75/75      | 22.7%      | 37.0%       | +14.3 pp   | 97.3%   | 83.6%    |
+| logan      | 75/75      | 1.3%       | 1.3%        | +0.0 pp    | 93.3%   | 86.7%    |
+| oklahoma   | 75/75      | 4.0%       | 1.4%        | -2.6 pp    | 89.3%   | 78.4%    |
+| payne      | 75/75      | 0.0%       | 8.0%        | +8.0 pp    | 97.3%   | 81.3%    |
+| pushmataha | 75/75      | 54.7%      | 42.5%       | -12.2 pp   | 93.3%   | 71.2%    |
+| rogermills | 3/3        | —          | —           | NaN pp     | —       | —        |
+| rogers     | 75/75      | 31.1%      | 10.8%       | -20.3 pp   | 94.6%   | 78.4%    |
+| tulsa      | 75/75      | 38.7%      | 44.6%       | +5.9 pp    | 93.3%   | 78.4%    |
 
 ## Reading these
 
